@@ -9,54 +9,272 @@
     <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="./assets/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/custom.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <style>
+        /* Custom Background Colors and Gradients */
+        .bg-custom-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        
+        .bg-custom-light {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        
+        .bg-custom-dark {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+        
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(45deg, #38bdf8, #818cf8);
+        }
+
+        /* Smooth Transitions */
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Custom Shadows */
+        .custom-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Custom Card Styles */
+        .card-gradient {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Custom Button Styles */
+        .btn-gradient {
+            background: linear-gradient(45deg, #38bdf8, #818cf8);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-gradient:hover {
+            background: linear-gradient(45deg, #818cf8, #38bdf8);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+        }
+
+        /* Navbar Style */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Backgrounds */
+        .section-gradient-1 {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        
+        .section-gradient-2 {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+
+        /* Skill Cards */
+        .skill-card {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Custom Text Colors */
+        .text-primary {
+            color: #38bdf8;
+        }
+
+        .text-secondary {
+            color: #818cf8;
+        }
+
+        /* Custom Accent Colors */
+        .accent-gradient {
+            background: linear-gradient(45deg, #38bdf8, #818cf8);
+        }
+
+        /* Custom Card Styles */
+        .card-gradient {
+            background: linear-gradient(145deg, #ffffff, #f3f4f6);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom Button Styles */
+        .btn-gradient {
+            background: linear-gradient(45deg, #60a5fa, #34d399);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            background: linear-gradient(45deg, #34d399, #60a5fa);
+            transform: translateY(-2px);
+        }
+
+        /* Navbar Style */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Section Backgrounds */
+        .section-gradient-1 {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+        
+        .section-gradient-2 {
+            background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+        }
+    </style>
 </head>
 
-<body class="inter antialiased text-gray-800  ">
-    <!-- Sticky Navigation Bar -->
-    <nav class="flex items-center justify-between sticky top-0 z-50 shadow-lg p-4 m-4">
-        <div class="text-2xl font-bold">Portfolio</div>
+<body class="inter antialiased bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300">
+                        Portfolio
+                    </a>
+                </div>
 
-        <!-- Desktop Navigation + Dark Mode Toggle -->
-        <div class="hidden md:flex space-x-8 items-center">
-            <a href="#about" class="hover:text-gray-600 ">About</a>
-            <a href="#skills" class="hover:text-gray-600 ">Skills</a>
-            <a href="#work" class="hover:text-gray-600 ">Work</a>
-            <a href="#contact" class="hover:text-gray-600 ">Contact</a>
-        </div>
+                <!-- Desktop Menu (Center) -->
+                <div class="hidden md:flex items-center justify-center space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Skills</a>
+                    <a href="#work" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Work</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                </div>
 
-        <!-- Mobile Menu Button + Mobile Dark Mode Toggle -->
-        <div class="flex items-center md:hidden">
-            <!-- Mobile Menu Button -->
-            <button class="focus:outline-none mobile-menu-button">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+                <!-- Hire Me Button (Desktop) -->
+                <div class="hidden md:block">
+                    <a href="#contact" 
+                       class="px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg">
+                        Hire Me
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Container -->
+            <div id="mobile-menu" class="hidden md:hidden w-full absolute left-0 bg-white/95 shadow-lg transition-all duration-300 ease-in-out">
+                <div class="container mx-auto px-4 py-4 flex flex-col items-center space-y-4">
+                    <a href="#about" class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">About</a>
+                    <a href="#skills" class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">Skills</a>
+                    <a href="#work" class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">Work</a>
+                    <a href="#contact" class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">Contact</a>
+                    <a href="#contact" 
+                       class="w-48 text-center px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-300">
+                        Hire Me
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
+
     <style>
-        nav {
-            transition: all 0.3s ease;
+        /* Mobile menu animation */
+        #mobile-menu {
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #mobile-menu.show {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
         }
     </style>
 
+    <script>
+        // Mobile menu toggle with animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                // Add a small delay to allow the hidden class to be removed before adding show
+                setTimeout(() => {
+                    mobileMenu.classList.toggle('show');
+                }, 10);
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInside = mobileMenu.contains(event.target) || menuButton.contains(event.target);
+                
+                if (!isClickInside && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('show');
+                    // Add a small delay to allow the animation to complete before hiding
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                    }, 300);
+                }
+            });
+
+            // Close menu when clicking on a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('show');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                    }, 300);
+                });
+            });
+        });
+    </script>
+
     <!-- Header & Hero Section -->
-    <header class="bg-gradient-to-br from-blue-500 via-blue-400">
+    <header class="bg-custom-gradient text-white">
+
         <div class="container mx-auto px-6 pt-24 pb-16">
-
-
             <div class="mt-20 md:mt-32 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 font-bricolage">Hi, I'm <span
-                        class="text-yellow-300">Moudud Hoq</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-josefin">A passionate developer creating
-                    awesome web
-                    experiences</p>
-                <a href="#contact"
-                    class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition duration-300">Hire
-                    Me</a>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 font-bricolage">Hi, I'm <span class="text-gradient">Moudud Hoq</span></h1>
+                <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-josefin text-gray-300">A passionate developer creating awesome web experiences</p>
+                <a href="#contact" class="btn-gradient text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300">
+                    Hire Me
+                </a>
             </div>
 
             <div class="mt-24 flex justify-center space-x-6">
@@ -84,7 +302,7 @@
     </style>
 
     <!-- About Me Section -->
-    <section id="about" class="py-20 bg-gray-50">
+    <section id="about" class="py-20 section-gradient-1">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">About <span class="text-purple-600">Me</span>
             </h2>
@@ -131,14 +349,14 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 ">
+    <section id="skills" class="py-20 section-gradient-2">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 ">My <span class="text-blue-600">Skills</span>
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Skill 1 -->
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="skill-card p-6 rounded-lg">
                     <div class="text-blue-500 text-4xl mb-4">
                         <i class="fab fa-html5"></i>
                     </div>
@@ -150,7 +368,7 @@
                 </div>
 
                 <!-- Skill 2 -->
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="skill-card p-6 rounded-lg">
                     <div class="text-blue-500 text-4xl mb-4">
                         <i class="fab fa-css3-alt"></i>
                     </div>
@@ -163,7 +381,7 @@
                 </div>
 
                 <!-- Skill 3 -->
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="skill-card p-6 rounded-lg">
                     <div class="text-blue-500 text-4xl mb-4">
                         <i class="fab fa-js"></i>
                     </div>
@@ -176,7 +394,7 @@
                 </div>
 
                 <!-- Skill 4 -->
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="skill-card p-6 rounded-lg">
                     <div class="text-blue-500 text-4xl mb-4">
                         <i class="fab fa-react"></i>
                     </div>
@@ -188,7 +406,7 @@
                 </div>
 
                 <!-- Skill 5 -->
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="skill-card p-6 rounded-lg">
                     <div class="text-blue-500 text-4xl mb-4">
                         <i class="fab fa-node-js"></i>
                     </div>
@@ -200,7 +418,7 @@
                 </div>
 
                 <!-- Skill 6 -->
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="skill-card p-6 rounded-lg">
                     <div class="text-blue-500 text-4xl mb-4">
                         <i class="fas fa-database"></i>
                     </div>
@@ -304,7 +522,7 @@
     </style>
 
     <!-- Projects Section -->
-    <section id="work" class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section id="work" class="py-20 bg-custom-gradient text-white">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-16">
                 <span class="text-sm font-semibold tracking-wider text-green-600 uppercase">My Work</span>
@@ -895,7 +1113,7 @@
 
 
     <!-- Contact Section/Get In Touch -->
-    <section id="contact" class="py-20 bg-gradient-to-br from-blue-100 to-purple-50">
+    <section id="contact" class="py-20 section-gradient-1">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
                 Get In <span
@@ -1228,7 +1446,7 @@
     </style>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-br from-gray-100 to-gray-200 py-12 text-gray-800">
+    <footer class="bg-custom-dark text-white py-12">
         <div class="container mx-auto px-6">
             <!-- Main Footer Content -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
@@ -1418,23 +1636,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- JavaScript s -->
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('.hidden.md\\:flex.space-x-8');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-            mobileMenu.classList.toggle('flex-col');
-            mobileMenu.classList.toggle('absolute');
-            mobileMenu.classList.toggle('top-20');
-            mobileMenu.classList.toggle('right-6');
-            mobileMenu.classList.toggle('bg-gray-900');
-            mobileMenu.classList.toggle('p-4');
-            mobileMenu.classList.toggle('rounded-lg');
-            mobileMenu.classList.toggle('space-y-4');
-            mobileMenu.classList.toggle('space-x-0');
-        });
+            // Mobile menu toggle    const menuBtn = document.querySelector('.md\\:hidden button');    const menu = document.querySelector('.hidden.md\\:flex');        menuBtn.addEventListener('click', () => {        menu.classList.toggle('hidden');        menu.classList.toggle('flex');        menu.classList.toggle('flex-col');        menu.classList.toggle('absolute');        menu.classList.toggle('top-20');        menu.classList.toggle('right-6');        menu.classList.toggle('bg-white/95');        menu.classList.toggle('p-4');        menu.classList.toggle('rounded-lg');        menu.classList.toggle('shadow-lg');        menu.classList.toggle('space-y-4');        menu.classList.toggle('w-48');    });
 
 
         // Projects 

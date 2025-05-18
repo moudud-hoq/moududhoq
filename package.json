@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "tailwindcss": "^3.3.0"
-  }
+  },
+  "name": "moududhoq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moudud-hoq/moududhoq.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moudud-hoq/moududhoq/issues"
+  },
+  "homepage": "https://github.com/moudud-hoq/moududhoq#readme"
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Project 01 | Simple Calculator</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <!-- Structure of Simple Calculator -->
+        <h1>Simple Calculator</h1>
+        <!-- Here we will set 2 input for number submission -->
+        <input type="number" id="num1" placeholder="Enter First Number">
+        <input type="number" id="num2" placeholder="Enter Second Number">
+
+        <!-- This is the selection of operation -->
+        <select id="operation">
+            <option value="add"> Add(+)</option>
+            <option value="subtract"> Minus(-)</option>
+            <option value="multiply"> Multiplication(*)</option>
+            <option value="divide"> Divide(/)</option>
+        </select>
+
+        <!-- This is calculation button -->
+        <button onclick="calculate()">Calculate</button>
+
+        <!-- Here the result or output will show -->
+        <div class="output" id="output">Your Calculation</div>
+
+    </div>
+
+<script src="./main.js"></script>
+</body>
+
+</html>

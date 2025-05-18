@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 02 | Click Counter</title>
+</head>
+
+<body>
+
+    <h4 id="output">Project 02 | Click Counter</h4>
+    <ul>
+        <li>let</li>
+        <li>getElementById</li>
+        <li>addEventListener()</li>
+        <li>textContent</li>
+    </ul>
+
+    <button id="clickMe">Click Me!</button>
+
+    <script>
+
+        let count = 0;
+
+        const btn = document.getElementById("clickMe");
+        const output = document.getElementById("output");
+
+        btn.addEventListener("click", function () {
+            count = count + 1;
+
+            output.textContent = "Project 0" + count + " | Click Counter";
+        });
+
+
+    </script>
+</body>
+
+</html>
