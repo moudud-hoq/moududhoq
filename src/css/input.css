@@ -119,15 +119,43 @@
 
     /* Project Grid Animation */
     .projects-grid {
-        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500;
+        @apply grid grid-cols-1 gap-8 transition-all duration-500;
     }
 
-    .project-card.hidden {
-        @apply opacity-0 scale-95;
+    /* Small screens (mobile) - 1 column, 4 cards visible */
+    .projects-grid .project-card:nth-child(n+5) {
+        @apply hidden;
     }
 
-    .project-card.visible {
-        @apply opacity-100 scale-100;
+    /* Medium screens (tablet) - 3 columns, 6 cards visible */
+    @media (min-width: 768px) {
+        .projects-grid {
+            @apply grid-cols-2;
+        }
+        .projects-grid .project-card:nth-child(n+7) {
+            @apply hidden;
+        }
+    }
+
+    /* Large screens (desktop) - 4 columns, 8 cards visible */
+    @media (min-width: 1024px) {
+        .projects-grid {
+            @apply grid-cols-3;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .projects-grid {
+            @apply grid-cols-4;
+        }
+        .projects-grid .project-card:nth-child(n+9) {
+            @apply hidden;
+        }
+    }
+
+    /* Show all cards when show-all class is present */
+    .projects-grid.show-all .project-card {
+        @apply block !important;
     }
 
     /* Social Icons */
