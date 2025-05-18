@@ -19,15 +19,15 @@
         .bg-custom-gradient {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
         }
-        
+
         .bg-custom-light {
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
         }
-        
+
         .bg-custom-dark {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         }
-        
+
         .text-gradient {
             background-clip: text;
             -webkit-background-clip: text;
@@ -59,7 +59,7 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .btn-gradient:hover {
             background: linear-gradient(45deg, #818cf8, #38bdf8);
             transform: translateY(-2px);
@@ -77,7 +77,7 @@
         .section-gradient-1 {
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
         }
-        
+
         .section-gradient-2 {
             background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
         }
@@ -132,7 +132,7 @@
             background: linear-gradient(45deg, #60a5fa, #34d399);
             transition: all 0.3s ease;
         }
-        
+
         .btn-gradient:hover {
             background: linear-gradient(45deg, #34d399, #60a5fa);
             transform: translateY(-2px);
@@ -148,7 +148,7 @@
         .section-gradient-1 {
             background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
         }
-        
+
         .section-gradient-2 {
             background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
         }
@@ -162,7 +162,8 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="#" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300">
+                    <a href="#"
+                        class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300">
                         Portfolio
                     </a>
                 </div>
@@ -170,38 +171,47 @@
                 <!-- Desktop Menu (Center) -->
                 <div class="hidden md:flex items-center justify-center space-x-8">
                     <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">About</a>
-                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Skills</a>
+                    <a href="#skills"
+                        class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Skills</a>
                     <a href="#work" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Work</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                    <a href="#contact"
+                        class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
                 </div>
 
                 <!-- Hire Me Button (Desktop) -->
                 <div class="hidden md:block">
-                    <a href="#contact" 
-                       class="px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg">
+                    <a href="#contact"
+                        class="px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg">
                         Hire Me
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button type="button" id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <button type="button" id="mobile-menu-button"
+                        class="text-gray-600 hover:text-blue-600 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
             </div>
 
             <!-- Mobile Menu Container -->
-            <div id="mobile-menu" class="hidden md:hidden w-full absolute left-0 bg-white/95 shadow-lg transition-all duration-300 ease-in-out">
+            <div id="mobile-menu"
+                class="hidden md:hidden w-full absolute left-0 bg-white/95 shadow-lg transition-all duration-300 ease-in-out">
                 <div class="container mx-auto px-4 py-4 flex flex-col items-center space-y-4">
-                    <a href="#about" class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">About</a>
-                    <a href="#skills" class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">Skills</a>
-                    <a href="#work" class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">Work</a>
-                    <a href="#contact" class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">Contact</a>
-                    <a href="#contact" 
-                       class="w-48 text-center px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-300">
+                    <a href="#about"
+                        class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">About</a>
+                    <a href="#skills"
+                        class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">Skills</a>
+                    <a href="#work"
+                        class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">Work</a>
+                    <a href="#contact"
+                        class="w-full text-center px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300">Contact</a>
+                    <a href="#contact"
+                        class="w-48 text-center px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-300">
                         Hire Me
                     </a>
                 </div>
@@ -227,11 +237,11 @@
 
     <script>
         // Mobile menu toggle with animation
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const menuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            
-            menuButton.addEventListener('click', function() {
+
+            menuButton.addEventListener('click', function () {
                 mobileMenu.classList.toggle('hidden');
                 // Add a small delay to allow the hidden class to be removed before adding show
                 setTimeout(() => {
@@ -240,9 +250,9 @@
             });
 
             // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
+            document.addEventListener('click', function (event) {
                 const isClickInside = mobileMenu.contains(event.target) || menuButton.contains(event.target);
-                
+
                 if (!isClickInside && !mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.remove('show');
                     // Add a small delay to allow the animation to complete before hiding
@@ -265,88 +275,129 @@
         });
     </script>
 
-    <!-- Header & Hero Section -->
-    <header class="bg-custom-gradient text-white">
-
-        <div class="container mx-auto px-6 pt-24 pb-16">
-            <div class="mt-20 md:mt-32 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 font-bricolage">Hi, I'm <span class="text-gradient">Moudud Hoq</span></h1>
-                <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-josefin text-gray-300">A passionate developer creating awesome web experiences</p>
-                <a href="#contact" class="btn-gradient text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300">
-                    Hire Me
-                </a>
-            </div>
-
-            <div class="mt-24 flex justify-center space-x-6">
-                <a href="#" class="text-2xl hover:text-yellow-300 transition duration-300"><i
-                        class="fab fa-github"></i></a>
-                <a href="#" class="text-2xl hover:text-yellow-300 transition duration-300"><i
-                        class="fab fa-codepen"></i></a>
-                <a href="#" class="text-2xl hover:text-yellow-300 transition duration-300"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-2xl hover:text-yellow-300 transition duration-300"><i
-                        class="fab fa-twitter"></i></a>
-                <a href="#" class="text-2xl hover:text-yellow-300 transition duration-300"><i
-                        class="fab fa-dribbble"></i></a>
-            </div>
-
-            <div class="mt-24 flex justify-center">
-                <a href="#about" class="animate-bounce text-2xl"><i class="fas fa-chevron-down"></i></a>
-            </div>
-        </div>
-    </header>
-    <style>
-        .hero-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-    </style>
-
-    <!-- About Me Section -->
-    <section id="about" class="py-20 section-gradient-1">
+    <!-- Combined Hero & About Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">About <span class="text-purple-600">Me</span>
-            </h2>
-
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <img src="https://scontent.fdac179-1.fna.fbcdn.net/v/t1.6435-9/133436767_1681251315377964_2146606863831181539_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFL9nCQIpuQEwVjw4m2ga0ETOaByyEQ3H5M5oHLIRDcfgx9LZraclDxxEtBzdCuJz-LW4OPAIJAYUGrjqaXGhBe&_nc_ohc=lOR4HnFULrkQ7kNvwHnYpIX&_nc_oc=AdmapOACwipTqSIftx245W_LJ6MulUQFC8z70UfkP0f5wSF7ayCxWHTx8OMXZEjlT8Y&_nc_zt=23&_nc_ht=scontent.fdac179-1.fna&_nc_gid=Z-rQ-Mb1jxQqivhSGXge0Q&oh=00_AfGfbV5TCZS2j6CKeb36M8_hbR4DO549WvbLchABmVBVfg&oe=68235298"
-                        alt="Profile" class="rounded-lg shadow-xl w-full max-w-md mx-auto">
-                </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl font-bold mb-6">Who am I?</h3>
-                    <p class="text-lg mb-6">I'm a passionate web developer with expertise in front-end technologies.
-                        I
-                        love creating beautiful, functional websites that provide great user experiences.</p>
-                    <p class="text-lg mb-8">With over 5 years of experience in the industry, I've worked with
-                        various
-                        clients and companies to bring their digital visions to life.</p>
-
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Left Column: Hero Content -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 font-bricolage">
+                        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Moudud Hoq</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 font-josefin text-gray-300">
+                        A passionate developer creating awesome web experiences
+                    </p>
+                    
+                    <!-- Quick Info -->
                     <div class="grid grid-cols-2 gap-4 mb-8">
                         <div class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
                             <span>HTML5/CSS3</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
                             <span>JavaScript</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
                             <span>Responsive Design</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
                             <span>UI/UX</span>
                         </div>
                     </div>
 
-                    <a href="#"
-                        class="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition duration-300">Download
-                        CV</a>
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" 
+                           class="btn-gradient text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                            Hire Me
+                        </a>
+                        <a href="#" 
+                           class="px-8 py-4 rounded-full font-bold border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+                            Download CV
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="mt-12 flex justify-center lg:justify-start space-x-6">
+                        <a href="#" class="text-2xl text-gray-400 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-2xl text-gray-400 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-2xl text-gray-400 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-2xl text-gray-400 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: About Content -->
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-700">
+                        <div class="relative mb-8">
+                            <img src="https://tinyurl.com/jeyrfdsh" 
+                                 alt="Profile" 
+                                 class="rounded-xl shadow-2xl w-full max-w-md mx-auto transform hover:scale-[1.02] transition-transform duration-300">
+                            <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+                                <div class="flex gap-2">
+                                    <span class="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-sm font-semibold shadow-lg">
+                                        5+ Years Experience
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center lg:text-left">
+                            <h3 class="text-2xl font-bold mb-4">Who am I?</h3>
+                            <p class="text-gray-300 mb-6">
+                                I'm a passionate web developer with expertise in front-end technologies.
+                                I love creating beautiful, functional websites that provide great user experiences.
+                            </p>
+                            <p class="text-gray-300 mb-6">
+                                With over 5 years of experience in the industry, I've worked with various
+                                clients and companies to bring their digital visions to life.
+                            </p>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                            <div class="text-center p-4 bg-gray-700/50 rounded-lg">
+                                <h4 class="text-2xl font-bold text-blue-400">50+</h4>
+                                <p class="text-sm text-gray-400">Projects</p>
+                            </div>
+                            <div class="text-center p-4 bg-gray-700/50 rounded-lg">
+                                <h4 class="text-2xl font-bold text-purple-400">30+</h4>
+                                <p class="text-sm text-gray-400">Clients</p>
+                            </div>
+                            <div class="text-center p-4 bg-gray-700/50 rounded-lg">
+                                <h4 class="text-2xl font-bold text-green-400">5+</h4>
+                                <p class="text-sm text-gray-400">Years</p>
+                            </div>
+                            <div class="text-center p-4 bg-gray-700/50 rounded-lg">
+                                <h4 class="text-2xl font-bold text-yellow-400">100%</h4>
+                                <p class="text-sm text-gray-400">Satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <style>
+        .btn-gradient {
+            background: linear-gradient(45deg, #3B82F6, #8B5CF6);
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(45deg, #2563EB, #7C3AED);
+        }
+    </style>
 
     <!-- Skills Section -->
     <section id="skills" class="py-20 section-gradient-2">
@@ -1636,7 +1687,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- JavaScript s -->
     <script>
-            // Mobile menu toggle    const menuBtn = document.querySelector('.md\\:hidden button');    const menu = document.querySelector('.hidden.md\\:flex');        menuBtn.addEventListener('click', () => {        menu.classList.toggle('hidden');        menu.classList.toggle('flex');        menu.classList.toggle('flex-col');        menu.classList.toggle('absolute');        menu.classList.toggle('top-20');        menu.classList.toggle('right-6');        menu.classList.toggle('bg-white/95');        menu.classList.toggle('p-4');        menu.classList.toggle('rounded-lg');        menu.classList.toggle('shadow-lg');        menu.classList.toggle('space-y-4');        menu.classList.toggle('w-48');    });
+        // Mobile menu toggle    const menuBtn = document.querySelector('.md\\:hidden button');    const menu = document.querySelector('.hidden.md\\:flex');        menuBtn.addEventListener('click', () => {        menu.classList.toggle('hidden');        menu.classList.toggle('flex');        menu.classList.toggle('flex-col');        menu.classList.toggle('absolute');        menu.classList.toggle('top-20');        menu.classList.toggle('right-6');        menu.classList.toggle('bg-white/95');        menu.classList.toggle('p-4');        menu.classList.toggle('rounded-lg');        menu.classList.toggle('shadow-lg');        menu.classList.toggle('space-y-4');        menu.classList.toggle('w-48');    });
 
 
         // Projects 
