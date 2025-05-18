@@ -1,14 +1,12 @@
 {
-  "dependencies": {
-    "tailwindcss": "^3.3.0"
-  },
   "name": "moududhoq",
   "version": "1.0.0",
   "description": "",
   "main": "tailwind.config.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css"
   },
   "repository": {
     "type": "git",
@@ -20,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/moudud-hoq/moududhoq/issues"
   },
-  "homepage": "https://github.com/moudud-hoq/moududhoq#readme"
+  "homepage": "https://github.com/moudud-hoq/moududhoq#readme",
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35"
+  }
 }

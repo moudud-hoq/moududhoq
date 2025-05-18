@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer components {
+    .btn-gradient {
+        @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white transition-all duration-300;
+    }
+
+    .social-icon {
+        @apply w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110;
+    }
+
+    .footer-link {
+        @apply text-gray-600 hover:text-purple-500 transition duration-300 flex items-center;
+    }
+
+    /* Custom Background Colors and Gradients */
+    .bg-custom-gradient {
+        @apply bg-gradient-to-br from-gray-900 to-gray-800;
+    }
+
+    .bg-custom-light {
+        @apply bg-gradient-to-br from-gray-50 to-gray-100;
+    }
+
+    .bg-custom-dark {
+        @apply bg-gradient-to-br from-gray-800 to-gray-900;
+    }
+
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500;
+    }
+
+    /* Smooth Transitions */
+    .transition-all {
+        @apply transition duration-300 ease-in-out;
+    }
+
+    /* Custom Shadows */
+    .custom-shadow {
+        @apply shadow-lg hover:shadow-xl;
+    }
+
+    /* Custom Card Styles */
+    .card-gradient {
+        @apply bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 backdrop-blur-md;
+    }
+
+    /* Custom Button Styles */
+    .btn-gradient {
+        @apply bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:-translate-y-1;
+    }
+
+    /* Navbar Style */
+    .navbar {
+        @apply bg-white/95 backdrop-blur-sm border-b border-gray-200;
+    }
+
+    /* Section Backgrounds */
+    .section-gradient-1 {
+        @apply bg-gradient-to-br from-gray-50 to-gray-100;
+    }
+
+    .section-gradient-2 {
+        @apply bg-gradient-to-br from-gray-100 to-gray-200;
+    }
+
+    /* Skill Cards */
+    .skill-card {
+        @apply bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 transition-all duration-300 hover:-translate-y-1;
+    }
+
+    /* Project Cards */
+    .project-card {
+        @apply bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] relative;
+    }
+
+    .project-card-image {
+        @apply relative overflow-hidden h-48;
+    }
+
+    .project-card-image img {
+        @apply w-full h-full object-cover transition-transform duration-700 hover:scale-110;
+    }
+
+    .project-card-overlay {
+        @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 transition-opacity duration-300 flex items-center justify-center;
+    }
+
+    .project-card:hover .project-card-overlay {
+        @apply opacity-100;
+    }
+
+    .tech-badge {
+        @apply px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium 
+        hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:text-white 
+        transition-all duration-300 transform hover:scale-105;
+    }
+
+    .project-link {
+        @apply inline-flex items-center px-4 py-2 text-sm font-semibold text-white 
+        bg-gradient-to-r from-green-500 to-blue-500 rounded-full
+        hover:from-green-600 hover:to-blue-600 transition-all duration-300 
+        transform hover:translate-x-1 hover:scale-105;
+    }
+
+    .project-filter {
+        @apply px-6 py-2 text-base font-medium rounded-full 
+        border-2 border-transparent hover:border-green-500
+        transition-all duration-300 transform hover:scale-105;
+    }
+
+    .project-filter.active {
+        @apply bg-gradient-to-r from-green-500 to-blue-500 text-white 
+        shadow-lg shadow-green-500/20;
+    }
+
+    /* Project Grid Animation */
+    .projects-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500;
+    }
+
+    .project-card.hidden {
+        @apply opacity-0 scale-95;
+    }
+
+    .project-card.visible {
+        @apply opacity-100 scale-100;
+    }
+
+    /* Social Icons */
+    .social-icon {
+        @apply w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110;
+    }
+
+    /* Footer Links */
+    .footer-link {
+        @apply text-gray-400 hover:text-blue-400 transition duration-300 flex items-center;
+    }
+
+    .footer-link::before {
+        content: "→";
+        @apply text-blue-500 mr-2 opacity-0 transition-all duration-300;
+    }
+
+    .footer-link:hover::before {
+        @apply opacity-100 mr-3;
+    }
+
+    /* Tags */
+    .tag {
+        @apply bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-blue-600 hover:text-white transition-all duration-300;
+    }
+
+    /* FAQ Styles */
+    .faq-toggle .rotate-icon {
+        @apply transition-transform duration-300;
+    }
+
+    .faq-toggle.active .rotate-icon {
+        @apply rotate-180;
+    }
+
+    .faq-content {
+        @apply transition-all duration-300 max-h-0 overflow-hidden;
+    }
+
+    .faq-content.active {
+        @apply max-h-[1000px];
+    }
+
+    .faq-toggle:hover h3 {
+        @apply text-blue-400;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+        @apply fixed bottom-[100px] right-[40px] bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-full shadow-xl transition-all duration-300 cursor-pointer z-[9999] hover:from-blue-600 hover:to-purple-600;
+        opacity: 0;
+        visibility: hidden;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .back-to-top:hover {
+        @apply transform scale-110;
+        animation: none;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+}
