@@ -24,6 +24,7 @@
 .btn-gradient {
     background: linear-gradient(45deg, #3B82F6, #8B5CF6);
 }
+
 .btn-gradient:hover {
     background: linear-gradient(45deg, #2563EB, #7C3AED);
 }
