@@ -14,39 +14,52 @@
 
 <body id="body" class="font-josefin antialiased bg-gray-90">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-md border-b border-gray-700/50">
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-md border-b border-gray-700/50">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="#body" class="flex items-center space-x-2 group">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center transform transition-all duration-300 group-hover:rotate-6 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/25">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center transform transition-all duration-300 group-hover:rotate-6 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/25">
                             <span class="text-xl font-bold text-white">MH</span>
                         </div>
                         <div class="flex flex-col">
-                            <span class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">Moudud</span>
-                            <span class="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Web Developer</span>
+                            <span
+                                class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">Moudud</span>
+                            <span
+                                class="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Web
+                                Developer</span>
                         </div>
                     </a>
                 </div>
 
                 <!-- Desktop Menu (Center) -->
                 <div class="hidden md:flex items-center justify-center space-x-8">
-                    <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+                    <a href="#about"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
                         About
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#skills" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+                    <a href="#skills"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
                         Skills
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#work" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+                    <a href="#work"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
                         Work
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+                    <a href="#contact"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
                         Contact
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                 </div>
 
@@ -119,9 +132,11 @@
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
@@ -130,14 +145,14 @@
 
     <script>
         // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const menuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             let isMenuOpen = false;
 
             function toggleMenu() {
                 isMenuOpen = !isMenuOpen;
-                
+
                 if (isMenuOpen) {
                     mobileMenu.classList.remove('hidden');
                     // Force a reflow
@@ -149,7 +164,7 @@
                         mobileMenu.classList.add('hidden');
                     }, 300); // Match the transition duration
                 }
-                
+
                 // Update button icon
                 const icon = menuButton.querySelector('svg');
                 if (isMenuOpen) {
@@ -164,13 +179,13 @@
             }
 
             // Toggle menu on button click
-            menuButton.addEventListener('click', function(e) {
+            menuButton.addEventListener('click', function (e) {
                 e.stopPropagation();
                 toggleMenu();
             });
 
             // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (isMenuOpen && !mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
                     toggleMenu();
                 }
@@ -185,7 +200,7 @@
             });
 
             // Close menu on window resize (if desktop size reached)
-            window.addEventListener('resize', function() {
+            window.addEventListener('resize', function () {
                 if (window.innerWidth >= 768 && isMenuOpen) {
                     toggleMenu();
                 }
@@ -207,7 +222,7 @@
                     <p class="text-xl md:text-2xl mb-8 font-josefin text-gray-300">
                         A passionate developer creating awesome web experiences
                     </p>
-                    
+
                     <!-- Quick Info -->
                     <div class="grid grid-cols-2 gap-4 mb-8">
                         <div class="flex items-center">
@@ -230,12 +245,12 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#contact" 
-                           class="btn-gradient text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <a href="#contact"
+                            class="btn-gradient text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                             Hire Me
                         </a>
-                    <a href="#"
-                           class="px-8 py-4 rounded-full font-bold border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+                        <a href="#"
+                            class="px-8 py-4 rounded-full font-bold border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all duration-300 transform hover:-translate-y-1">
                             Download CV
                         </a>
                     </div>
@@ -262,7 +277,7 @@
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-700">
                         <div class="relative mb-8">
                             <img src="https://tinyurl.com/jeyrfdsh" alt="Profile"
-                                 class="rounded-xl shadow-2xl w-full max-w-md mx-auto transform hover:scale-[1.02] transition-transform duration-300">
+                                class="rounded-xl shadow-2xl w-full max-w-md mx-auto transform hover:scale-[1.02] transition-transform duration-300">
                             <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
                                 <div class="flex gap-2">
                                     <span
@@ -478,7 +493,8 @@
                 <h2 class="text-4xl md:text-5xl font-bold text-white mt-2">Featured <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">Projects</span>
                 </h2>
-                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Explore my recent work and discover how I bring creative solutions to life.</p>
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Explore my recent work and discover how I bring creative
+                    solutions to life.</p>
             </div>
 
             <!-- Project Categories -->
@@ -495,23 +511,23 @@
                 <!-- Project 1 -->
                 <div class="project-card" data-category="web">
                     <div class="project-card-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                            alt="E-commerce Dashboard">
+                        <img src="./src/images/projects/Dorik Live Site Clone.png" alt="E-commerce Dashboard">
                         <div class="project-card-overlay">
                             <a href="#" class="project-link">
                                 View Details <i class="fas fa-arrow-right ml-2"></i>
                             </a>
-                            </div>
                         </div>
+                    </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">E-commerce Dashboard</h3>
-                        <p class="text-gray-600 mb-4">A modern dashboard for managing online stores with real-time analytics.</p>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Live Site Clone</h3>
+                        <p class="text-gray-600 mb-4">A modern dashboard for managing online stores with real-time
+                            analytics.</p>
                         <div class="flex flex-wrap gap-2">
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">Node.js</span>
-                            <span class="tech-badge">MongoDB</span>
-                            </div>
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">Figma Template</span>
                         </div>
+                    </div>
                 </div>
 
                 <!-- Project 2 -->
@@ -527,7 +543,8 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-gray-800">Fitness Tracking App</h3>
-                        <p class="text-gray-600 mb-4">Mobile app for tracking workouts and monitoring fitness progress.</p>
+                        <p class="text-gray-600 mb-4">Mobile app for tracking workouts and monitoring fitness progress.
+                        </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="tech-badge">React Native</span>
                             <span class="tech-badge">Firebase</span>
@@ -546,7 +563,7 @@
                                 View Details <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
-                            </div>
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-gray-800">Design System</h3>
                         <p class="text-gray-600 mb-4">A comprehensive design system for consistent brand experience.</p>
@@ -571,7 +588,8 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-gray-800">WordPress Blog Theme</h3>
-                        <p class="text-gray-600 mb-4">Custom WordPress theme with modern design and advanced features.</p>
+                        <p class="text-gray-600 mb-4">Custom WordPress theme with modern design and advanced features.
+                        </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="tech-badge">WordPress</span>
                             <span class="tech-badge">PHP</span>
@@ -595,11 +613,11 @@
                         <h3 class="text-xl font-bold mb-2 text-gray-800">Product Landing Page</h3>
                         <p class="text-gray-600 mb-4">High-converting landing page with modern animations and CTAs.</p>
                         <div class="flex flex-wrap gap-2">
-                                <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">HTML5</span>
                             <span class="tech-badge">CSS3</span>
-                                <span class="tech-badge">GSAP</span>
-                            </div>
+                            <span class="tech-badge">GSAP</span>
                         </div>
+                    </div>
                 </div>
 
                 <!-- Project 6 - Tailwind Project -->
@@ -619,9 +637,9 @@
                         <div class="flex flex-wrap gap-2">
                             <span class="tech-badge">Tailwind CSS</span>
                             <span class="tech-badge">Alpine.js</span>
-                                <span class="tech-badge">Chart.js</span>
-                            </div>
+                            <span class="tech-badge">Chart.js</span>
                         </div>
+                    </div>
                 </div>
 
                 <!-- Project 7 - CSS Project -->
@@ -642,9 +660,9 @@
                             <span class="tech-badge">CSS3</span>
                             <span class="tech-badge">SCSS</span>
                             <span class="tech-badge">JavaScript</span>
-                </div>
                         </div>
-                            </div>
+                    </div>
+                </div>
 
                 <!-- Project 8 - WordPress Shop -->
                 <div class="project-card" data-category="wordpress">
@@ -664,8 +682,8 @@
                             <span class="tech-badge">WordPress</span>
                             <span class="tech-badge">WooCommerce</span>
                             <span class="tech-badge">PHP</span>
-                </div>
-            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -908,9 +926,9 @@
                                                 d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                                         </svg>
                                         <h4 class="font-medium text-white">Maintenance</h4>
-                                        </div>
-                                    <p class="text-sm text-gray-400">Regular updates and security patches</p>
                                     </div>
+                                    <p class="text-sm text-gray-400">Regular updates and security patches</p>
+                                </div>
                                 <div class="bg-gray-700/50 p-4 rounded-lg">
                                     <div class="flex items-center mb-2">
                                         <svg class="w-5 h-5 text-purple-400 mr-2" fill="none" viewBox="0 0 24 24"
@@ -951,7 +969,7 @@
         .faq-toggle .rotate-icon {
             transition: transform 0.3s ease;
         }
-        
+
         .faq-toggle.active .rotate-icon {
             transform: rotate(180deg);
         }
@@ -976,12 +994,12 @@
         // FAQ Accordion functionality
         document.addEventListener('DOMContentLoaded', function () {
             const faqToggles = document.querySelectorAll('.faq-toggle');
-            
+
             faqToggles.forEach(toggle => {
                 toggle.addEventListener('click', () => {
                     const content = toggle.nextElementSibling;
                     const isActive = toggle.classList.contains('active');
-                    
+
                     // Close all other accordions
                     faqToggles.forEach(otherToggle => {
                         if (otherToggle !== toggle) {
