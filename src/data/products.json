@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "title": "Study Table",
+    "price": 4000,
+    "image": "/src/images/projects/Dorik Live Site Clone.png"
+  },
+  {
+    "id": 2,
+    "title": "Live Site Clone",
+    "price": 3200,
+    "description":"A modern dashboard for managing online stores with real-time analytics.",
+    "image": "/src/images/projects/Dorik Live Site Clone.png"
+  },
+  {
+    "id": 3,
+    "title": "Live Site Clone",
+    "price": 3200,
+    "description":"A modern dashboard for managing online stores with real-time analytics.",
+    "image": "/src/images/projects/Dorik Live Site Clone.png"
+  },
+  {
+    "id": 4,
+    "title": "Live Site Clone",
+    "price": 3200,
+    "description":"A modern dashboard for managing online stores with real-time analytics.",
+    "image": "/src/images/projects/Dorik Live Site Clone.png"
+  },
+  {
+    "id": 5,
+    "title": "Live Site Clone",
+    "price": 3200,
+    "description":"A modern dashboard for managing online stores with real-time analytics.",
+    "image": "/src/images/projects/Dorik Live Site Clone.png"
+  },
+  {
+    "id": 6,
+    "title": "Live Site Clone",
+    "price": 3200,
+    "description":"A modern dashboard for managing online stores with real-time analytics.",
+    "image": "/src/images/projects/Dorik Live Site Clone.png"
+  }
+]

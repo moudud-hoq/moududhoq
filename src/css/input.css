@@ -69,7 +69,7 @@
 
     /* Skill Cards */
     .skill-card {
-        @apply bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 transition-all duration-300 hover:-translate-y-1;
+        @apply bg-gradient-to-br from-gray-900/90 to-gray-900/50 backdrop-blur-sm border border-blue-700 transition-all duration-300 hover:-translate-y-1;
     }
 
     /* Project Cards */
