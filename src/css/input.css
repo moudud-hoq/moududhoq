@@ -82,7 +82,7 @@
     }
 
     .project-card-image img {
-        @apply w-full h-full object-contain transition-transform duration-700 hover:scale-110;
+        @apply w-full h-full object-cover transition-transform duration-700 hover:scale-110;
     }
 
     .project-card-overlay {

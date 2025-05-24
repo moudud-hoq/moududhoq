@@ -31,15 +31,17 @@
     },
     {
       "id": 3,
-      "title": "Design System",
-      "description": "A comprehensive design system for consistent brand experience.",
-      "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "link": "#",
-      "category": "ui",
+      "title": "Figma to Tailwind CSS",
+      "description": "A comprehensive design Using Tailwind CSS.",
+      "image": "./src/images/projectimage/shop.co.png",
+      "link": "https://moudud-hoq.github.io/project-01/",
+      "category": "web",
       "technologies": [
-        "Figma",
-        "Storybook",
-        "Tailwind"
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "jQuery Plugins: Slick Slider, Typewritter, Typed",
+        "Convert from Figma Template"
       ]
     },
     {
