@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.project-filter');
     const projectCards = document.querySelectorAll('.project-card');
     const projectsGrid = document.querySelector('.projects-grid');
@@ -20,16 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', () => {
             // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            
+
             // Add active class to clicked button
             button.classList.add('active');
-            
+
             const filter = button.getAttribute('data-filter');
-            
+
             // Reset show-all state
             isShowingAll = false;
             projectsGrid.classList.remove('show-all');
-            
+
             projectCards.forEach(card => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.style.display = 'block';
@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (viewAllButton) {
         viewAllButton.addEventListener('click', (e) => {
             e.preventDefault();
-            
+
             // Toggle show-all state
             isShowingAll = !isShowingAll;
-            
+
             if (isShowingAll) {
                 // Show all projects
                 projectsGrid.classList.add('show-all');
@@ -103,4 +103,78 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay.style.opacity = '0';
         });
     });
-}); 
+});
+
+// Function to create project card HTML
+function createProjectCard(project) {
+    return `
+        <div class="project-card" data-category="${project.category}">
+            <div class="project-card-image">
+                <img src="${project.image}" alt="${project.title}">
+                <div class="project-card-overlay">
+                    <a href="${project.link}" class="project-link">
+                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-gray-800">${project.title}</h3>
+                <p class="text-gray-600 mb-4">${project.description}</p>
+                ${project.figmaLink ? `<div class="my-3"><a href="${project.figmaLink}">Figma File</a></div>` : ''}
+                <div class="flex flex-wrap gap-2">
+                    ${project.technologies.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Function to load and display projects
+async function loadProjects() {
+    try {
+        const response = await fetch('./src/data/projects.json');
+        const data = await response.json();
+        const projectsGrid = document.querySelector('.projects-grid');
+
+        // Clear existing projects
+        projectsGrid.innerHTML = '';
+
+        // Add all projects
+        data.projects.forEach(project => {
+            projectsGrid.innerHTML += createProjectCard(project);
+        });
+
+        // Initialize project filters
+        initializeProjectFilters();
+    } catch (error) {
+        console.error('Error loading projects:', error);
+    }
+}
+
+// Function to initialize project filters
+function initializeProjectFilters() {
+    const filterButtons = document.querySelectorAll('.project-filter');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const filter = button.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+// Load projects when the document is ready
+document.addEventListener('DOMContentLoaded', loadProjects); 
