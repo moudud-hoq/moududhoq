@@ -28,6 +28,7 @@
         rel="stylesheet">
     <link href="./src/css/output.css" rel="stylesheet">
     <script src="src/js/main.js" defer></script>
+    <script src="src/js/faq.js" defer></script>
 
 
     <!-- Favicon -->
@@ -248,7 +249,7 @@
 
                     <!-- Quick Info -->
                     <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 mb-8">
-                        
+
                         <div class="flex items-center">
                             <i class="fas fa-check text-blue-400 mr-2"></i>
                             <span class="text-sm">HTML5</span>
@@ -337,7 +338,8 @@
                 <div class="lg:w-1/2">
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-700">
                         <div class="relative mb-8">
-                            <img src="https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/487868560_2859497670886650_1078534593812205352_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHAiW_G0MPT26CRNJ76QaJNPdBEy2vhmEU90ETLa-GYRXB_syuMGApQhLAfZ2EGWz8MulTd9qy9AqW2edYiIhsu&_nc_ohc=iS2UeMSXF5YQ7kNvwGDQYYC&_nc_oc=AdmnFkCLCwJs6Cn6ulSLz71oXk7RRKOM9-O3WnW-1j-UDFeyFDfqo0HwoDaCyd5-_t0&_nc_zt=23&_nc_ht=scontent.fdac5-1.fna&_nc_gid=-Ty4AHHRhVFIVt6bRPLGkw&oh=00_AfJI1QrsDOVML9g9EpySpKDE_JW_MLqdtwVjEUwJFSg3wg&oe=6837A71F" alt="Profile"
+                            <img src="https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/487868560_2859497670886650_1078534593812205352_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHAiW_G0MPT26CRNJ76QaJNPdBEy2vhmEU90ETLa-GYRXB_syuMGApQhLAfZ2EGWz8MulTd9qy9AqW2edYiIhsu&_nc_ohc=iS2UeMSXF5YQ7kNvwGDQYYC&_nc_oc=AdmnFkCLCwJs6Cn6ulSLz71oXk7RRKOM9-O3WnW-1j-UDFeyFDfqo0HwoDaCyd5-_t0&_nc_zt=23&_nc_ht=scontent.fdac5-1.fna&_nc_gid=-Ty4AHHRhVFIVt6bRPLGkw&oh=00_AfJI1QrsDOVML9g9EpySpKDE_JW_MLqdtwVjEUwJFSg3wg&oe=6837A71F"
+                                alt="Profile"
                                 class="rounded-full shadow-2xl w-80 max-w-md mx-auto transform hover:scale-[1.02] transition-transform duration-300">
                             <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
                                 <div class="flex gap-2">
@@ -716,287 +718,18 @@
     </script>
 
     <!-- FAQ Section -->
-    <section class="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="text-center mb-16">
-                <span class="text-sm font-semibold tracking-wider text-blue-400 uppercase">Help Center</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Frequently Asked <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Questions</span>
-                </h2>
-                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Find quick answers to common questions about my services
-                    and process.</p>
+    <section id="faq" class="py-20 bg-gradient-to-b from-gray-800 to-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Find answers to common questions about my services and development process.</p>
             </div>
-
-            <div class="max-w-3xl mx-auto space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
-                    <button class="faq-toggle w-full px-6 py-4 text-left focus:outline-none">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-lg font-semibold text-white group-hover:text-blue-400">
-                                What services do you offer?
-                            </h3>
-                            <div class="ml-4 transition-transform duration-300 transform rotate-icon">
-                                <svg class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </div>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-5">
-                        <div class="pt-2 border-t border-gray-700">
-                            <p class="text-gray-300">I offer comprehensive web development services including:</p>
-                            <ul class="mt-3 space-y-2 pl-5 text-gray-400">
-                                <li class="flex items-center">
-                                    <svg class="w-4 h-4 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7" />
-                                    </svg>
-                                    Custom website development
-                                </li>
-                                <li class="flex items-center">
-                                    <svg class="w-4 h-4 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7" />
-                                    </svg>
-                                    Responsive design implementation
-                                </li>
-                                <li class="flex items-center">
-                                    <svg class="w-4 h-4 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7" />
-                                    </svg>
-                                    Performance optimization
-                                </li>
-                                <li class="flex items-center">
-                                    <svg class="w-4 h-4 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7" />
-                                    </svg>
-                                    UI/UX design consultation
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 2 -->
-                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
-                    <button class="faq-toggle w-full px-6 py-4 text-left focus:outline-none">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-lg font-semibold text-white group-hover:text-blue-400">
-                                How long does a typical project take?
-                            </h3>
-                            <div class="ml-4 transition-transform duration-300 transform rotate-icon">
-                                <svg class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </div>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-5">
-                        <div class="pt-2 border-t border-gray-700">
-                            <p class="text-gray-300">Project timelines vary based on complexity:</p>
-                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="bg-gray-700/50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-blue-400">Basic Website</h4>
-                                    <p class="text-sm mt-1 text-gray-400">2-4 weeks</p>
-                                </div>
-                                <div class="bg-gray-700/50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-purple-400">Web Application</h4>
-                                    <p class="text-sm mt-1 text-gray-400">2-6 months</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
-                    <button class="faq-toggle w-full px-6 py-4 text-left focus:outline-none">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-lg font-semibold text-white group-hover:text-blue-400">
-                                What's your pricing structure?
-                            </h3>
-                            <div class="ml-4 transition-transform duration-300 transform rotate-icon">
-                                <svg class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </div>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-5">
-                        <div class="pt-2 border-t border-gray-700">
-                            <p class="text-gray-300">I offer flexible pricing options:</p>
-                            <div class="mt-4 space-y-4">
-                                <div class="flex items-start">
-                                    <div class="bg-blue-400/20 p-2 rounded-full mr-3">
-                                        <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium text-white">Fixed Price</h4>
-                                        <p class="text-sm mt-1 text-gray-400">For well-defined projects with clear
-                                            requirements</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="bg-purple-400/20 p-2 rounded-full mr-3">
-                                        <svg class="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium text-white">Hourly Rate</h4>
-                                        <p class="text-sm mt-1 text-gray-400">For ongoing work or projects with evolving
-                                            requirements</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 4 -->
-                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
-                    <button class="faq-toggle w-full px-6 py-4 text-left focus:outline-none">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-lg font-semibold text-white group-hover:text-blue-400">
-                                Do you provide ongoing support?
-                            </h3>
-                            <div class="ml-4 transition-transform duration-300 transform rotate-icon">
-                                <svg class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </div>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-5">
-                        <div class="pt-2 border-t border-gray-700">
-                            <p class="text-gray-300">Yes, I offer several support options:</p>
-                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="bg-gray-700/50 p-4 rounded-lg">
-                                    <div class="flex items-center mb-2">
-                                        <svg class="w-5 h-5 text-blue-400 mr-2" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                                        </svg>
-                                        <h4 class="font-medium text-white">Maintenance</h4>
-                                    </div>
-                                    <p class="text-sm text-gray-400">Regular updates and security patches</p>
-                                </div>
-                                <div class="bg-gray-700/50 p-4 rounded-lg">
-                                    <div class="flex items-center mb-2">
-                                        <svg class="w-5 h-5 text-purple-400 mr-2" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                                        </svg>
-                                        <h4 class="font-medium text-white">Technical Support</h4>
-                                    </div>
-                                    <p class="text-sm text-gray-400">Priority response for urgent issues</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Section -->
-            <div class="mt-16 text-center">
-                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 max-w-2xl mx-auto">
-                    <h3 class="text-xl font-bold text-white">Still have questions?</h3>
-                    <p class="mt-2 text-gray-400">I'm happy to answer any other questions you might have.</p>
-                    <a href="#contact"
-                        class="mt-6 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1">
-                        Contact Me
-                        <svg class="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                </div>
+            
+            <div id="faq-container" class="max-w-3xl mx-auto">
+                <!-- FAQ items will be dynamically loaded here -->
             </div>
         </div>
     </section>
-
-    <style>
-        /* FAQ Accordion Styles */
-        .faq-toggle .rotate-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .faq-toggle.active .rotate-icon {
-            transform: rotate(180deg);
-        }
-
-        .faq-content {
-            transition: all 0.3s ease-in-out;
-            max-height: 0;
-            overflow: hidden;
-        }
-
-        .faq-content.active {
-            max-height: 1000px;
-        }
-
-        .faq-toggle:hover h3 {
-            color: #60A5FA;
-            /* text-blue-400 */
-        }
-    </style>
-
-    <script>
-        // FAQ Accordion functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const faqToggles = document.querySelectorAll('.faq-toggle');
-
-            faqToggles.forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const isActive = toggle.classList.contains('active');
-
-                    // Close all other accordions
-                    faqToggles.forEach(otherToggle => {
-                        if (otherToggle !== toggle) {
-                            otherToggle.classList.remove('active');
-                            otherToggle.nextElementSibling.classList.remove('active');
-                            otherToggle.nextElementSibling.classList.add('hidden');
-                        }
-                    });
-
-                    // Toggle current accordion
-                    toggle.classList.toggle('active');
-                    content.classList.toggle('hidden');
-                    content.classList.toggle('active');
-
-                    // Smooth animation for opening/closing
-                    if (!isActive) {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                    } else {
-                        content.style.maxHeight = null;
-                    }
-                });
-            });
-        });
-    </script>
 
     <!-- Pricing Section -->
     <section class="py-20 bg-gray-50">

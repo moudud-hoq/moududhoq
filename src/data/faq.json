@@ -1,0 +1,24 @@
+{
+  "faqs": [
+    {
+      "question": "What web development services do you offer?",
+      "answer": "I specialize in front-end development with expertise in HTML5, CSS3, and JavaScript. I offer WordPress customization, WooCommerce development, and website speed optimization. I can convert Figma designs into responsive websites using HTML, CSS, Tailwind CSS, and implement them in WordPress or WooCommerce platforms."
+    },
+    {
+      "question": "Do you work with WordPress and WooCommerce?",
+      "answer": "Yes, I specialize in WordPress customization and WooCommerce development. I can help with custom theme development, plugin customization, e-commerce setup, payment gateway integration, and store management. I also ensure your WordPress site is optimized for speed and performance."
+    },
+    {
+      "question": "What is your design-to-code process?",
+      "answer": "I can convert your Figma designs into fully functional websites. My process includes: 1) Analyzing the design files, 2) Converting to semantic HTML5, 3) Implementing responsive CSS3/Tailwind CSS, 4) Adding interactivity with JavaScript/jQuery, 5) Implementing in WordPress/WooCommerce if required, and 6) Optimizing for performance and speed."
+    },
+    {
+      "question": "How do you ensure website performance?",
+      "answer": "I implement several optimization techniques including: image optimization, code minification, caching implementation, database optimization, and using performance-focused development practices. I also ensure mobile responsiveness and fast loading times across all devices."
+    },
+    {
+      "question": "What technologies do you use for front-end development?",
+      "answer": "I work with modern front-end technologies including HTML5 for structure, CSS3/Tailwind CSS for styling, JavaScript for interactivity, and jQuery for enhanced functionality. I also use various development tools and plugins to ensure efficient and high-quality code delivery."
+    }
+  ]
+}
