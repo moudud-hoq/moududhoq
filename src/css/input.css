@@ -107,8 +107,8 @@
     }
 
     .project-filter {
-        @apply px-6 py-2 text-base font-medium rounded-full 
-        border-2 border-transparent hover:border-green-500
+        @apply px-6 py-2 text-base font-medium rounded-full text-white
+        border-2 border-transparent border-gray-500 hover:border-green-500
         transition-all duration-300 transform hover:scale-105;
     }
 

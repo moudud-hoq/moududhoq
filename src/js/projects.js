@@ -112,7 +112,7 @@ function createProjectCard(project) {
             <div class="project-card-image">
                 <img src="${project.image}" alt="${project.title}">
                 <div class="project-card-overlay">
-                    <a href="${project.link}" class="project-link">
+                    <a href="${project.link}" class="project-link" target="_blank" rel="noopener noreferrer">
                         View Details <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -120,7 +120,7 @@ function createProjectCard(project) {
             <div class="p-6">
                 <h3 class="text-xl font-bold mb-2 text-gray-800">${project.title}</h3>
                 <p class="text-gray-600 mb-4">${project.description}</p>
-                ${project.figmaLink ? `<div class="my-3"><a href="${project.figmaLink}">Figma File</a></div>` : ''}
+                ${project.figmaLink ? `<div class="my-3"><a href="${project.figmaLink}" target="_blank" rel="noopener noreferrer">Figma File</a></div>` : ''}
                 <div class="flex flex-wrap gap-2">
                     ${project.technologies.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
                 </div>
