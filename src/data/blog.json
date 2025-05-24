@@ -1,0 +1,54 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "The Future of Web Development: Trends to Watch in 2024",
+      "description": "Explore the latest trends in web development, from AI integration to advanced CSS techniques that are shaping the future of the web.",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
+      "date": "2024-03-15",
+      "readTime": "5 min read",
+      "views": 1245,
+      "category": "Web Development"
+    },
+    {
+      "id": 2,
+      "title": "Mastering Tailwind CSS: A Comprehensive Guide",
+      "description": "Learn how to leverage Tailwind CSS to create stunning, responsive designs with minimal effort and maximum efficiency.",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
+      "date": "2024-03-10",
+      "readTime": "8 min read",
+      "views": 987,
+      "category": "CSS"
+    },
+    {
+      "id": 3,
+      "title": "JavaScript Best Practices for 2024",
+      "description": "Discover the most effective JavaScript practices and patterns that will help you write cleaner, more maintainable code.",
+      "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800",
+      "date": "2024-03-05",
+      "readTime": "6 min read",
+      "views": 1567,
+      "category": "JavaScript"
+    },
+    {
+      "id": 4,
+      "title": "Building Responsive Websites: A Complete Guide",
+      "description": "A comprehensive guide to creating websites that look and function perfectly across all devices and screen sizes.",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800",
+      "date": "2024-02-28",
+      "readTime": "7 min read",
+      "views": 2134,
+      "category": "Responsive Design"
+    },
+    {
+      "id": 5,
+      "title": "WordPress Development: Tips and Tricks",
+      "description": "Learn advanced WordPress development techniques to create custom themes and plugins that stand out.",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800",
+      "date": "2024-02-20",
+      "readTime": "9 min read",
+      "views": 1789,
+      "category": "WordPress"
+    }
+  ]
+}
