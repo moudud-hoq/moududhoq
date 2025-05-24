@@ -1223,7 +1223,7 @@
     </button>
 
     <!-- Go to Footer Button -->
-    <button id="goToFooter" class="fixed right-6 bottom-24 w-12 h-12 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-all duration-300 z-50 flex items-center justify-center group" aria-label="Go to footer">
+    <button id="goToFooter" class="fixed right-6 bottom-24 w-12 h-12 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-all duration-300 z-50 flex items-center justify-center group opacity-100" aria-label="Go to footer">
         <i class="fas fa-arrow-down text-xl group-hover:animate-bounce"></i>
     </button>
 
@@ -1317,6 +1317,12 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <script src="./src/js/projects.js"></script>
+
+    <style>
+        #goToFooter {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+    </style>
 </body>
 
 </html>
