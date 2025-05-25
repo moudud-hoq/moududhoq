@@ -46,68 +46,63 @@
     },
     {
       "id": 4,
+      "title": "Figma to Tailwind CSS",
+      "description": "A comprehensive design Using Tailwind CSS.",
+      "image": "./src/images/projectimage/myTutor.png",
+      "link": "https://moudud-hoq.github.io/educationalcourse/",
+      "category": "web",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "jQuery Plugins: Slick Slider, Counter Up",
+        "Convert from Figma Template"
+      ]
+    },
+    {
+      "id": 5,
       "title": "Fitness Tracking App",
       "description": "Mobile app for tracking workouts and monitoring fitness progress.",
       "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "link": "#",
       "category": "mobile",
-      "technologies": [
-        "React Native",
-        "Firebase",
-        "Redux"
-      ]
+      "technologies": ["React Native", "Firebase", "Redux"]
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Product Landing Page",
       "description": "High-converting landing page with modern animations and CTAs.",
       "image": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "link": "#",
       "category": "web",
-      "technologies": [
-        "HTML5",
-        "CSS3",
-        "GSAP"
-      ]
+      "technologies": ["HTML5", "CSS3", "GSAP"]
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Admin Dashboard",
       "description": "Modern admin dashboard built with Tailwind CSS and Alpine.js.",
       "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "link": "#",
       "category": "web",
-      "technologies": [
-        "Tailwind CSS",
-        "Alpine.js",
-        "Chart.js"
-      ]
+      "technologies": ["Tailwind CSS", "Alpine.js", "Chart.js"]
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "CSS Animation Library",
       "description": "Collection of reusable CSS animations and transitions.",
       "image": "https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "link": "#",
       "category": "web",
-      "technologies": [
-        "CSS3",
-        "SCSS",
-        "JavaScript"
-      ]
+      "technologies": ["CSS3", "SCSS", "JavaScript"]
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "WooCommerce Shop",
       "description": "Custom WooCommerce theme for a fashion boutique.",
       "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "link": "#",
       "category": "wordpress",
-      "technologies": [
-        "WordPress",
-        "WooCommerce",
-        "PHP"
-      ]
+      "technologies": ["WordPress", "WooCommerce", "PHP"]
     }
   ]
 }
