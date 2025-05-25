@@ -21,7 +21,7 @@
       "description": "I have clone a live site named dorik.ai.",
       "image": "./src/images/projects/Dorik Live Site Clone.png",
       "link": "https://moudud-hoq.github.io/rrf-16th-assignment/",
-      "category": "web",
+      "category": "css3",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -35,7 +35,7 @@
       "description": "A comprehensive design Using Tailwind CSS.",
       "image": "./src/images/projectimage/shop.co.png",
       "link": "https://moudud-hoq.github.io/project-01/",
-      "category": "web",
+      "category": "tailwind",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -50,7 +50,7 @@
       "description": "A comprehensive design Using Tailwind CSS.",
       "image": "./src/images/projectimage/myTutor.png",
       "link": "https://moudud-hoq.github.io/educationalcourse/",
-      "category": "web",
+      "category": "tailwind",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -61,47 +61,40 @@
     },
     {
       "id": 5,
-      "title": "Fitness Tracking App",
-      "description": "Mobile app for tracking workouts and monitoring fitness progress.",
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "link": "#",
-      "category": "mobile",
-      "technologies": ["React Native", "Firebase", "Redux"]
+      "title": "Lessons Landing Page",
+      "description": "High-converting landing page with modern animations and CTAs.",
+      "image": "./../src/images/projectimage/lesson.png",
+      "link": "https://moudud-hoq.github.io/RRF-Education/",
+      "category": "css3",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "jQuery Plugins: Slick Slider, Counter Up",
+        "Convert from Figma Template"
+      ]
     },
     {
       "id": 6,
-      "title": "Product Landing Page",
+      "title": "Lessons Landing Page",
       "description": "High-converting landing page with modern animations and CTAs.",
-      "image": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "link": "#",
-      "category": "web",
-      "technologies": ["HTML5", "CSS3", "GSAP"]
+      "image": "./../src/images/projectimage/lesson.png",
+      "link": "https://moudud-hoq.github.io/rrf-landing-page-with-tailwindcss/",
+      "category": "tailwind",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "jQuery Plugins: Slick Slider, Counter Up",
+        "Convert from Figma Template"
+      ]
     },
     {
       "id": 7,
-      "title": "Admin Dashboard",
-      "description": "Modern admin dashboard built with Tailwind CSS and Alpine.js.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "link": "#",
-      "category": "web",
-      "technologies": ["Tailwind CSS", "Alpine.js", "Chart.js"]
-    },
-    {
-      "id": 8,
-      "title": "CSS Animation Library",
-      "description": "Collection of reusable CSS animations and transitions.",
-      "image": "https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "link": "#",
-      "category": "web",
-      "technologies": ["CSS3", "SCSS", "JavaScript"]
-    },
-    {
-      "id": 9,
       "title": "WooCommerce Shop",
       "description": "Custom WooCommerce theme for a fashion boutique.",
       "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "link": "#",
-      "category": "wordpress",
+      "category": "woocommerce",
       "technologies": ["WordPress", "WooCommerce", "PHP"]
     }
   ]
