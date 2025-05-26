@@ -101,6 +101,20 @@
         "Elementor Builder",
         "Convert from Figma Template"
       ]
+    },
+    {
+      "id": 8,
+      "title": "Wordpress Landing Page",
+      "description": "The site develop by Hello Elementor and Free Elementor Builder.",
+      "image": "./../src/images/projectimage/xinder.png",
+      "link": "https://dev-rrfbjan25practice.pantheonsite.io/",
+      "category": "wordpress",
+      "technologies": [
+        "WordPress",
+        "Hello Elementor Theme",
+        "Elementor Builder",
+        "Convert from Figma Template"
+      ]
     }
   ]
 }
