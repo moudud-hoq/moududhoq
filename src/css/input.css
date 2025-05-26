@@ -4,6 +4,10 @@
 
 /* Custom styles */
 @layer components {
+
+    .hero-skills{
+        @apply px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300;
+    }
     .btn-gradient {
         @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white transition-all duration-300;
     }

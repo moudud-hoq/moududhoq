@@ -27,14 +27,31 @@
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link href="./src/css/output.css" rel="stylesheet">
+
+    <!-- Slick Slider style -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
+    <!-- JS Code -->
     <script src="src/js/main.js" defer></script>
     <script src="src/js/faq.js" defer></script>
 
     <!-- jQuery Code -->
     <script src="src/js/jQueryPlugins.js" defer></script>
 
-    <!-- jQuery Plugin -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery Typed Plugin -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Waypoints (Dependency for Counter-Up) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <!-- Counter-Up Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://tinyurl.com/jeyrfdsh">
@@ -253,38 +270,17 @@
 
                     <!-- Quick Info -->
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <span
-                            class="px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300">HTML5</span>
-                        <span
-                            class="px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300">CSS3</span>
-                        <span
-                            class="px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300">Tailwind
-                            CSS</span>
-                        <span
-                            class="px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300">JavaScript
-                            (Basic)</span>
-                        <span
-                            class="px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300">SASS
-                        </span>
-                        <span
-                            class="px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300">jQuery
-                            Plugins</span>
-                        <span
-                            class="px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300">WordPress
-                            Customization</span>
-                        <span
-                            class="px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300">WooCommerce
-                            Customization and Management
-                        </span>
-                        <span
-                            class="px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300">Website
-                            Speed Optimization</span>
-                        <span
-                            class="px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300">Website
-                            SEO</span>
-                        <span
-                            class="px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300">Figma
-                            to HTML, CSS, Tailwind, Wordpress, WooCommerce</span>
+                        <span class="hero-skills">HTML5</span>
+                        <span class="hero-skills">CSS3</span>
+                        <span class="hero-skills">SASS</span>
+                        <span class="hero-skills">Tailwind CSS</span>
+                        <span class="hero-skills">jQueryPlugins</span>
+                        <span class="hero-skills">Website SEO</span>
+                        <span class="hero-skills">JavaScript(Basic)</span>
+                        <span class="hero-skills">WordPress Customization</span>
+                        <span class="hero-skills">Website Speed Optimization</span>
+                        <span class="hero-skills">WooCommerce Customization and Management</span>
+                        <span class="hero-skills">Figma to HTML, CSS, Tailwind, Wordpress, WooCommerce</span>
                     </div>
 
                     <!-- CTA Buttons -->
@@ -349,13 +345,13 @@
                 <div class="lg:w-1/2">
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-700">
                         <div class="relative mb-8 flex flex-col md:flex-row items-center ">
-                            <h3 class="text-2xl font-bold mb-4">Who am I?</h3>
+                            <h3 class="text-2xl font-bold mb-4">Who am I <span class="text-5xl text-orange-500">?</span>
+                            </h3>
                             <img src="./src/images/MoududHoq.png" alt="Profile"
                                 class="rounded-sm shadow-2xl w-full max-w-[220px] h-auto mx-auto transform hover:scale-[1.02] transition-transform duration-300 object-contain">
                             <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
                                 <div class="flex gap-2">
-                                    <span
-                                        class="px-4 py-2 bg-blue-500  rounded-full text-sm font-semibold shadow-lg">
+                                    <span class="px-4 py-2 bg-blue-500  rounded-full text-sm font-semibold shadow-lg">
                                         Learning & Growing
                                     </span>
                                 </div>
@@ -365,36 +361,41 @@
                         <div class="text-justify">
                             <p class="text-gray-300 mb-6">
                                 I'm an aspiring web developer actively building my portfolio through practical projects,
-                                focusing on HTML5, CSS3, Tailwind CSS, JavaScript and jQuery Plugins.
+                                focusing on HTML5, CSS3, Tailwind CSS, JavaScript, jQuery Plugins and Wordpress.
                                 Each project is an opportunity to learn, grow, and apply new skills in real-world
                                 scenarios.
                             </p>
                             <p class="text-gray-300 mb-6">
                                 My goal is to develop clean, responsive, and user-friendly websites while continuously
-                                expanding my knowledge
-                                in modern web development practices and tools.
+                                expanding my knowledge in modern web development practices and tools.
                             </p>
                         </div>
 
                         <!-- Stats -->
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                             <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                                <h4 class="text-2xl font-bold text-blue-400">5+</h4>
+                                <h4 class="text-2xl font-bold text-blue-400"><span
+                                        class="counter">10</span><span>+</span></h4>
                                 <p class="text-sm text-gray-400">Projects</p>
                             </div>
                             <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                                <h4 class="text-2xl font-bold text-purple-400">3+</h4>
+                                <h4 class="text-2xl font-bold text-purple-400"><span
+                                        class="counter">10</span><span>+</span></h4>
                                 <p class="text-sm text-gray-400">Skills</p>
                             </div>
                             <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                                <h4 class="text-2xl font-bold text-green-400">2+</h4>
-                                <p class="text-sm text-gray-400">Months</p>
+                                <h4 class="text-2xl font-bold text-green-400"><span
+                                        class="counter">1</span><span>+</span></h4>
+                                <p class="text-sm text-gray-400">Years</p>
                             </div>
                             <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                                <h4 class="text-2xl font-bold text-yellow-400">100%</h4>
+                                <h4 class="text-2xl font-bold text-yellow-400"><span
+                                        class="counter">100</span><span>%</span></h4>
                                 <p class="text-sm text-gray-400">Dedication</p>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
 
@@ -404,9 +405,12 @@
 
     <!-- Skills Section -->
     <section id="skills" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white">My <span
                     class="text-blue-500">Skills</span></h2>
+
+            <!-- Complete Skills -->
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
 
                 <!-- HTML5 -->
@@ -457,22 +461,6 @@
                     </div>
                 </div>
 
-                <!-- JavaScript -->
-                <div
-                    class="flex flex-col justify-between skill-card bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
-                    <div class="text-[#F7DF1E] text-3xl mb-2">
-                        <h3 class="text-lg font-bold">JavaScript</h3>
-                    </div>
-                    <p class="text-gray-300 text-sm mb-2">Interactive web applications.</p>
-                    <div class="flex items-center justify-between mb-1">
-                        <span class="text-xs text-gray-400">Progress</span>
-                        <span class="text-xs font-medium text-[#F7DF1E]">25%</span>
-                    </div>
-                    <div class="w-full bg-gray-700 rounded-full h-1.5">
-                        <div class="bg-[#F7DF1E] h-1.5 rounded-full" style="width: 25%"></div>
-                    </div>
-                </div>
-
                 <!-- WordPress -->
                 <div
                     class="flex flex-col justify-between skill-card bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
@@ -483,10 +471,10 @@
                         Plugins, etc.</p>
                     <div class="flex items-center justify-between mb-1">
                         <span class="text-xs text-gray-400">Progress</span>
-                        <span class="text-xs font-medium text-[#21759B]">90%</span>
+                        <span class="text-xs font-medium text-[#21759B]">70%</span>
                     </div>
                     <div class="w-full bg-gray-700 rounded-full h-1.5">
-                        <div class="bg-[#21759B] h-1.5 rounded-full" style="width: 90%"></div>
+                        <div class="bg-[#21759B] h-1.5 rounded-full" style="width: 70%"></div>
                     </div>
                 </div>
 
@@ -499,10 +487,10 @@
                     <p class="text-gray-300 text-sm mb-2">E-commerce customization and Management.</p>
                     <div class="flex items-center justify-between mb-1">
                         <span class="text-xs text-gray-400">Progress</span>
-                        <span class="text-xs font-medium text-[#96588A]">85%</span>
+                        <span class="text-xs font-medium text-[#96588A]">60%</span>
                     </div>
                     <div class="w-full bg-gray-700 rounded-full h-1.5">
-                        <div class="bg-[#96588A] h-1.5 rounded-full" style="width: 85%"></div>
+                        <div class="bg-[#96588A] h-1.5 rounded-full" style="width: 60%"></div>
                     </div>
                 </div>
 
@@ -537,16 +525,72 @@
                         <div class="bg-[#4285F4] h-1.5 rounded-full" style="width: 70%"></div>
                     </div>
                 </div>
+
+                <!-- Speed Optimization -->
+                <div
+                    class="flex flex-col justify-between skill-card bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
+                    <div class="text-[#4285F4] text-3xl mb-2">
+                        <h3 class="text-lg font-bold">SEO</h3>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-2">Website Speed optimization.</p>
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="text-xs text-gray-400">Progress</span>
+                        <span class="text-xs font-medium text-[#4285F4]">80%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-1.5">
+                        <div class="bg-[#4285F4] h-1.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
             </div>
+
 
             <!-- Upcoming Skills Section -->
             <div class="mt-16">
                 <h3 class="text-2xl font-bold text-center mb-8 text-white">Currently <span
                         class="text-purple-500">Learning</span></h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+
+                    <!-- Javascript -->
+                    <div
+                        class="flex flex-col justify-between bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-code text-2xl text-purple-400"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white">Javascript</h4>
+                        </div>
+                        <p class="text-gray-400">Learning Javascript for interactive web applications.</p>
+                        <div class="mt-4 flex items-center">
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 25%"></div>
+                            </div>
+                            <span class="ml-2 text-sm text-purple-400">25%</span>
+                        </div>
+                    </div>
+
+                    <!-- PHP -->
+                    <div
+                        class="flex flex-col justify-between bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-laptop-code text-2xl text-purple-400"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white">PHP</h4>
+                        </div>
+                        <p class="text-gray-400">Learning as server-side scripting language used to build dynamic
+                            websites.</p>
+                        <div class="mt-4 flex items-center">
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 25%"></div>
+                            </div>
+                            <span class="ml-2 text-sm text-purple-400">25%</span>
+                        </div>
+                    </div>
+
                     <!-- MySQL -->
                     <div
-                        class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-1">
+                        class="flex flex-col justify-between bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-1">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="fas fa-database text-2xl text-purple-400"></i>
@@ -564,7 +608,7 @@
 
                     <!-- WordPress Theme Development -->
                     <div
-                        class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-1">
+                        class="flex flex-col justify-between bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-1">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="fab fa-wordpress text-2xl text-purple-400"></i>
@@ -582,7 +626,7 @@
 
                     <!-- Shopify Theme Development -->
                     <div
-                        class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-1">
+                        class="flex flex-col justify-between bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-1">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mr-4">
                                 <i class="fab fa-shopify text-2xl text-purple-400"></i>
@@ -592,14 +636,17 @@
                         <p class="text-gray-400">Learning to create custom Shopify themes and apps</p>
                         <div class="mt-4 flex items-center">
                             <div class="w-full bg-gray-700 rounded-full h-2">
-                                <div class="bg-purple-500 h-2 rounded-full" style="width: 30%"></div>
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 10%"></div>
                             </div>
-                            <span class="ml-2 text-sm text-purple-400">30%</span>
+                            <span class="ml-2 text-sm text-purple-400">10%</span>
                         </div>
                     </div>
+
                 </div>
             </div>
+
         </div>
+
     </section>
 
     <style>
@@ -611,6 +658,44 @@
             @apply bg-gray-800;
         }
     </style>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.skill-slider').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2500,
+                speed: 800,
+                arrows: true,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+
 
     <!-- Projects Section -->
     <section id="work" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">

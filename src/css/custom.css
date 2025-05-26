@@ -44,3 +44,30 @@
     width: 100%;
     height: 100%;
 }
+
+
+/* Slick Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+
+.slick-slide {
+    border: 12px solid #0055ff;
+}
+
+.slick-list {
+    border: 5px solid red;
+}
+
+.slick-active {
+    background-color: red;
+}
+
+.flex.flex-col.justify-between.skill-card.slick-slide {
+    background-color: red;
+}

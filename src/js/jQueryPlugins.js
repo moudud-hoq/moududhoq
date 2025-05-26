@@ -23,3 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: true
     });
 });
+
+
+$(document).ready(function () {
+    $('.counter').counterUp({
+        delay: 10, // delay in ms
+        time: 1000 // total time in ms
+    });
+});
