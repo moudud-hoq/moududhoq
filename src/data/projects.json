@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Plumber Site",
       "description": "Here I have used Hello Elementor theme and Free Elementor Builder.",
-      "image": "./src/images/projectimage/plumberSite.png",
+      "image": "./../src/images/projectimage/plumberSite.png",
       "link": "https://plumber.hoqtech.com/wp/",
       "figmaLink": "#",
       "category": "wordpress",
@@ -19,7 +19,7 @@
       "id": 2,
       "title": "Live Site Clone",
       "description": "I have clone a live site named dorik.ai.",
-      "image": "./src/images/projects/Dorik Live Site Clone.png",
+      "image": "./../src/images/projects/Dorik Live Site Clone.png",
       "link": "https://moudud-hoq.github.io/rrf-16th-assignment/",
       "category": "css3",
       "technologies": [
@@ -33,7 +33,7 @@
       "id": 3,
       "title": "Figma to Tailwind CSS",
       "description": "A comprehensive design Using Tailwind CSS.",
-      "image": "./src/images/projectimage/shop.co.png",
+      "image": "./../src/images/projectimage/shop.co.png",
       "link": "https://moudud-hoq.github.io/project-01/",
       "category": "tailwind",
       "technologies": [
@@ -48,7 +48,7 @@
       "id": 4,
       "title": "Figma to Tailwind CSS",
       "description": "A comprehensive design Using Tailwind CSS.",
-      "image": "./src/images/projectimage/myTutor.png",
+      "image": "./../src/images/projectimage/myTutor.png",
       "link": "https://moudud-hoq.github.io/educationalcourse/",
       "category": "tailwind",
       "technologies": [
