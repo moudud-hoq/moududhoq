@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Plumber Site",
       "description": "Here I have used Hello Elementor theme and Free Elementor Builder.",
-      "image": "./../src/images/projectimage/plumberSite.png",
+      "image": "./src/images/projectimage/plumberSite.png",
       "link": "https://plumber.hoqtech.com/wp/",
       "figmaLink": "#",
       "category": "wordpress",
@@ -19,7 +19,7 @@
       "id": 2,
       "title": "Live Site Clone",
       "description": "I have clone a live site named dorik.ai.",
-      "image": "./../src/images/projects/Dorik Live Site Clone.png",
+      "image": "./src/images/projects/Dorik Live Site Clone.png",
       "link": "https://moudud-hoq.github.io/rrf-16th-assignment/",
       "category": "css3",
       "technologies": [
@@ -33,7 +33,7 @@
       "id": 3,
       "title": "Figma to Tailwind CSS",
       "description": "A comprehensive design Using Tailwind CSS.",
-      "image": "./../src/images/projectimage/shop.co.png",
+      "image": "./src/images/projectimage/shop.co.png",
       "link": "https://moudud-hoq.github.io/project-01/",
       "category": "tailwind",
       "technologies": [
@@ -48,7 +48,7 @@
       "id": 4,
       "title": "Figma to Tailwind CSS",
       "description": "A comprehensive design Using Tailwind CSS.",
-      "image": "./../src/images/projectimage/myTutor.png",
+      "image": "./src/images/projectimage/myTutor.png",
       "link": "https://moudud-hoq.github.io/educationalcourse/",
       "category": "tailwind",
       "technologies": [
@@ -63,7 +63,7 @@
       "id": 5,
       "title": "Lessons Landing Page",
       "description": "High-converting landing page with modern animations and CTAs.",
-      "image": "./../src/images/projectimage/lesson.png",
+      "image": "./src/images/projectimage/lesson.png",
       "link": "https://moudud-hoq.github.io/RRF-Education/",
       "category": "css3",
       "technologies": [
@@ -77,7 +77,7 @@
       "id": 6,
       "title": "Lessons Landing Page",
       "description": "High-converting landing page with modern animations and CTAs.",
-      "image": "./../src/images/projectimage/lesson.png",
+      "image": "./src/images/projectimage/lesson.png",
       "link": "https://moudud-hoq.github.io/rrf-landing-page-with-tailwindcss/",
       "category": "tailwind",
       "technologies": [
@@ -92,7 +92,7 @@
       "id": 7,
       "title": "Wordpress Landing Page",
       "description": "The site develop by Hello Elementor and Free Elementor Builder.",
-      "image": "./../src/images/projectimage/magnifico.png",
+      "image": "./src/images/projectimage/magnifico.png",
       "link": "https://dev-rrfbjan25practice.pantheonsite.io/landing-page-5/",
       "category": "wordpress",
       "technologies": [
@@ -106,7 +106,7 @@
       "id": 8,
       "title": "Wordpress Landing Page",
       "description": "The site develop by Hello Elementor and Free Elementor Builder.",
-      "image": "./../src/images/projectimage/xinder.png",
+      "image": "./src/images/projectimage/xinder.png",
       "link": "https://dev-rrfbjan25practice.pantheonsite.io/",
       "category": "wordpress",
       "technologies": [
