@@ -1,7 +1,7 @@
 // Load and display FAQ data
 async function loadFAQs() {
     try {
-        const response = await fetch('./src/data/faq.json');
+        const response = await fetch('../../src/data/faq.json');
         const data = await response.json();
         const faqContainer = document.getElementById('faq-container');
         
