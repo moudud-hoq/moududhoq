@@ -117,7 +117,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "Upcomming",
       "description": "Upcomming",
       "image": "https://img.freepik.com/free-vector/coming-soon-background-with-focus-light-effect-design_1017-27277.jpg?ga=GA1.1.1793962052.1744683530&semt=ais_hybrid&w=740",
@@ -127,6 +127,21 @@
         "WordPress",
         "Hello Elementor Theme",
         "Elementor Builder",
+        "Convert from Figma Template"
+      ]
+    },
+        {
+      "id": 10,
+      "title": "My Doctor",
+      "description": "Wordpress Landing Page: The site develop by Hello Elementor and Free Elementor Builder.",
+      "image": "./src/images/projectimage/myDoctor.png",
+      "link": "https://doctorappointment.hoqtech.com/",
+      "category": "wordpress",
+      "technologies": [
+        "WordPress",
+        "Hello Elementor Theme",
+        "Elementor Builder",
+        "Responsive Design",
         "Convert from Figma Template"
       ]
     }
