@@ -93,7 +93,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Enhanced hover effects for project cards
     projectCards.forEach(card => {
-        initializeCardHover(card);
+        const techBadges = card.querySelector('.tech-badges');
+        const backgroundImage = card.querySelector('.project-background-image');
+        
+        card.addEventListener('mouseenter', () => {
+            // Hide tech badges
+            if (techBadges) {
+                techBadges.style.opacity = '0';
+                techBadges.style.transform = 'translateY(-20px)';
+            }
+            
+            // Start image scroll animation
+            if (backgroundImage) {
+                backgroundImage.style.transform = 'translateY(-30%)';
+            }
+        });
+
+        card.addEventListener('mouseleave', () => {
+            // Show tech badges
+            if (techBadges) {
+                techBadges.style.opacity = '1';
+                techBadges.style.transform = 'translateY(0)';
+            }
+            
+            // Reset image position
+            if (backgroundImage) {
+                backgroundImage.style.transform = 'translateY(0)';
+            }
+        });
     });
 });
 
@@ -150,44 +177,43 @@ async function loadProjects() {
     }
 }
 
-// Function to initialize hover effects for a single card
-function initializeCardHover(card) {
-    const techBadges = card.querySelector('.tech-badges');
-    const backgroundImage = card.querySelector('.project-background-image');
-    
-    card.addEventListener('mouseenter', () => {
-        // Hide tech badges
-        if (techBadges) {
-            techBadges.style.opacity = '0';
-            techBadges.style.transform = 'translateY(-20px)';
-        }
-        
-        // Start image scroll animation
-        if (backgroundImage) {
-            backgroundImage.style.backgroundPosition = 'center bottom';
-        }
-    });
-
-    card.addEventListener('mouseleave', () => {
-        // Show tech badges
-        if (techBadges) {
-            techBadges.style.opacity = '1';
-            techBadges.style.transform = 'translateY(0)';
-        }
-        
-        // Reset image position
-        if (backgroundImage) {
-            backgroundImage.style.backgroundPosition = 'center top';
-        }
-    });
-}
-
 // Function to initialize hover effects for dynamically created cards
 function initializeCardHoverEffects() {
     const projectCards = document.querySelectorAll('.project-card');
     
     projectCards.forEach(card => {
-        initializeCardHover(card);
+        const techBadges = card.querySelector('.tech-badges');
+        const backgroundImage = card.querySelector('.project-background-image');
+        
+        // Remove existing event listeners to avoid duplicates
+        card.removeEventListener('mouseenter', handleMouseEnter);
+        card.removeEventListener('mouseleave', handleMouseLeave);
+        
+        card.addEventListener('mouseenter', () => {
+            // Hide tech badges
+            if (techBadges) {
+                techBadges.style.opacity = '0';
+                techBadges.style.transform = 'translateY(-20px)';
+            }
+            
+            // Start image scroll animation
+            if (backgroundImage) {
+                backgroundImage.style.transform = 'translateY(-30%)';
+            }
+        });
+
+        card.addEventListener('mouseleave', () => {
+            // Show tech badges
+            if (techBadges) {
+                techBadges.style.opacity = '1';
+                techBadges.style.transform = 'translateY(0)';
+            }
+            
+            // Reset image position
+            if (backgroundImage) {
+                backgroundImage.style.transform = 'translateY(0)';
+            }
+        });
     });
 }
 

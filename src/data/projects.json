@@ -149,8 +149,8 @@
     {
       "id": 11,
       "title": "Solar Solution Landing Page",
-      "image": "./src/images/projectimage/lesson.png",
-      "link": "https://moudud-hoq.github.io/rrf-landing-page-with-tailwindcss/",
+      "image": "./src/images/projectimage/solarSolution.png",
+      "link": "https://moudud-hoq.github.io/tailwind-practice/",
       "category": "tailwind",
       "technologies": [
         "HTML5",

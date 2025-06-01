@@ -1,0 +1,132 @@
+/* Project Cards */
+.project-card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] relative;
+}
+
+.project-card-container {
+    @apply flex flex-col h-full;
+}
+
+.project-background-image {
+    @apply relative h-64 bg-cover bg-center bg-no-repeat overflow-hidden transition-transform duration-1000 ease-in-out;
+    background-size: cover;
+    background-position: center top;
+}
+
+.tech-badges {
+    @apply absolute inset-0 flex flex-wrap items-start justify-start p-4 gap-2 transition-all duration-300 ease-in-out;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, transparent 100%);
+}
+
+.tech-badge {
+    @apply px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-800 rounded-full text-xs font-medium 
+    hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:text-white 
+    transition-all duration-300 transform hover:scale-105 shadow-sm;
+}
+
+.project-info {
+    @apply p-6 flex-1 flex flex-col justify-between;
+}
+
+.project-title {
+    @apply text-xl font-bold mb-4 text-gray-800;
+}
+
+.project-buttons {
+    @apply flex flex-col gap-3;
+}
+
+.project-button {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-full
+    transition-all duration-300 transform hover:scale-105 text-center;
+}
+
+.primary-button {
+    @apply text-white bg-gradient-to-r from-green-500 to-blue-500
+    hover:from-green-600 hover:to-blue-600 hover:shadow-lg;
+}
+
+.secondary-button {
+    @apply text-gray-700 bg-gray-100 border border-gray-300
+    hover:bg-gray-200 hover:border-gray-400;
+}
+
+.project-filter {
+    @apply px-6 py-2 text-base font-medium rounded-full text-white
+    border-2 border-transparent border-gray-500 hover:border-green-500
+    transition-all duration-300 transform hover:scale-105;
+}
+
+.project-filter.active {
+    @apply bg-gradient-to-r from-green-500 to-blue-500 text-white 
+    shadow-lg shadow-green-500/20;
+}
+
+/* Project Grid Animation */
+.projects-grid {
+    @apply grid grid-cols-1 gap-8 transition-all duration-500;
+}
+
+/* Small screens (mobile) - 1 column, 4 cards visible */
+.projects-grid .project-card:nth-child(n+5) {
+    @apply hidden;
+}
+
+/* Medium screens (tablet) - 2 columns, 6 cards visible */
+@media (min-width: 768px) {
+    .projects-grid {
+        @apply grid-cols-2;
+    }
+    .projects-grid .project-card:nth-child(n+7) {
+        @apply hidden;
+    }
+}
+
+/* Large screens (desktop) - 3 columns, 9 cards visible */
+@media (min-width: 1024px) {
+    .projects-grid {
+        @apply grid-cols-3;
+    }
+}
+
+/* Extra large screens - 4 columns, 8 cards visible */
+@media (min-width: 1280px) {
+    .projects-grid {
+        @apply grid-cols-4;
+    }
+    .projects-grid .project-card:nth-child(n+9) {
+        @apply hidden;
+    }
+}
+
+/* Show all cards when show-all class is present */
+.projects-grid.show-all .project-card {
+    @apply block !important;
+}
+
+/* Hover effects for background image scrolling */
+.project-card:hover .project-background-image {
+    transform: translateY(-30%);
+}
+
+/* Ensure smooth transitions */
+.tech-badges,
+.project-background-image {
+    transition: all 0.6s ease-in-out;
+}
+
+/* Additional styling for better visual hierarchy */
+.project-card-container {
+    @apply min-h-full;
+}
+
+/* Responsive adjustments for project info */
+@media (max-width: 640px) {
+    .project-buttons {
+        @apply flex-row gap-2;
+    }
+    
+    .project-button {
+        @apply flex-1 text-xs px-3 py-2;
+    }
+}
