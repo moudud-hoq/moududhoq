@@ -109,7 +109,6 @@
     {
       "id": 8,
       "title": "Wordpress Landing Page",
-      "description": "The site develop by Hello Elementor and Free Elementor Builder.",
       "image": "./src/images/projectimage/xinder.png",
       "link": "https://dev-rrfbjan25practice.pantheonsite.io/",
       "category": "wordpress",
@@ -123,7 +122,6 @@
     {
       "id": 9,
       "title": "Upcomming",
-      "description": "Upcomming",
       "image": "https://img.freepik.com/free-vector/coming-soon-background-with-focus-light-effect-design_1017-27277.jpg?ga=GA1.1.1793962052.1744683530&semt=ais_hybrid&w=740",
       "link": "#",
       "category": "woocommerce",
@@ -137,7 +135,6 @@
     {
       "id": 10,
       "title": "My Doctor Appoinment",
-      "description": "Wordpress Landing Page: The site develop by Hello Elementor and Free Elementor Builder.",
       "image": "./src/images/projectimage/myDoctor.png",
       "link": "https://doctorappointment.hoqtech.com/",
       "category": "wordpress",
@@ -146,6 +143,20 @@
         "Hello Elementor Theme",
         "Elementor Builder",
         "Responsive Design",
+        "Convert from Figma Template"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Solar Solution Landing Page",
+      "image": "./src/images/projectimage/lesson.png",
+      "link": "https://moudud-hoq.github.io/rrf-landing-page-with-tailwindcss/",
+      "category": "tailwind",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "jQuery Plugins: Slick Slider, Counter Up",
         "Convert from Figma Template"
       ]
     }
