@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Plumber Site",
       "description": "Here I have used Hello Elementor theme and Free Elementor Builder.",
-      "image": "./src/images/projectimage/plumberSite.png",
+      "image": "./src/images/projectimage/plumberWebsite.png",
       "link": "https://plumber.hoqtech.com/wp/",
       "figmaLink": "#",
       "category": "wordpress",
@@ -23,7 +23,7 @@
       "id": 2,
       "title": "Live Site Clone",
       "description": "I have clone a live site named dorik.ai.",
-      "image": "./src/images/projects/Dorik Live Site Clone.png",
+      "image": "./src/images/projectimage/DorikCss.png",
       "link": "https://moudud-hoq.github.io/rrf-16th-assignment/",
       "category": "css3",
       "technologies": [
@@ -37,7 +37,7 @@
       "id": 3,
       "title": "Figma to Tailwind CSS",
       "description": "A comprehensive design Using Tailwind CSS.",
-      "image": "./src/images/projectimage/shop.co.png",
+      "image": "./src/images/projectimage/shopCoTailwind.png",
       "link": "https://moudud-hoq.github.io/project-01/",
       "category": "tailwind",
       "technologies": [
@@ -52,7 +52,7 @@
       "id": 4,
       "title": "Figma to Tailwind CSS",
       "description": "A comprehensive design Using Tailwind CSS.",
-      "image": "./src/images/projectimage/myTutor.png",
+      "image": "./src/images/projectimage/myTutorTailwind.png",
       "link": "https://moudud-hoq.github.io/educationalcourse/",
       "category": "tailwind",
       "technologies": [
@@ -65,9 +65,9 @@
     },
     {
       "id": 5,
-      "title": "Lessons Landing Page",
+      "title": "Lesson: Raw CSS Landing Page",
       "description": "High-converting landing page with modern animations and CTAs.",
-      "image": "./src/images/projectimage/lesson.png",
+      "image": "./src/images/projectimage/lessonCSS.png",
       "link": "https://moudud-hoq.github.io/RRF-Education/",
       "category": "css3",
       "technologies": [
@@ -79,9 +79,9 @@
     },
     {
       "id": 6,
-      "title": "Lessons Landing Page",
+      "title": "Lesson:Tailwind Landing Page",
       "description": "High-converting landing page with modern animations and CTAs.",
-      "image": "./src/images/projectimage/lesson.png",
+      "image": "./src/images/projectimage/lessonTailwind.png",
       "link": "https://moudud-hoq.github.io/rrf-landing-page-with-tailwindcss/",
       "category": "tailwind",
       "technologies": [
@@ -94,9 +94,9 @@
     },
     {
       "id": 7,
-      "title": "Wordpress Landing Page",
+      "title": "Magnifico:Wordpress Landing Page",
       "description": "The site develop by Hello Elementor and Free Elementor Builder.",
-      "image": "./src/images/projectimage/magnifico.png",
+      "image": "./src/images/projectimage/magnificoWP.png",
       "link": "https://dev-rrfbjan25practice.pantheonsite.io/landing-page-5/",
       "category": "wordpress",
       "technologies": [
@@ -108,8 +108,8 @@
     },
     {
       "id": 8,
-      "title": "Wordpress Landing Page",
-      "image": "./src/images/projectimage/xinder.png",
+      "title": "Xinder:Wordpress Landing Page",
+      "image": "./src/images/projectimage/XinderWP.png",
       "link": "https://dev-rrfbjan25practice.pantheonsite.io/",
       "category": "wordpress",
       "technologies": [
@@ -135,7 +135,7 @@
     {
       "id": 10,
       "title": "My Doctor Appoinment",
-      "image": "./src/images/projectimage/myDoctor.png",
+      "image": "./src/images/projectimage/MuhirisDoctorWP.png",
       "link": "https://doctorappointment.hoqtech.com/",
       "category": "wordpress",
       "technologies": [
