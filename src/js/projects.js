@@ -111,7 +111,7 @@ function createProjectCard(project) {
                     <h3 class="project-title">${project.title}</h3>
                     <div class="project-buttons">
                         <a href="${project.link}" class="project-button primary-button" target="_blank" rel="noopener noreferrer">
-                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                            View Website <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                         ${project.figmaLink ? `
                             <a href="${project.figmaLink}" class="project-button secondary-button" target="_blank" rel="noopener noreferrer">
