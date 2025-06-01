@@ -115,7 +115,7 @@ function createProjectCard(project) {
                         </a>
                         ${project.figmaLink ? `
                             <a href="${project.figmaLink}" class="project-button secondary-button" target="_blank" rel="noopener noreferrer">
-                                Figma File <i class="fab fa-figma ml-2"></i>
+                                Design Link <i class="fab fa-figma ml-2"></i>
                             </a>
                         ` : ''}
                     </div>

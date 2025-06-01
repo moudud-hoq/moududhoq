@@ -25,6 +25,7 @@
       "description": "I have clone a live site named dorik.ai.",
       "image": "./src/images/projectimage/DorikCss.png",
       "link": "https://moudud-hoq.github.io/rrf-16th-assignment/",
+      "figmaLink": "#",
       "category": "css3",
       "technologies": [
         "HTML5",
@@ -40,6 +41,7 @@
       "image": "./src/images/projectimage/shopCoTailwind.png",
       "link": "https://moudud-hoq.github.io/project-01/",
       "category": "tailwind",
+      "figmaLink": "#",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -54,6 +56,7 @@
       "description": "A comprehensive design Using Tailwind CSS.",
       "image": "./src/images/projectimage/myTutorTailwind.png",
       "link": "https://moudud-hoq.github.io/educationalcourse/",
+      "figmaLink": "#",
       "category": "tailwind",
       "technologies": [
         "HTML5",
@@ -70,6 +73,7 @@
       "image": "./src/images/projectimage/lessonCSS.png",
       "link": "https://moudud-hoq.github.io/RRF-Education/",
       "category": "css3",
+      "figmaLink": "#",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -83,6 +87,7 @@
       "description": "High-converting landing page with modern animations and CTAs.",
       "image": "./src/images/projectimage/lessonTailwind.png",
       "link": "https://moudud-hoq.github.io/rrf-landing-page-with-tailwindcss/",
+      "figmaLink": "#",
       "category": "tailwind",
       "technologies": [
         "HTML5",
@@ -98,6 +103,7 @@
       "description": "The site develop by Hello Elementor and Free Elementor Builder.",
       "image": "./src/images/projectimage/magnificoWP.png",
       "link": "https://dev-rrfbjan25practice.pantheonsite.io/landing-page-5/",
+      "figmaLink": "#",
       "category": "wordpress",
       "technologies": [
         "WordPress",
@@ -111,6 +117,7 @@
       "title": "Xinder:Wordpress Landing Page",
       "image": "./src/images/projectimage/XinderWP.png",
       "link": "https://dev-rrfbjan25practice.pantheonsite.io/",
+      "figmaLink": "#",
       "category": "wordpress",
       "technologies": [
         "WordPress",
@@ -124,6 +131,7 @@
       "title": "Upcomming",
       "image": "https://img.freepik.com/free-vector/coming-soon-background-with-focus-light-effect-design_1017-27277.jpg?ga=GA1.1.1793962052.1744683530&semt=ais_hybrid&w=740",
       "link": "#",
+      "figmaLink": "#",
       "category": "woocommerce",
       "technologies": [
         "WordPress",
@@ -137,6 +145,7 @@
       "title": "My Doctor Appoinment",
       "image": "./src/images/projectimage/MuhirisDoctorWP.png",
       "link": "https://doctorappointment.hoqtech.com/",
+      "figmaLink": "#",
       "category": "wordpress",
       "technologies": [
         "WordPress",
