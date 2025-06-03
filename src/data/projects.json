@@ -168,6 +168,18 @@
         "jQuery Plugins: Slick Slider, Counter Up",
         "Convert from Figma Template"
       ]
+    },
+    {
+      "id": 12,
+      "title": "Solar Solution Landing Page",
+      "image": "./src/images/projectimage/bdArmyCamp.png",
+      "link": "https://bdarmycamp.netlify.app/",
+      "category": "tailwind",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "Leaflet JS"
+      ]
     }
   ]
 }
