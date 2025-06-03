@@ -6,7 +6,7 @@
       "description": "Here I have used Hello Elementor theme and Free Elementor Builder.",
       "image": "./src/images/projectimage/plumberWebsite.png",
       "link": "https://plumber.hoqtech.com/wp/",
-      "figmaLink": "#",
+      "figmaLink": "https://www.figma.com/design/yIJXnKH0vGFfRv71bYXwE4/RRF-Template-Challenge--3-to-8-?node-id=1-371&t=XJsCDSJXMyx80lsx-1",
       "category": "wordpress",
       "technologies": [
         "WordPress",
@@ -25,7 +25,7 @@
       "description": "I have clone a live site named dorik.ai.",
       "image": "./src/images/projectimage/DorikCss.png",
       "link": "https://moudud-hoq.github.io/rrf-16th-assignment/",
-      "figmaLink": "#",
+      "figmaLink": "https://dorik.com/",
       "category": "css3",
       "technologies": [
         "HTML5",
@@ -41,7 +41,7 @@
       "image": "./src/images/projectimage/shopCoTailwind.png",
       "link": "https://moudud-hoq.github.io/project-01/",
       "category": "tailwind",
-      "figmaLink": "#",
+      "figmaLink": "https://www.figma.com/design/xC0vdJUvMTfRacohch23LW/RRF-E-COM-Template-Challenge-10?node-id=0-1&t=YyNNeY3cvVuLd1Bq-1",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -56,7 +56,7 @@
       "description": "A comprehensive design Using Tailwind CSS.",
       "image": "./src/images/projectimage/myTutorTailwind.png",
       "link": "https://moudud-hoq.github.io/educationalcourse/",
-      "figmaLink": "#",
+      "figmaLink": "https://www.figma.com/design/4I7CSMuWBDN0BceTZCt8OH/Template-Challenge-09?node-id=1-283&m=dev",
       "category": "tailwind",
       "technologies": [
         "HTML5",
@@ -73,7 +73,7 @@
       "image": "./src/images/projectimage/lessonCSS.png",
       "link": "https://moudud-hoq.github.io/RRF-Education/",
       "category": "css3",
-      "figmaLink": "#",
+      "figmaLink": "https://www.figma.com/design/WaKLF8vlgS6zG2rSJC6Lma/RRF-landing-page--Copy-?node-id=0-1&t=TVI4GhB4kBgfpWzT-1",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -87,7 +87,7 @@
       "description": "High-converting landing page with modern animations and CTAs.",
       "image": "./src/images/projectimage/lessonTailwind.png",
       "link": "https://moudud-hoq.github.io/rrf-landing-page-with-tailwindcss/",
-      "figmaLink": "#",
+      "figmaLink": "https://www.figma.com/design/WaKLF8vlgS6zG2rSJC6Lma/RRF-landing-page--Copy-?node-id=0-1&t=TVI4GhB4kBgfpWzT-1",
       "category": "tailwind",
       "technologies": [
         "HTML5",
@@ -145,7 +145,7 @@
       "title": "My Doctor Appoinment",
       "image": "./src/images/projectimage/MuhirisDoctorWP.png",
       "link": "https://doctorappointment.hoqtech.com/",
-      "figmaLink": "#",
+      "figmaLink": "https://www.figma.com/design/foRxSPG4uFGXupqBRY4DOw/Medical-Consultation-Landing-Page--Community---Copy-?node-id=0-1&t=6mhDvORtRPfufPEB-1",
       "category": "wordpress",
       "technologies": [
         "WordPress",
@@ -160,6 +160,7 @@
       "title": "Solar Solution Landing Page",
       "image": "./src/images/projectimage/solarSolution.png",
       "link": "https://moudud-hoq.github.io/tailwind-practice/",
+      "figmaLink": "https://www.figma.com/design/8ZHnNjJB0HbclDhLmZtcE7/website-design---solar-solution---corporate--Community---Copy-?node-id=1-36&t=ZfDX3EV6y8PQrZLi-1",
       "category": "tailwind",
       "technologies": [
         "HTML5",
@@ -171,17 +172,12 @@
     },
     {
       "id": 12,
-      "title": "Solar Solution Landing Page",
+      "title": "BD Temporary Army Camp",
       "image": "./src/images/projectimage/bdArmyCamp.png",
       "link": "https://bdarmycamp.netlify.app/",
+      "figmaLink": "#",
       "category": "others",
-      "technologies": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "AI",
-        "Leaflet JS"
-      ]
+      "technologies": ["HTML", "CSS", "JavaScript", "AI", "Leaflet JS"]
     }
   ]
 }
