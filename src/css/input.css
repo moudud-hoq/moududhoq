@@ -115,11 +115,11 @@
 }
 
 .project-buttons {
-    @apply flex flex-col gap-3;
+    @apply flex flex-col gap-2;
 }
 
 .project-button {
-    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-full
+    @apply inline-flex items-center justify-center p-2 text-sm font-semibold rounded-full
     transition-all duration-300 transform hover:scale-105 text-center;
 }
 

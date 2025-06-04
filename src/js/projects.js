@@ -107,19 +107,21 @@ function createProjectCard(project) {
                         ${project.technologies.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
                     </div>
                 </div>
-                <div class="project-info">
-                    <h3 class="project-title">${project.title}</h3>
-                    <div class="project-buttons">
-                        <a href="${project.link}" class="project-button primary-button" target="_blank" rel="noopener noreferrer">
-                            View Website <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                        ${project.figmaLink ? `
-                            <a href="${project.figmaLink}" class="project-button secondary-button" target="_blank" rel="noopener noreferrer">
-                                Design Link <i class="fab fa-figma ml-2"></i>
-                            </a>
-                        ` : ''}
-                    </div>
-                </div>
+
+<div class="project-info">
+    <h3 class="project-title mb-3">${project.title}</h3>
+    <div class="project-buttons flex flex-row ">
+        <a href="${project.link}" class="project-button primary-button" target="_blank" rel="noopener noreferrer">
+            View Website <i class="fas fa-arrow-right"></i>
+        </a>
+        ${project.figmaLink ? `
+            <a href="${project.figmaLink}" class="project-button secondary-button" target="_blank" rel="noopener noreferrer">
+                Design Link <i class="fab fa-figma"></i>
+            </a>
+        ` : ''}
+    </div>
+</div>
+
             </div>
         </div>
     `;
@@ -142,7 +144,7 @@ async function loadProjects() {
 
         // Re-initialize event listeners for dynamically created cards
         initializeCardHoverEffects();
-        
+
         // Initialize project filters
         initializeProjectFilters();
     } catch (error) {
@@ -154,14 +156,14 @@ async function loadProjects() {
 function initializeCardHover(card) {
     const techBadges = card.querySelector('.tech-badges');
     const backgroundImage = card.querySelector('.project-background-image');
-    
+
     card.addEventListener('mouseenter', () => {
         // Hide tech badges
         if (techBadges) {
             techBadges.style.opacity = '0';
             techBadges.style.transform = 'translateY(-20px)';
         }
-        
+
         // Start image scroll animation
         if (backgroundImage) {
             backgroundImage.style.backgroundPosition = 'center bottom';
@@ -174,7 +176,7 @@ function initializeCardHover(card) {
             techBadges.style.opacity = '1';
             techBadges.style.transform = 'translateY(0)';
         }
-        
+
         // Reset image position
         if (backgroundImage) {
             backgroundImage.style.backgroundPosition = 'center top';
@@ -185,7 +187,7 @@ function initializeCardHover(card) {
 // Function to initialize hover effects for dynamically created cards
 function initializeCardHoverEffects() {
     const projectCards = document.querySelectorAll('.project-card');
-    
+
     projectCards.forEach(card => {
         initializeCardHover(card);
     });
@@ -200,7 +202,7 @@ function initializeProjectFilters() {
         button.addEventListener('click', () => {
             // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            
+
             // Add active class to clicked button
             button.classList.add('active');
 
