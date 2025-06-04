@@ -1036,10 +1036,7 @@ video {
   border-color: transparent;
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 500;
@@ -1173,10 +1170,7 @@ video {
 
   .project-button {
     flex: 1 1 0%;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem;
     font-size: 0.75rem;
     line-height: 1rem;
   }
