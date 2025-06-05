@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moudud Hoq - Front End Developer</title>
 
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Open Graph Meta Tags for Link Preview -->
     <meta property="og:title" content="Moudud Hoq - Front End Developer">
@@ -33,6 +35,8 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
+    <!-- Alpine.js (For reactive data) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- JS Code -->
     <script src="src/js/main.js" defer></script>
@@ -411,13 +415,97 @@
 
 
 
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gradient-to-b from-gray-900 to-gray-800" x-data="skillsData">
+        <section id="skills" class="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
+            <div class="container mx-auto px-4">
+                <!-- Main Skills -->
+                <h2 class="text-3xl font-bold text-center mb-12 text-white">My <span class="text-blue-500">Skills</span>
+                </h2>
 
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                    <!-- Skill cards - Data driven approach -->
+                    <template x-for="skill in skills" :key="skill.name">
+                        <div
+                            class="skill-card bg-gray-800/50 p-3 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-md mr-2 flex items-center justify-center"
+                                    :class="skill.bgColor">
+                                    <i :class="skill.icon" :style="{color: skill.color}"></i>
+                                </div>
+                                <h3 class="text-sm font-semibold text-white" x-text="skill.name"></h3>
+                            </div>
+                            <div class="flex items-center justify-between text-xs mb-1 text-gray-400">
+                                <span>Progress</span>
+                                <span :style="{color: skill.color}" x-text="skill.percent + '%'"></span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5">
+                                <div class="h-1.5 rounded-full"
+                                    :style="{width: skill.percent + '%', backgroundColor: skill.color}"></div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
 
+                <!-- Learning Section -->
+                <h3 class="text-2xl font-bold text-center mt-12 mb-8 text-white">Currently <span
+                        class="text-purple-500">Learning</span></h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                    <template x-for="skill in learning" :key="skill.name">
+                        <div
+                            class="skill-card bg-gray-800/50 p-3 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-md mr-2 flex items-center justify-center bg-purple-500/10">
+                                    <i :class="skill.icon" class="text-purple-400"></i>
+                                </div>
+                                <h3 class="text-sm font-semibold text-white" x-text="skill.name"></h3>
+                            </div>
+                            <div class="flex items-center justify-between text-xs mb-1 text-gray-400">
+                                <span>Progress</span>
+                                <span class="text-purple-400" x-text="skill.percent + '%'"></span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5">
+                                <div class="bg-purple-500 h-1.5 rounded-full" :style="{width: skill.percent + '%'}">
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+    </section>
 
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('skillsData', () => ({
+                skills: [
+                    { name: 'HTML5', icon: 'fab fa-html5', color: '#F1662A', percent: 90, bgColor: 'bg-[#F1662A]/10' },
+                    { name: 'CSS3', icon: 'fab fa-css3-alt', color: '#226DE4', percent: 90, bgColor: 'bg-[#226DE4]/10' },
+                    { name: 'Tailwind CSS', icon: 'fas fa-wind', color: '#44a8b3', percent: 90, bgColor: 'bg-[#44a8b3]/10' },
+                    { name: 'WordPress', icon: 'fab fa-wordpress', color: '#21759B', percent: 70, bgColor: 'bg-[#21759B]/10' },
+                    { name: 'WooCommerce', icon: 'fas fa-cart-plus', color: '#96588A', percent: 60, bgColor: 'bg-[#96588A]/10' },
+                    { name: 'jQuery', icon: 'fas fa-code', color: '#88D686', percent: 65, bgColor: 'bg-[#88D686]/10' },
+                    { name: 'SEO', icon: 'fas fa-search', color: '#4285F4', percent: 70, bgColor: 'bg-[#4285F4]/10' },
+                    { name: 'Speed Optimization', icon: 'fas fa-tachometer-alt', color: '#4285F4', percent: 80, bgColor: 'bg-[#4285F4]/10' },
+                    { name: 'Website Security', icon: 'fas fa-shield-alt', color: '#4285F4', percent: 80, bgColor: 'bg-[#4285F4]/10' }
+                ],
+                learning: [
+                    { name: 'JavaScript', icon: 'fab fa-js', percent: 25 },
+                    { name: 'PHP', icon: 'fab fa-php', percent: 25 },
+                    { name: 'MySQL', icon: 'fas fa-database', percent: 20 },
+                    { name: 'WP Theme Dev', icon: 'fab fa-wordpress', percent: 20 },
+                    { name: 'Shopify', icon: 'fab fa-shopify', percent: 10 }
+                ]
+            }));
+        });
+    </script>
 
+    <style>
+        .skill-card {
+            @apply transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10 hover:bg-gray-800;
+        }
+    </style>
 
-
-    
 
     <!-- Skills Section -->
     <section id="skills" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
