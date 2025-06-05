@@ -5,19 +5,23 @@
 /* Custom styles */
 @layer components {
 
-    .hero-skills{
-        @apply px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300;
-    }
+    /* .hero-skills {
+        @apply px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-400 border border-blue-500/20 hover: from-blue-500/20 hover:to-purple-500/20 transition-all duration-300;
+    } */
+
     .btn-gradient {
-        @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white transition-all duration-300;
+        @apply bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 transform;
+    }
+    .btn-gradient:hover {
+        @apply from-blue-600 to-purple-600 -translate-y-1;
     }
 
     .social-icon {
-        @apply w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110;
+        @apply w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover: scale-110;
     }
 
     .footer-link {
-        @apply text-gray-600 hover:text-purple-500 transition duration-300 flex items-center;
+        @apply text-gray-600 hover: text-purple-500 transition duration-300 flex items-center;
     }
 
     /* Custom Background Colors and Gradients */
@@ -44,7 +48,7 @@
 
     /* Custom Shadows */
     .custom-shadow {
-        @apply shadow-lg hover:shadow-xl;
+        @apply shadow-lg hover: shadow-xl;
     }
 
     /* Custom Card Styles */
@@ -54,7 +58,7 @@
 
     /* Custom Button Styles */
     .btn-gradient {
-        @apply bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:-translate-y-1;
+        @apply bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:-translate-y-1;
     }
 
     /* Navbar Style */
@@ -72,168 +76,162 @@
     }
 
     /* Skill Cards */
-    .skill-card {
-        @apply bg-gradient-to-br from-gray-900/90 to-gray-900/50 backdrop-blur-sm border border-blue-700 transition-all duration-300 hover:-translate-y-1;
-    }
+    /* .skill-card {
+        @apply bg-gradient-to-br from-gray-900/90 to-gray-900/50 backdrop-blur-sm border border-blue-700 transition-all duration-300 hover: -translate-y-1;
+    } */
 
     /* Project Cards */
-.project-card {
-    @apply bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] relative;
-}
-
-.project-card-container {
-    @apply flex flex-col h-full;
-}
-
-.project-background-image {
-    @apply relative h-64 bg-no-repeat overflow-hidden;
-    background-size: cover;
-    background-position: center top;
-    transition: background-position 2s ease-in-out;
-}
-
-.tech-badges {
-    @apply absolute flex flex-wrap items-end bottom-0 p-1 gap-1;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, transparent 100%);
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.tech-badge {
-    @apply px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-800 rounded-full text-xs font-medium 
-    hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:text-white 
-    transition-all duration-300 transform hover:scale-105 shadow-sm;
-}
-
-.project-info {
-    @apply p-6 flex-1 flex flex-col justify-between;
-}
-
-.project-title {
-    @apply text-xl font-bold mb-4 text-gray-800;
-}
-
-.project-buttons {
-    @apply flex flex-col gap-2;
-}
-
-.project-button {
-    @apply inline-flex items-center justify-center p-2 text-sm font-semibold rounded-full
-    transition-all duration-300 transform hover:scale-105 text-center;
-}
-
-.primary-button {
-    @apply text-white bg-gradient-to-r from-green-500 to-blue-500
-    hover:from-green-600 hover:to-blue-600 hover:shadow-lg;
-}
-
-.secondary-button {
-    @apply text-gray-700 bg-gray-100 border border-gray-300
-    hover:bg-gray-200 hover:border-gray-400;
-}
-
-.project-filter {
-    @apply p-2 text-base font-medium rounded-full text-white
-    border-2 border-transparent border-gray-500 hover:border-green-500
-    transition-all duration-300 transform hover:scale-105;
-}
-
-.project-filter.active {
-    @apply bg-gradient-to-r from-green-500 to-blue-500 text-white 
-    shadow-lg shadow-green-500/20;
-}
-
-/* Project Grid Animation */
-.projects-grid {
-    @apply grid grid-cols-1 gap-8 transition-all duration-500;
-}
-
-/* Small screens (mobile) - 1 column, 4 cards visible */
-.projects-grid .project-card:nth-child(n+5) {
-    @apply hidden;
-}
-
-/* Medium screens (tablet) - 2 columns, 6 cards visible */
-@media (min-width: 768px) {
-    .projects-grid {
-        @apply grid-cols-2;
+    .project-card {
+        @apply bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] relative;
     }
-    .projects-grid .project-card:nth-child(n+7) {
-        @apply hidden;
+
+    .project-card-container {
+        @apply flex flex-col h-full;
     }
-}
 
-/* Large screens (desktop) - 3 columns, 9 cards visible */
-@media (min-width: 1024px) {
-    .projects-grid {
-        @apply grid-cols-3;
+    .project-background-image {
+        @apply relative h-64 bg-no-repeat overflow-hidden;
+        background-size: cover;
+        background-position: center top;
+        transition: background-position 2s ease-in-out;
     }
-}
 
-/* Extra large screens - 4 columns, 8 cards visible */
-@media (min-width: 1280px) {
-    .projects-grid {
-        @apply grid-cols-4;
+    .tech-badges {
+        @apply absolute flex flex-wrap items-end bottom-0 p-1 gap-1;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 100%);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        opacity: 1;
+        transform: translateY(0);
     }
-    .projects-grid .project-card:nth-child(n+9) {
-        @apply hidden;
+
+    .tech-badge {
+        @apply px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-800 rounded-full text-xs font-medium hover: bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-sm;
     }
-}
 
-/* Show all cards when show-all class is present */
-.projects-grid.show-all .project-card {
-    @apply block !important;
-}
+    .project-info {
+        @apply p-6 flex-1 flex flex-col justify-between;
+    }
 
-/* Hover effects for background image scrolling */
-.project-card:hover .project-background-image {
-    background-position: center bottom;
-}
+    .project-title {
+        @apply text-xl font-bold mb-4 text-gray-800;
+    }
 
-.project-card:hover .tech-badges {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-
-/* Ensure smooth transitions */
-.tech-badges,
-.project-background-image {
-    transition: all 0.1s ease-in-out;
-}
-
-.project-background-image {
-    transition: background-position 5s ease-in-out;
-}
-
-.tech-badges {
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-/* Additional styling for better visual hierarchy */
-.project-card-container {
-    @apply min-h-full;
-}
-
-/* Responsive adjustments for project info */
-@media (max-width: 640px) {
     .project-buttons {
-        @apply flex-row gap-2;
+        @apply flex flex-col gap-2;
     }
-    
+
     .project-button {
-        @apply flex-1 text-xs p-2;
+        @apply inline-flex items-center justify-center p-2 text-sm font-semibold rounded-full transition-all duration-300 transform hover: scale-105 text-center;
     }
-}
+
+    .primary-button {
+        @apply text-white bg-gradient-to-r from-green-500 to-blue-500 hover: from-green-600 hover:to-blue-600 hover:shadow-lg;
+    }
+
+    .secondary-button {
+        @apply text-gray-700 bg-gray-100 border border-gray-300 hover: bg-gray-200 hover:border-gray-400;
+    }
+
+    .project-filter {
+        @apply p-2 text-base font-medium rounded-full text-white border-2 border-transparent border-gray-500 hover: border-green-500 transition-all duration-300 transform hover:scale-105;
+    }
+
+    .project-filter.active {
+        @apply bg-gradient-to-r from-green-500 to-blue-500 text-white shadow-lg shadow-green-500/20;
+    }
+
+    /* Project Grid Animation */
+    .projects-grid {
+        @apply grid grid-cols-1 gap-8 transition-all duration-500;
+    }
+
+    /* Small screens (mobile) - 1 column, 4 cards visible */
+    .projects-grid .project-card:nth-child(n+5) {
+        @apply hidden;
+    }
+
+    /* Medium screens (tablet) - 2 columns, 6 cards visible */
+    @media (min-width: 768px) {
+        .projects-grid {
+            @apply grid-cols-2;
+        }
+
+        .projects-grid .project-card:nth-child(n+7) {
+            @apply hidden;
+        }
+    }
+
+    /* Large screens (desktop) - 3 columns, 9 cards visible */
+    @media (min-width: 1024px) {
+        .projects-grid {
+            @apply grid-cols-3;
+        }
+    }
+
+    /* Extra large screens - 4 columns, 8 cards visible */
+    @media (min-width: 1280px) {
+        .projects-grid {
+            @apply grid-cols-4;
+        }
+
+        .projects-grid .project-card:nth-child(n+9) {
+            @apply hidden;
+        }
+    }
+
+    /* Show all cards when show-all class is present */
+    .projects-grid.show-all .project-card {
+        @apply block !important;
+    }
+
+    /* Hover effects for background image scrolling */
+    .project-card:hover .project-background-image {
+        background-position: center bottom;
+    }
+
+    .project-card:hover .tech-badges {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    /* Ensure smooth transitions */
+    .tech-badges,
+    .project-background-image {
+        transition: all 0.1s ease-in-out;
+    }
+
+    .project-background-image {
+        transition: background-position 5s ease-in-out;
+    }
+
+    .tech-badges {
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    }
+
+    /* Additional styling for better visual hierarchy */
+    .project-card-container {
+        @apply min-h-full;
+    }
+
+    /* Responsive adjustments for project info */
+    @media (max-width: 640px) {
+        .project-buttons {
+            @apply flex-row gap-2;
+        }
+
+        .project-button {
+            @apply flex-1 text-xs p-2;
+        }
+    }
 
     /* Social Icons */
     .social-icon {
-        @apply w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110;
+        @apply w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover: scale-110;
     }
 
     /* Footer Links */
     .footer-link {
-        @apply text-gray-400 hover:text-blue-400 transition duration-300 flex items-center;
+        @apply text-gray-400 hover: text-blue-400 transition duration-300 flex items-center;
     }
 
     .footer-link::before {
@@ -247,7 +245,7 @@
 
     /* Tags */
     .tag {
-        @apply bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-blue-600 hover:text-white transition-all duration-300;
+        @apply bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm hover: bg-blue-600 hover:text-white transition-all duration-300;
     }
 
     /* FAQ Styles */
@@ -273,7 +271,7 @@
 
     /* Back to Top Button */
     .back-to-top {
-        @apply fixed bottom-[100px] right-[40px] bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-full shadow-xl transition-all duration-300 cursor-pointer z-[9999] hover:from-blue-600 hover:to-purple-600;
+        @apply fixed bottom-[100px] right-[40px] bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-full shadow-xl transition-all duration-300 cursor-pointer z-[9999] hover: from-blue-600 hover:to-purple-600;
         opacity: 0;
         visibility: hidden;
         animation: float 3s ease-in-out infinite;
@@ -293,9 +291,11 @@
         0% {
             transform: translateY(0px);
         }
+
         50% {
             transform: translateY(-10px);
         }
+
         100% {
             transform: translateY(0px);
         }
