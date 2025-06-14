@@ -1733,10 +1733,6 @@ video {
   width: 20rem;
 }
 
-.w-\[1170px\] {
-  width: 1170px;
-}
-
 .w-full {
   width: 100%;
 }
@@ -3875,14 +3871,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:grid {
-    display: grid;
-  }
-
-  .lg\:hidden {
-    display: none;
-  }
-
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -3907,17 +3895,7 @@ video {
     justify-content: flex-start;
   }
 
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .lg\:text-left {
     text-align: left;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 }
