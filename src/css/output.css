@@ -1912,6 +1912,10 @@ video {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -2258,6 +2262,10 @@ video {
 
 .bg-\[\#96588A\]\/10 {
   background-color: rgb(150 88 138 / 0.1);
+}
+
+.bg-\[\#CC6699\]\/10 {
+  background-color: rgb(204 102 153 / 0.1);
 }
 
 .bg-\[\#F1662A\]\/10 {
@@ -3798,6 +3806,10 @@ video {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -3885,6 +3897,10 @@ video {
 
   .lg\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
