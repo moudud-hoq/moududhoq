@@ -1400,6 +1400,18 @@ video {
   top: 1rem;
 }
 
+.bottom-\[180px\] {
+  bottom: 180px;
+}
+
+.bottom-\[120px\] {
+  bottom: 120px;
+}
+
+.bottom-\[140px\] {
+  bottom: 140px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1759,6 +1771,18 @@ video {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-\[420px\] {
+  max-width: 420px;
+}
+
+.max-w-\[320px\] {
+  max-width: 320px;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
 }
 
 .flex-1 {
