@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moudud Hoq - Front End Developer | WordPress & WooCommerce Expert</title>
+    <meta name="theme-color" content="#0d6efd" />
     <meta name="description"
         content="Professional Front End Developer specializing in WordPress, WooCommerce, HTML5, CSS3, and JavaScript. Expert in website development, speed optimization, and SEO.">
     <meta name="keywords"
@@ -325,7 +326,7 @@
                             class="px-8 py-2 rounded-full font-bold  bg-green-800 text-white hover:bg-green-400 transition-all duration-300 transform hover:-translate-y-1">
                             Let's Disucss
                         </a>
-            
+
                         <a href="./src/others/Moududul Hoque.pdf" target="_blank"
                             class="px-8 py-2 rounded-full font-bold border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white transition-all duration-300 transform hover:-translate-y-1">
                             View CV
@@ -385,7 +386,7 @@
         </div>
     </section>
 
-    
+
     <!-- Skills Section -->
     <section id="skills" class="py-12 bg-gradient-to-b from-gray-900 to-gray-800" x-data="skillsData">
         <div class="container mx-auto px-4">
@@ -393,56 +394,56 @@
             <h2 class="text-3xl font-bold text-center mb-12 text-white">My <span class="text-blue-500">Skills</span>
             </h2>
 
-                <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
-                    <!-- Skill cards - Data driven approach -->
-                    <template x-for="skill in skills" :key="skill.name">
-                        <div
-                            class="skill-card bg-gray-800/50 hover:bg-black p-2 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all">
-                            <div class="flex items-center mb-2">
-                                <div class="w-6 h-6 rounded-md mr-1 flex items-center justify-center"
-                                    :class="skill.bgColor">
-                                    <i :class="skill.icon" :style="{color: skill.color}"></i>
-                                </div>
-                                <h3 class="text-sm font-semibold text-white" x-text="skill.name"></h3>
+            <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
+                <!-- Skill cards - Data driven approach -->
+                <template x-for="skill in skills" :key="skill.name">
+                    <div
+                        class="skill-card bg-gray-800/50 hover:bg-black p-2 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all">
+                        <div class="flex items-center mb-2">
+                            <div class="w-6 h-6 rounded-md mr-1 flex items-center justify-center"
+                                :class="skill.bgColor">
+                                <i :class="skill.icon" :style="{color: skill.color}"></i>
                             </div>
-                            <div class="flex items-center justify-between text-xs mb-1 text-gray-400">
-                                <span>Progress</span>
-                                <span :style="{color: skill.color}" x-text="skill.percent + '%'"></span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-1.5">
-                                <div class="h-1.5 rounded-full"
-                                    :style="{width: skill.percent + '%', backgroundColor: skill.color}"></div>
-                            </div>
+                            <h3 class="text-sm font-semibold text-white" x-text="skill.name"></h3>
                         </div>
-                    </template>
-                </div>
-
-                <!-- Learning Section -->
-                <h3 class="text-2xl font-bold text-center mt-12 mb-8 text-white">Currently <span
-                        class="text-purple-500">Learning</span></h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-                    <template x-for="skill in learning" :key="skill.name">
-                        <div
-                            class="skill-card bg-gray-800/50 p-2 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all">
-                            <div class="flex items-center mb-2">
-                                <div class="w-6 h-6 rounded-md mr-1 flex items-center justify-center bg-purple-500/10">
-                                    <i :class="skill.icon" class="text-purple-400"></i>
-                                </div>
-                                <h3 class="text-sm font-semibold text-white" x-text="skill.name"></h3>
-                            </div>
-                            <div class="flex items-center justify-between text-xs mb-1 text-gray-400">
-                                <span>Progress</span>
-                                <span class="text-purple-400" x-text="skill.percent + '%'"></span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-1.5">
-                                <div class="bg-purple-500 h-1.5 rounded-full" :style="{width: skill.percent + '%'}">
-                                </div>
-                            </div>
+                        <div class="flex items-center justify-between text-xs mb-1 text-gray-400">
+                            <span>Progress</span>
+                            <span :style="{color: skill.color}" x-text="skill.percent + '%'"></span>
                         </div>
-                    </template>
-                </div>
+                        <div class="w-full bg-gray-700 rounded-full h-1.5">
+                            <div class="h-1.5 rounded-full"
+                                :style="{width: skill.percent + '%', backgroundColor: skill.color}"></div>
+                        </div>
+                    </div>
+                </template>
             </div>
-        </section>
+
+            <!-- Learning Section -->
+            <h3 class="text-2xl font-bold text-center mt-12 mb-8 text-white">Currently <span
+                    class="text-purple-500">Learning</span></h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+                <template x-for="skill in learning" :key="skill.name">
+                    <div
+                        class="skill-card bg-gray-800/50 p-2 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all">
+                        <div class="flex items-center mb-2">
+                            <div class="w-6 h-6 rounded-md mr-1 flex items-center justify-center bg-purple-500/10">
+                                <i :class="skill.icon" class="text-purple-400"></i>
+                            </div>
+                            <h3 class="text-sm font-semibold text-white" x-text="skill.name"></h3>
+                        </div>
+                        <div class="flex items-center justify-between text-xs mb-1 text-gray-400">
+                            <span>Progress</span>
+                            <span class="text-purple-400" x-text="skill.percent + '%'"></span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-1.5">
+                            <div class="bg-purple-500 h-1.5 rounded-full" :style="{width: skill.percent + '%'}">
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
     </section>
 
     <script>
