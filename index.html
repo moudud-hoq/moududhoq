@@ -88,8 +88,6 @@
     <!-- Waypoints (Dependency for Counter-Up) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
-    <!-- Counter-Up Plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png"
@@ -322,13 +320,14 @@
 
 
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <div class="flex gap-4 justify-start">
                         <a href="#contact"
-                            class="btn-gradient text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                            Let's Discuss
+                            class="px-8 py-2 rounded-full font-bold  bg-green-800 text-white hover:bg-green-400 transition-all duration-300 transform hover:-translate-y-1">
+                            Let's Disucss
                         </a>
+            
                         <a href="./src/others/Moududul Hoque.pdf" target="_blank"
-                            class="px-8 py-4 rounded-full font-bold border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+                            class="px-8 py-2 rounded-full font-bold border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white transition-all duration-300 transform hover:-translate-y-1">
                             View CV
                         </a>
 
@@ -343,35 +342,37 @@
                                 class="rounded-sm shadow-2xl w-full max-w-[300px] h-auto mx-auto transform hover:scale-[1.02] transition-transform duration-300 object-contain">
                             <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
                                 <div class="flex gap-2">
-                                    <span class="px-4 py-2 bg-blue-500  rounded-full text-sm font-semibold shadow-lg">
+                                    <span class="px-4 py-2 bg-blue-500 rounded-full text-sm font-semibold shadow-lg">
                                         Learning & Growing
                                     </span>
                                 </div>
                             </div>
                         </div>
 
-
-
-                        <!-- Stats -->
+                        <!-- Stats Section -->
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                             <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                                <h4 class="text-2xl font-bold text-blue-400"><span
-                                        class="counter">10</span><span>+</span></h4>
+                                <h4 class="text-2xl font-bold text-blue-400">
+                                    <span class="">10</span><span>+</span>
+                                </h4>
                                 <p class="text-sm text-gray-400">Projects</p>
                             </div>
                             <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                                <h4 class="text-2xl font-bold text-purple-400"><span
-                                        class="counter">10</span><span>+</span></h4>
+                                <h4 class="text-2xl font-bold text-purple-400">
+                                    <span class="">10</span><span>+</span>
+                                </h4>
                                 <p class="text-sm text-gray-400">Skills</p>
                             </div>
                             <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                                <h4 class="text-2xl font-bold text-green-400"><span
-                                        class="counter">1</span><span>+</span></h4>
+                                <h4 class="text-2xl font-bold text-green-400">
+                                    <span class="">1</span><span>+</span>
+                                </h4>
                                 <p class="text-sm text-gray-400">Years</p>
                             </div>
                             <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                                <h4 class="text-2xl font-bold text-yellow-400"><span
-                                        class="counter">100</span><span>%</span></h4>
+                                <h4 class="text-2xl font-bold text-yellow-400">
+                                    <span class="">100</span><span>%</span>
+                                </h4>
                                 <p class="text-sm text-gray-400">Dedication</p>
                             </div>
                         </div>
@@ -384,22 +385,21 @@
         </div>
     </section>
 
-
+    
     <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-gradient-to-b from-gray-900 to-gray-800" x-data="skillsData">
-        <section id="skills" class="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
-            <div class="container mx-auto px-4">
-                <!-- Main Skills -->
-                <h2 class="text-3xl font-bold text-center mb-12 text-white">My <span class="text-blue-500">Skills</span>
-                </h2>
+    <section id="skills" class="py-12 bg-gradient-to-b from-gray-900 to-gray-800" x-data="skillsData">
+        <div class="container mx-auto px-4">
+            <!-- Main Skills -->
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">My <span class="text-blue-500">Skills</span>
+            </h2>
 
                 <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
                     <!-- Skill cards - Data driven approach -->
                     <template x-for="skill in skills" :key="skill.name">
                         <div
-                            class="skill-card bg-gray-800/50 p-3 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all">
+                            class="skill-card bg-gray-800/50 hover:bg-black p-2 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all">
                             <div class="flex items-center mb-2">
-                                <div class="w-8 h-8 rounded-md mr-2 flex items-center justify-center"
+                                <div class="w-6 h-6 rounded-md mr-1 flex items-center justify-center"
                                     :class="skill.bgColor">
                                     <i :class="skill.icon" :style="{color: skill.color}"></i>
                                 </div>
@@ -423,9 +423,9 @@
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
                     <template x-for="skill in learning" :key="skill.name">
                         <div
-                            class="skill-card bg-gray-800/50 p-3 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all">
+                            class="skill-card bg-gray-800/50 p-2 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all">
                             <div class="flex items-center mb-2">
-                                <div class="w-8 h-8 rounded-md mr-2 flex items-center justify-center bg-purple-500/10">
+                                <div class="w-6 h-6 rounded-md mr-1 flex items-center justify-center bg-purple-500/10">
                                     <i :class="skill.icon" class="text-purple-400"></i>
                                 </div>
                                 <h3 class="text-sm font-semibold text-white" x-text="skill.name"></h3>
@@ -1221,106 +1221,106 @@
     </style>
 
 
-<!-- WhatsApp Chat Button -->
-<a href="https://wa.me/8801788167580"
-    class="fixed bottom-[340px] left-2 border border-red-100 bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300 z-50 group"
-    target="_blank" aria-label="Chat on WhatsApp">
-    <div class="tooltip">WhatsApp</div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-        <path
-            d="M20.52 3.48A11.87 11.87 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 1.64 6.07L0 24l6.28-1.64A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12a11.87 11.87 0 0 0-3.48-8.52zM12 22c-1.93 0-3.77-.5-5.4-1.44l-.39-.22-3.72.97.99-3.61-.25-.38A9.91 9.91 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.26-7.4c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14s-.74.94-.9 1.13c-.16.19-.33.21-.62.07-.29-.14-1.22-.45-2.32-1.44-.86-.76-1.44-1.7-1.6-1.98-.16-.29-.02-.45.12-.59.12-.12.29-.31.43-.45.14-.15.19-.24.29-.4.1-.14.05-.29 0-.43-.05-.14-.64-1.54-.88-2.12-.23-.55-.46-.48-.64-.49h-.54c-.19 0-.5.07-.77.36-.26.29-1.01.99-1.01 2.4s1.03 2.78 1.17 2.97c.14.19 2.03 3.1 4.92 4.34.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.7-.7 1.94-1.36.24-.65.24-1.22.17-1.36-.07-.12-.26-.19-.54-.33z" />
-    </svg>
-</a>
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/8801788167580"
+        class="fixed bottom-[340px] left-2 border border-red-100 bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300 z-50 group"
+        target="_blank" aria-label="Chat on WhatsApp">
+        <div class="tooltip">WhatsApp</div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M20.52 3.48A11.87 11.87 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 1.64 6.07L0 24l6.28-1.64A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12a11.87 11.87 0 0 0-3.48-8.52zM12 22c-1.93 0-3.77-.5-5.4-1.44l-.39-.22-3.72.97.99-3.61-.25-.38A9.91 9.91 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.26-7.4c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14s-.74.94-.9 1.13c-.16.19-.33.21-.62.07-.29-.14-1.22-.45-2.32-1.44-.86-.76-1.44-1.7-1.6-1.98-.16-.29-.02-.45.12-.59.12-.12.29-.31.43-.45.14-.15.19-.24.29-.4.1-.14.05-.29 0-.43-.05-.14-.64-1.54-.88-2.12-.23-.55-.46-.48-.64-.49h-.54c-.19 0-.5.07-.77.36-.26.29-1.01.99-1.01 2.4s1.03 2.78 1.17 2.97c.14.19 2.03 3.1 4.92 4.34.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.7-.7 1.94-1.36.24-.65.24-1.22.17-1.36-.07-.12-.26-.19-.54-.33z" />
+        </svg>
+    </a>
 
-<!-- GitHub -->
-<a href="https://github.com/moudud-hoq"
-    class="fixed bottom-[300px] left-2 border border-red-100 bg-gray-900 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition duration-300 z-50 group"
-    target="_blank" aria-label="View GitHub">
-    <div class="tooltip">GitHub</div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-        <path
-            d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.262.793-.583 0-.288-.011-1.243-.017-2.253-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.606-2.665-.304-5.466-1.332-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.5 11.5 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.804 5.625-5.475 5.921.43.371.823 1.102.823 2.222 0 1.606-.015 2.899-.015 3.293 0 .324.192.699.801.58C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z" />
-    </svg>
-</a>
+    <!-- GitHub -->
+    <a href="https://github.com/moudud-hoq"
+        class="fixed bottom-[300px] left-2 border border-red-100 bg-gray-900 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition duration-300 z-50 group"
+        target="_blank" aria-label="View GitHub">
+        <div class="tooltip">GitHub</div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.262.793-.583 0-.288-.011-1.243-.017-2.253-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.606-2.665-.304-5.466-1.332-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.5 11.5 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.804 5.625-5.475 5.921.43.371.823 1.102.823 2.222 0 1.606-.015 2.899-.015 3.293 0 .324.192.699.801.58C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z" />
+        </svg>
+    </a>
 
-<!-- Facebook -->
-<a href="https://www.facebook.com/moudud4"
-    class="fixed bottom-[260px] left-2 border border-red-100 bg-blue-500 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 z-50 group"
-    target="_blank" aria-label="Chat on Facebook">
-    <div class="tooltip">Facebook</div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-        <path
-            d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0" />
-    </svg>
-</a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/moudud4"
+        class="fixed bottom-[260px] left-2 border border-red-100 bg-blue-500 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 z-50 group"
+        target="_blank" aria-label="Chat on Facebook">
+        <div class="tooltip">Facebook</div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0" />
+        </svg>
+    </a>
 
-<!-- Youtube Button -->
-<a href="https://www.youtube.com/@moududhoq"
-    class="fixed bottom-[220px] left-2 border border-red-100 bg-red-500 text-white p-2 rounded-full shadow-lg hover:bg-red-700 transition duration-300 z-50 group"
-    target="_blank" aria-label="View YouTube">
-    <div class="tooltip">YouTube</div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-        <path
-            d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.12C19.228 3.5 12 3.5 12 3.5s-7.228 0-9.386.566a2.997 2.997 0 0 0-2.112 2.12C0 8.353 0 12 0 12s0 3.647.502 5.814a2.997 2.997 0 0 0 2.112 2.12C4.772 20.5 12 20.5 12 20.5s7.228 0 9.386-.566a2.997 2.997 0 0 0 2.112-2.12C24 15.647 24 12 24 12s0-3.647-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-    </svg>
-</a>
+    <!-- Youtube Button -->
+    <a href="https://www.youtube.com/@moududhoq"
+        class="fixed bottom-[220px] left-2 border border-red-100 bg-red-500 text-white p-2 rounded-full shadow-lg hover:bg-red-700 transition duration-300 z-50 group"
+        target="_blank" aria-label="View YouTube">
+        <div class="tooltip">YouTube</div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.12C19.228 3.5 12 3.5 12 3.5s-7.228 0-9.386.566a2.997 2.997 0 0 0-2.112 2.12C0 8.353 0 12 0 12s0 3.647.502 5.814a2.997 2.997 0 0 0 2.112 2.12C4.772 20.5 12 20.5 12 20.5s7.228 0 9.386-.566a2.997 2.997 0 0 0 2.112-2.12C24 15.647 24 12 24 12s0-3.647-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg>
+    </a>
 
-<!-- Linkedin Button -->
-<a href="https://www.linkedin.com/in/moududhoq/"
-    class="fixed bottom-[180px] left-2 border border-red-100 bg-blue-500 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 z-50 group"
-    target="_blank" aria-label="View LinkedIn">
-    <div class="tooltip">LinkedIn</div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-        <path
-            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z" />
-    </svg>
-</a>
+    <!-- Linkedin Button -->
+    <a href="https://www.linkedin.com/in/moududhoq/"
+        class="fixed bottom-[180px] left-2 border border-red-100 bg-blue-500 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 z-50 group"
+        target="_blank" aria-label="View LinkedIn">
+        <div class="tooltip">LinkedIn</div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z" />
+        </svg>
+    </a>
 
-<!-- Mail -->
-<a href="mailto:moududulhaque@gmail.com"
-    class="fixed bottom-[140px] left-2 border border-red-100 bg-gray-900 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition duration-300 z-50 group"
-    target="_blank" aria-label="Chat on Mail">
-    <div class="tooltip">Email</div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-        <path
-            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z" />
-    </svg>
-</a>
+    <!-- Mail -->
+    <a href="mailto:moududulhaque@gmail.com"
+        class="fixed bottom-[140px] left-2 border border-red-100 bg-gray-900 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition duration-300 z-50 group"
+        target="_blank" aria-label="Chat on Mail">
+        <div class="tooltip">Email</div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z" />
+        </svg>
+    </a>
 
-<style>
-    .tooltip {
-        position: absolute;
-        left: 50px;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 4px 8px;
-        border-radius: 4px;
-        font-size: 12px;
-        white-space: nowrap;
-        opacity: 0;
-        pointer-events: none;
-        transform: translateX(-10px);
-        transition: all 0.2s ease;
-    }
-    
-    .group:hover .tooltip {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    
-    .tooltip::before {
-        content: "";
-        position: absolute;
-        left: -5px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 0;
-        height: 0;
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        border-right: 5px solid rgba(0, 0, 0, 0.8);
-    }
-</style>
+    <style>
+        .tooltip {
+            position: absolute;
+            left: 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(-10px);
+            transition: all 0.2s ease;
+        }
+
+        .group:hover .tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .tooltip::before {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-right: 5px solid rgba(0, 0, 0, 0.8);
+        }
+    </style>
 
     <!-- Back to Top Button -->
     <button id="backToTop"
