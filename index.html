@@ -1592,33 +1592,42 @@
                 chatMessages.scrollTop = chatMessages.scrollHeight;
             }
 
-            // Process user message and generate response
             function processMessage(message) {
-                // Convert message to lowercase for easier matching
-                const lowerMessage = message.toLowerCase();
+    const lowerMessage = message.toLowerCase();
+    let response = '';
 
-                // Define responses based on website content
-                let response = '';
+    if (lowerMessage.includes('skill') || lowerMessage.includes('expertise')) {
+        response = "I specialize in HTML5, CSS3, Tailwind CSS, JavaScript, jQuery Plugins, WordPress, and WooCommerce. I'm also experienced in website speed optimization, SEO, and converting Figma designs to code.";
+    } else if (lowerMessage.includes('contact') || lowerMessage.includes('reach')) {
+        response = "You can reach me via WhatsApp (+88 017 8816 7580), Email (moududulhaque@gmail.com), or follow me on GitHub, LinkedIn, Facebook, and YouTube.";
+    } else if (lowerMessage.includes('project') || lowerMessage.includes('work')) {
+        response = "I’ve worked on WordPress websites, plugin development, WooCommerce stores, Elementor designs, and website speed optimization.";
+    } else if (lowerMessage.includes('experience') || lowerMessage.includes('year')) {
+        response = "I have over 1 year of hands-on experience in professional web development.";
+    } else if (lowerMessage.includes('service') || lowerMessage.includes('offer')) {
+        response = "My services include WordPress theme/plugin development, speed optimization, SEO setup, responsive design fixes, and more.";
+    } else if (lowerMessage.includes('learning') || lowerMessage.includes('studying')) {
+        response = "I'm currently learning advanced CSS, WordPress plugin/theme development, server deployment, and improving English for global clients.";
+    } else if (lowerMessage.includes('resume') || lowerMessage.includes('cv')) {
+        response = "I’m a WordPress Developer skilled in Elementor, Gutenberg, SEO, plugin/theme development, and performance troubleshooting. Want a copy? Just ask!";
+    } else if (lowerMessage.includes('number') || lowerMessage.includes('phone')) {
+        response = "You can WhatsApp me at +88 017 8816 7580.";
+    } else if (lowerMessage.includes('whatsapp')) {
+        response = "Sure! Reach out to me directly via WhatsApp: +88 017 8816 7580.";
+    } else if (lowerMessage.includes('html') || lowerMessage.includes('css') || lowerMessage.includes('javascript')) {
+        response = "I use HTML5, CSS3 (especially Tailwind CSS), and JavaScript (with jQuery) to build responsive and functional websites.";
+    } else if (lowerMessage.includes('plugin') || lowerMessage.includes('theme')) {
+        response = "I can develop custom WordPress themes and plugins tailored to your needs.";
+    } else if (lowerMessage.includes('elementor') || lowerMessage.includes('builder')) {
+        response = "I frequently use Elementor and Gutenberg to create stunning page designs.";
+    } else {
+        response = "Sorry, I didn’t quite catch that. You can ask me about my skills, services, learning goals, resume, or how to reach me!";
+    }
 
-                if (lowerMessage.includes('skill') || lowerMessage.includes('expertise')) {
-                    response = "I specialize in HTML5, CSS3, Tailwind CSS, JavaScript, jQuery Plugins, WordPress, and WooCommerce. I'm also experienced in website speed optimization, SEO, and converting Figma designs to code.";
-                } else if (lowerMessage.includes('contact') || lowerMessage.includes('reach')) {
-                    response = "You can reach me through WhatsApp (+88 017 8816 7580), email (moududulhaque@gmail.com), or through my social media profiles (GitHub, LinkedIn, Facebook, and YouTube).";
-                } else if (lowerMessage.includes('project') || lowerMessage.includes('work')) {
-                    response = "I've worked on various projects including website development, WordPress customization, WooCommerce setup, and website optimization. You can check out my portfolio section for more details.";
-                } else if (lowerMessage.includes('experience') || lowerMessage.includes('year')) {
-                    response = "I have over 1 year of experience in web development, focusing on front-end development and WordPress solutions.";
-                } else if (lowerMessage.includes('service') || lowerMessage.includes('offer')) {
-                    response = "I offer services in website development, WordPress customization, WooCommerce setup, website optimization, and converting Figma designs to code.";
-                } else {
-                    response = "I'm not sure about that. You can ask me about my skills, services, experience, or how to contact me. I'll be happy to help!";
-                }
-
-                // Add a small delay to simulate typing
-                setTimeout(() => {
-                    addMessage(response, 'bot');
-                }, 500);
-            }
+    setTimeout(() => {
+        addMessage(response, 'bot');
+    }, 500);
+}
         });
     </script>
 </body>
