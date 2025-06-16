@@ -128,16 +128,21 @@
     },
     {
       "id": 9,
-      "title": "Upcomming",
-      "image": "https://img.freepik.com/free-vector/coming-soon-background-with-focus-light-effect-design_1017-27277.jpg?ga=GA1.1.1793962052.1744683530&semt=ais_hybrid&w=740",
-      "link": "#",
+      "title": "Shokh Furniture:WooCommerce",
+      "image": "./src/images/projectimage/ShokhFurniture.png",
+      "link": "https://dev-sokhfurniture.pantheonsite.io/",
       "figmaLink": "#",
       "category": "woocommerce",
       "technologies": [
         "WordPress",
-        "Hello Elementor Theme",
+        "WooCommerce",
+        "Astra Theme",
         "Elementor Builder",
-        "Convert from Figma Template"
+        "SEO Optimization",
+        "Security Enhancements",
+        "Speed Optimization",
+        "Payment Gateway Setup",
+        "Responsive Design"
       ]
     },
     {
