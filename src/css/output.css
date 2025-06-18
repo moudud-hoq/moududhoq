@@ -1492,6 +1492,18 @@ video {
   left: 1rem;
 }
 
+.bottom-\[\] {
+  bottom: ;
+}
+
+.bottom-\[30px\] {
+  bottom: 30px;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
 .z-0 {
   z-index: 0;
 }
