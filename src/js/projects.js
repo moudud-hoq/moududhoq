@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Handle "View All Projects" button
+    // Handle "View All Project's" button
     if (viewAllButton) {
         viewAllButton.addEventListener('click', (e) => {
             e.preventDefault();
