@@ -84,7 +84,7 @@
   }
 
   .project-background-image {
-    @apply relative h-64 bg-no-repeat overflow-hidden;
+    @apply relative h-96 bg-no-repeat overflow-hidden;
     background-size: cover;
     background-position: center top;
     transition: background-position 5s ease-in-out;
@@ -159,7 +159,7 @@
 
   @media (min-width: 1280px) {
     .projects-grid {
-      @apply grid-cols-4;
+      @apply grid-cols-3;
     }
 
     .projects-grid .project-card:nth-child(n+9) {
