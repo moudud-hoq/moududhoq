@@ -91,31 +91,30 @@
 
     <!-- Waypoints (Dependency for Counter-Up) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-
-
+    <!-- Project.css -->
+    <link rel="stylesheet" href="./src/css/project.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png"
         href="https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/487868560_2859497670886650_1078534593812205352_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHAiW_G0MPT26CRNJ76QaJNPdBEy2vhmEU90ETLa-GYRXB_syuMGApQhLAfZ2EGWz8MulTd9qy9AqW2edYiIhsu&_nc_ohc=cmlxj_9HEMkQ7kNvwFuHFQz&_nc_oc=AdnFkRbr_Kwa3Dusox9qpe1sHXmhCB0vC4HC9SnA6oq5-fyIQgrNEsiohixYdVItqIk&_nc_zt=23&_nc_ht=scontent.fdac5-1.fna&_nc_gid=tdT1UBM7_yVSEFpxTsM_mw&oh=00_AfJH_u8dDgJuBzL2db3rWRQZSmJMH-QG_hMf_jwDj0WmMw&oe=6844D61F">
 </head>
 
-<body id="body" class="font-josefin antialiased bg-gray-90">
+<body id="body" class="font-josefin antialiased ">
     <!-- Navigation Menu -->
-    <nav
-        class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-md border-b border-gray-700/50">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-100">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="#body" class="flex items-center space-x-2 group">
                         <div
-                            class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center transform transition-all duration-300 group-hover:rotate-6 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/25">
+                            class="w-10 h-10 rounded-lg bg-slate-700 flex items-center justify-center transform transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
                             <span class="text-xl font-bold text-white">MH</span>
                         </div>
                         <div class="flex flex-col">
                             <span
-                                class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">Moudud</span>
+                                class="text-xl font-bold text-slate-700 group-hover:text-slate-800 transition-colors duration-300">Moudud</span>
                             <span
-                                class="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Web
+                                class="text-xs text-slate-500 group-hover:text-slate-600 transition-colors duration-300">Web
                                 Developer</span>
                         </div>
                     </a>
@@ -124,35 +123,35 @@
                 <!-- Desktop Menu (Center) -->
                 <div class="hidden md:flex items-center justify-center space-x-8">
                     <a href="#about"
-                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+                        class="text-slate-700 hover:text-slate-900 transition-colors duration-300 relative group">
                         About
                         <span
-                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-700 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#skills"
-                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+                        class="text-slate-700 hover:text-slate-900 transition-colors duration-300 relative group">
                         Skills
                         <span
-                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-700 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#work"
-                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+                        class="text-slate-700 hover:text-slate-900 transition-colors duration-300 relative group">
                         Projects
                         <span
-                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-700 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#blog"
-                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+                        class="text-slate-700 hover:text-slate-900 transition-colors duration-300 relative group">
                         Blog
                         <span
-                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-700 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                 </div>
 
                 <!-- Hire Me Button (Desktop) -->
                 <div class="hidden md:block">
                     <a href="#contact"
-                        class="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/25 focus:ring-2 focus:ring-blue-500/50 focus:outline-none">
+                        class="px-6 py-2.5 bg-slate-700 text-white font-semibold rounded-full hover:bg-slate-800 transition-all duration-300 focus:ring-2 focus:ring-slate-300 focus:outline-none">
                         Let's Discuss
                     </a>
                 </div>
@@ -160,7 +159,7 @@
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
                     <button type="button" id="mobile-menu-button"
-                        class="text-gray-300 hover:text-blue-400 focus:outline-none">
+                        class="text-slate-700 hover:text-slate-900 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
@@ -172,65 +171,26 @@
 
         <!-- Mobile Menu Container -->
         <div id="mobile-menu"
-            class="hidden md:hidden absolute top-20 left-0 w-full bg-gradient-to-b from-gray-900/95 to-gray-800/95 backdrop-blur-md shadow-lg transform transition-all duration-300 ease-in-out opacity-0 -translate-y-2 border-t border-gray-700/50">
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-white shadow-lg border-t border-gray-100">
             <div class="container mx-auto px-4 py-4 flex flex-col items-center space-y-4">
                 <a href="#about"
-                    class="w-full text-center px-4 py-2 text-gray-300 hover:bg-gray-700/50 hover:text-blue-400 rounded-lg transition-colors duration-300">About</a>
+                    class="w-full text-center px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-lg transition-colors duration-300">About</a>
                 <a href="#skills"
-                    class="w-full text-center px-4 py-2 text-gray-300 hover:bg-gray-700/50 hover:text-blue-400 rounded-lg transition-colors duration-300">Skills</a>
+                    class="w-full text-center px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-lg transition-colors duration-300">Skills</a>
                 <a href="#work"
-                    class="w-full text-center px-4 py-2 text-gray-300 hover:bg-gray-700/50 hover:text-blue-400 rounded-lg transition-colors duration-300">Projects</a>
+                    class="w-full text-center px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-lg transition-colors duration-300">Projects</a>
                 <a href="#blog"
-                    class="w-full text-center px-4 py-2 text-gray-300 hover:bg-gray-700/50 hover:text-blue-400 rounded-lg transition-colors duration-300">Blog</a>
+                    class="w-full text-center px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-lg transition-colors duration-300">Blog</a>
                 <a href="#contact"
-                    class="w-48 text-center px-6 py-2.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/25">
+                    class="w-48 text-center px-6 py-2.5 bg-slate-700 text-white font-semibold rounded-full hover:bg-slate-800 transition-all duration-300">
                     Let's Discuss
                 </a>
             </div>
         </div>
     </nav>
 
-    <style>
-        /* Mobile Menu Animation Styles */
-        #mobile-menu {
-            transition: all 0.3s ease-in-out;
-        }
-
-        #mobile-menu.show {
-            opacity: 1;
-            transform: translateY(0);
-            visibility: visible;
-        }
-
-        #mobile-menu.hidden {
-            opacity: 0;
-            transform: translateY(-1rem);
-            visibility: hidden;
-        }
-
-        /* Navbar Gradient Animation */
-        nav {
-            background-size: 200% 200%;
-            animation: gradientMove 15s ease infinite;
-        }
-
-        @keyframes gradientMove {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-    </style>
-
     <script>
-        // Mobile menu functionality
+        // Same mobile menu functionality as before
         document.addEventListener('DOMContentLoaded', function () {
             const menuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -241,43 +201,38 @@
 
                 if (isMenuOpen) {
                     mobileMenu.classList.remove('hidden');
-                    // Force a reflow
                     mobileMenu.offsetHeight;
                     mobileMenu.classList.add('show');
                 } else {
                     mobileMenu.classList.remove('show');
                     setTimeout(() => {
                         mobileMenu.classList.add('hidden');
-                    }, 300); // Match the transition duration
+                    }, 300);
                 }
 
-                // Update button icon
                 const icon = menuButton.querySelector('svg');
                 if (isMenuOpen) {
                     icon.innerHTML = `
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    `;
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                `;
                 } else {
                     icon.innerHTML = `
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    `;
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                `;
                 }
             }
 
-            // Toggle menu on button click
             menuButton.addEventListener('click', function (e) {
                 e.stopPropagation();
                 toggleMenu();
             });
 
-            // Close menu when clicking outside
             document.addEventListener('click', function (e) {
                 if (isMenuOpen && !mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
                     toggleMenu();
                 }
             });
 
-            // Close menu when clicking on a link
             const menuLinks = mobileMenu.querySelectorAll('a');
             menuLinks.forEach(link => {
                 link.addEventListener('click', () => {
@@ -285,7 +240,6 @@
                 });
             });
 
-            // Close menu on window resize (if desktop size reached)
             window.addEventListener('resize', function () {
                 if (window.innerWidth >= 768 && isMenuOpen) {
                     toggleMenu();
@@ -294,107 +248,145 @@
         });
     </script>
 
-    <!-- Combined Hero & About Section -->
-    <section id="about" class="pt-32 pb-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+    <section id="about" class="pt-32 pb-20 bg-white text-slate-800">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-12">
 
                 <!-- Left Column: Hero Content -->
                 <div class="lg:w-2/3 text-center lg:text-left">
-                    <h1 class="text-3xl md:text-6xl font-bold mb-6 font-bricolage">
-                        Hi, I'm <span id="typed-text2"
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"></span>
+                    <h1 class="text-2xl md:text-6xl font-bold mb-6">
+                        Hi, I'm <span id="typed-text2" class="text-slate-900 font-extrabold"></span>
                     </h1>
-                    <p class="text-xl md:text-2xl mb-4 font-josefin text-gray-300">
-                        <span id="typed-text"></span>
+                    <p class="text-xl md:text-2xl mb-4 text-slate-600">
+                        A Front End and WordPress Developer
                     </p>
-
                     <div class="text-justify">
-                        <!-- Hero Section Introduction -->
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-slate-700 mb-4">
                             I'm a passionate web developer crafting user-focused digital experiences through modern
                             design and development practices. With a strong learning mindset, I constantly build,
                             refine, and deploy real-world projects that speak for my growth.
                         </p>
-
-                        <!-- WordPress Design & Development Section -->
-                        <p class="text-gray-300 mb-4">
-                            I specialize in
-                            <span class="text-yellow-400 text-xl font-semibold">WordPress Design</span>, offering
-                            tailored solutions through
-                            <span class="text-red-400">custom theme development</span> and popular builders like
-                            <span class="text-red-400">Elementor</span>,
-                            <span class="text-red-400">Astra</span>,
-                            <span class="text-red-400">Kadence</span>,
-                            <span class="text-red-400">Bricks</span> etc. I focus on
-                            <span class="text-red-400">website security</span>,
-                            <span class="text-red-400">performance optimization</span>,
-                            <span class="text-red-400">SEO best practices</span>, and
-                            <span class="text-red-400">WooCommerce setup & management</span> to ensure every site is
-                            fast, secure, and conversion-ready.
-                        </p>
-
-                        <!-- Frontend Development Skills Section -->
-                        <p class="text-gray-300 mb-6">
-                            On the <span class="text-yellow-400 text-xl font-semibold">frontend</span>, I work with
-                            <span class="text-red-400">HTML5</span>,
-                            <span class="text-red-400">CSS3</span>,
-                            <span class="text-red-400">Tailwind CSS</span>,
-                            <span class="text-red-400">JavaScript</span>, and
-                            <span class="text-red-400">jQuery Plugins</span>
-                            to create clean, responsive, and interactive interfaces. My goal is to bridge creativity and
-                            code for the best user experience.
-                        </p>
                     </div>
-                    <!-- Social Icons -->
-                    <div class="flex items-center gap-3 mt-6 justify-center lg:justify-start">
-                        <a href="https://www.facebook.com/moudud4" target="_blank" aria-label="Facebook"
-                            class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 shadow-lg hover:scale-110">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/moudud-hoq-593583176/" target="_blank" aria-label="LinkedIn"
-                            class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 text-white transition-all duration-300 shadow-lg hover:scale-110">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/moudud-hoq" target="_blank" aria-label="GitHub"
-                            class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-gray-800 text-white transition-all duration-300 shadow-lg hover:scale-110">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@moududhoq" target="_blank" aria-label="YouTube"
-                            class="w-9 h-9 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 shadow-lg hover:scale-110">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="mailto:moududulhaque@gmail.com" target="_blank" aria-label="Email"
-                            class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600 text-white transition-all duration-300 shadow-lg hover:scale-110">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://wa.me/8801788167580" target="_blank" aria-label="WhatsApp"
-                            class="w-9 h-9 flex items-center justify-center rounded-full bg-green-500 hover:bg-green-600 text-white transition-all duration-300 shadow-lg hover:scale-110">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+
+                    <!-- Stats + Social combined container -->
+                    <div class="stats-social flex flex-col md:flex-row items-center gap-6 md:gap-12 mt-6">
+
+                        <!-- Stats Section -->
+                        <div class="grid grid-cols-4 gap-4">
+                            <!-- Stats Card 1 -->
+                            <div class="relative flex flex-col items-center">
+                                <div class="relative flex items-center justify-center mb-2">
+                                    <svg class="w-16 h-16" viewBox="0 0 40 40">
+                                        <circle class="text-slate-200" stroke="currentColor" stroke-width="2"
+                                            fill="none" cx="20" cy="20" r="16" />
+                                        <circle stroke="#3b82f6" stroke-width="2" fill="none" cx="20" cy="20" r="16"
+                                            stroke-linecap="round" stroke-dasharray="100.53"
+                                            stroke-dashoffset="10.53" />
+                                    </svg>
+                                    <span
+                                        class="absolute inset-0 flex items-center justify-center text-blue-600 font-bold text-xl">10+</span>
+                                </div>
+                                <span class="text-sm font-semibold text-slate-800">Projects</span>
+                            </div>
+
+                            <!-- Stats Card 2 -->
+                            <div class="relative flex flex-col items-center">
+                                <div class="relative flex items-center justify-center mb-2">
+                                    <svg class="w-16 h-16" viewBox="0 0 40 40">
+                                        <circle class="text-slate-200" stroke="currentColor" stroke-width="2"
+                                            fill="none" cx="20" cy="20" r="16" />
+                                        <circle stroke="#9333ea" stroke-width="2" fill="none" cx="20" cy="20" r="16"
+                                            stroke-linecap="round" stroke-dasharray="100.53"
+                                            stroke-dashoffset="10.53" />
+                                    </svg>
+                                    <span
+                                        class="absolute inset-0 flex items-center justify-center text-purple-600 font-bold text-xl">10+</span>
+                                </div>
+                                <span class="text-sm font-semibold text-slate-800">Skills</span>
+                            </div>
+
+                            <!-- Stats Card 3 -->
+                            <div class="relative flex flex-col items-center">
+                                <div class="relative flex items-center justify-center mb-2">
+                                    <svg class="w-16 h-16" viewBox="0 0 40 40">
+                                        <circle class="text-slate-200" stroke="currentColor" stroke-width="2"
+                                            fill="none" cx="20" cy="20" r="16" />
+                                        <circle stroke="#10b981" stroke-width="2" fill="none" cx="20" cy="20" r="16"
+                                            stroke-linecap="round" stroke-dasharray="100.53"
+                                            stroke-dashoffset="80.53" />
+                                    </svg>
+                                    <span
+                                        class="absolute inset-0 flex items-center justify-center text-green-600 font-bold text-xl">1+</span>
+                                </div>
+                                <span class="text-sm font-semibold text-slate-800">Years</span>
+                            </div>
+
+                            <!-- Stats Card 4 -->
+                            <div class="relative flex flex-col items-center">
+                                <div class="relative flex items-center justify-center mb-2">
+                                    <svg class="w-16 h-16" viewBox="0 0 40 40">
+                                        <circle class="text-slate-200" stroke="currentColor" stroke-width="2"
+                                            fill="none" cx="20" cy="20" r="16" />
+                                        <circle stroke="#eab308" stroke-width="2" fill="none" cx="20" cy="20" r="16"
+                                            stroke-linecap="round" stroke-dasharray="100.53" stroke-dashoffset="0" />
+                                    </svg>
+                                    <span
+                                        class="absolute inset-0 flex items-center justify-center text-yellow-600 font-bold text-xl">100%</span>
+                                </div>
+                                <span class="text-sm font-semibold text-slate-800">Dedication</span>
+                            </div>
+                        </div>
+
+                        <!-- Social Icons -->
+                        <div class="flex items-center gap-3 justify-center">
+                            <a href="https://www.facebook.com/moudud4" target="_blank" aria-label="Facebook"
+                                class="w-9 h-9 flex items-center justify-center rounded-full bg-slate-700 hover:bg-slate-800 text-white transition-all duration-300 hover:scale-110">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/moudud-hoq-593583176/" target="_blank"
+                                aria-label="LinkedIn"
+                                class="w-9 h-9 flex items-center justify-center rounded-full bg-slate-700 hover:bg-slate-800 text-white transition-all duration-300 hover:scale-110">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/moudud-hoq" target="_blank" aria-label="GitHub"
+                                class="w-9 h-9 flex items-center justify-center rounded-full bg-slate-700 hover:bg-slate-800 text-white transition-all duration-300 hover:scale-110">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@moududhoq" target="_blank" aria-label="YouTube"
+                                class="w-9 h-9 flex items-center justify-center rounded-full bg-slate-700 hover:bg-slate-800 text-white transition-all duration-300 hover:scale-110">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="mailto:moududulhaque@gmail.com" target="_blank" aria-label="Email"
+                                class="w-9 h-9 flex items-center justify-center rounded-full bg-slate-700 hover:bg-slate-800 text-white transition-all duration-300 hover:scale-110">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://wa.me/8801788167580" target="_blank" aria-label="WhatsApp"
+                                class="w-9 h-9 flex items-center justify-center rounded-full bg-slate-700 hover:bg-slate-800 text-white transition-all duration-300 hover:scale-110">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
 
                 <!-- Right Column: About Content -->
                 <div class="lg:w-1/3">
-                    <div
-                        class="bg-gray-800/60 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-600/50 hover:border-gray-500/70 transition-all duration-500">
+                    <div class="">
                         <div class="relative mb-10 flex flex-col md:flex-row items-center group">
                             <!-- Image with Hover Overlay -->
                             <div
-                                class="relative w-full max-w-[280px] sm:max-w-[320px] mx-auto overflow-hidden rounded-xl shadow-2xl">
+                                class="relative w-full max-w-[280px] sm:max-w-[320px] mx-auto overflow-hidden rounded-xl shadow-lg">
                                 <img src="./src/images/MoududHoq.png" alt="Profile"
-                                    class="w-full h-auto transform transition-all duration-500 group-hover:scale-110 object-contain">
+                                    class="w-full h-auto transform transition-all duration-500 group-hover:scale-105 object-contain" />
 
                                 <!-- Hover Overlay -->
                                 <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center">
+                                    class="absolute inset-0 bg-slate-900/50 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center">
                                     <div
                                         class="text-center p-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
                                         <h3 class="text-white font-bold text-lg mb-2">Moudud Hoque</h3>
-                                        <p class="text-gray-200 text-sm leading-relaxed">
-                                            Passionate Web Developer <br>
+                                        <p class="text-slate-200 text-sm leading-relaxed">
+                                            Passionate Web Developer <br />
                                             Creating Digital Solutions
                                         </p>
                                     </div>
@@ -405,7 +397,7 @@
                             <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-10">
                                 <div class="whitespace-nowrap">
                                     <span
-                                        class="px-4 py-2 sm:px-5 sm:py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-xs sm:text-sm font-semibold shadow-xl text-white border border-blue-400/30">
+                                        class="px-4 py-2 sm:px-5 sm:py-2 bg-slate-700 rounded-full text-xs sm:text-sm font-semibold shadow-lg text-white border border-slate-600">
                                         🚀 Learning & Growing
                                     </span>
                                 </div>
@@ -413,154 +405,208 @@
                         </div>
 
                         <!-- CTA Buttons -->
-                        <div class="flex gap-2 justify-center mt-8">
+                        <div class="flex gap-4 justify-center mt-8">
                             <a href="#contact"
-                                class="group relative px-2 sm:px-8 py-2 rounded-xl font-semibold bg-gradient-to-r from-indigo-600 to-blue-600 text-white hover:from-indigo-500 hover:to-blue-500 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl text-center overflow-hidden">
-                                <span class="relative z-10">Let's Discuss</span>
-                                <div
-                                    class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left">
-                                </div>
+                                class="px-6 py-2.5 bg-slate-700 rounded-xl font-semibold text-white hover:bg-slate-800 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                                Let's Discuss
                             </a>
-
                             <a href="./src/others/Moududul Hoque.pdf" target="_blank"
-                                class="group relative px-2 sm:px-8 py-2 rounded-xl font-semibold border-2 border-gray-400/60 text-gray-300 hover:border-indigo-400 hover:text-indigo-300 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl text-center backdrop-blur-sm">
-                                <span class="relative z-10">View CV</span>
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                </div>
+                                class="px-6 py-2.5 rounded-xl font-semibold border-2 border-slate-300 text-slate-700 hover:border-slate-700 hover:text-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                                View CV
                             </a>
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="py-1 bg-gray-900">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-                <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                    <h4 class="text-2xl font-bold text-blue-400">
-                        <span class="">10</span><span>+</span>
-                    </h4>
-                    <p class="text-sm text-gray-400">Projects</p>
-                </div>
-                <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                    <h4 class="text-2xl font-bold text-purple-400">
-                        <span class="">10</span><span>+</span>
-                    </h4>
-                    <p class="text-sm text-gray-400">Skills</p>
-                </div>
-                <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                    <h4 class="text-2xl font-bold text-green-400">
-                        <span class="">1</span><span>+</span>
-                    </h4>
-                    <p class="text-sm text-gray-400">Years</p>
-                </div>
-                <div class="text-center p-4 bg-gray-700/50 rounded-lg">
-                    <h4 class="text-2xl font-bold text-yellow-400">
-                        <span class="">100</span><span>%</span>
-                    </h4>
-                    <p class="text-sm text-gray-400">Dedication</p>
-                </div>
             </div>
         </div>
     </section>
 
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-12 bg-gradient-to-b from-gray-900 to-gray-800" x-data="skillsData">
+    <!-- Enhanced Skills Section -->
+    <section id="skills" class="pb-16 bg-white text-slate-800" x-data="skillsData" x-init="init()">
         <div class="container mx-auto px-4">
             <!-- Main Skills -->
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">My <span class="text-blue-500">Skills</span>
+            <h2 class="text-4xl font-bold text-center mb-1">
+                My <span class="text-blue-600">Skills</span>
+            </h2>
+            <h2 class="text-xs font-semibold text-center mb-12">
+                Click Any Skill to See Details
             </h2>
 
-            <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
-                <!-- Skill cards - Data driven approach -->
+            <div
+                class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-11 gap-4 justify-center">
                 <template x-for="skill in skills" :key="skill.name">
-                    <div
-                        class="skill-card bg-gray-800/50 hover:bg-black p-2 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all">
-                        <div class="flex items-center mb-2">
-                            <div class="w-6 h-6 rounded-md mr-1 flex items-center justify-center"
-                                :class="skill.bgColor">
-                                <i :class="skill.icon" :style="{color: skill.color}"></i>
-                            </div>
-                            <h3 class="text-sm font-semibold text-white" x-text="skill.name"></h3>
+                    <div class="relative flex flex-col justify-center items-center pb-6 cursor-pointer"
+                        @click="openModal(skill)">
+                        <div class="relative flex items-center justify-center mb-2 scale-90 sm:scale-100">
+                            <svg class="w-16 h-16 sm:w-20 sm:h-20 spin" viewBox="0 0 40 40"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle class="text-slate-200" stroke="currentColor" stroke-width="4" fill="none"
+                                    cx="20" cy="20" r="16" />
+                                <circle :stroke="skill.color" stroke-width="4" fill="none" cx="20" cy="20" r="16"
+                                    stroke-linecap="round" :stroke-dasharray="circumference"
+                                    :stroke-dashoffset="skill.dashoffset" />
+                            </svg>
+                            <span class="absolute inset-0 flex items-center justify-center">
+                                <i :class="skill.icon" :style="{ color: skill.color }" class="text-xl sm:text-2xl"></i>
+                            </span>
+                            <span
+                                class="absolute -top-2 -right-2 bg-white px-2 py-0.5 rounded-full text-xs font-bold shadow"
+                                :style="{ color: skill.color, border: '1px solid ' + skill.color }"
+                                x-text="skill.percent + '%'"></span>
                         </div>
-                        <div class="flex items-center justify-between text-xs mb-1 text-gray-400">
-                            <span>Progress</span>
-                            <span :style="{color: skill.color}" x-text="skill.percent + '%'"></span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-1.5">
-                            <div class="h-1.5 rounded-full"
-                                :style="{width: skill.percent + '%', backgroundColor: skill.color}"></div>
-                        </div>
+                        <span class="text-sm font-semibold text-slate-800 text-center" x-text="skill.name"></span>
                     </div>
                 </template>
             </div>
 
-            <!-- Learning Section -->
-            <h3 class="text-2xl font-bold text-center mt-12 mb-8 text-white">Currently <span
-                    class="text-purple-500">Learning</span></h3>
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            <!-- Currently Learning Section -->
+            <h3 class="text-3xl font-bold text-center mt-16 mb-10">
+                Currently <span class="text-purple-600">Learning</span>
+            </h3>
+
+            <div
+                class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-11 gap-4 justify-center">
                 <template x-for="skill in learning" :key="skill.name">
-                    <div
-                        class="skill-card bg-gray-800/50 p-2 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all">
-                        <div class="flex items-center mb-2">
-                            <div class="w-6 h-6 rounded-md mr-1 flex items-center justify-center bg-purple-500/10">
-                                <i :class="skill.icon" class="text-purple-400"></i>
-                            </div>
-                            <h3 class="text-sm font-semibold text-white" x-text="skill.name"></h3>
+                    <div class="relative flex flex-col items-center pb-6 cursor-pointer" @click="openModal(skill)">
+                        <div class="relative flex items-center justify-center mb-2 scale-90 sm:scale-100 mx-auto">
+                            <svg class="w-16 h-16 sm:w-20 sm:h-20 spin" viewBox="0 0 40 40"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle class="text-slate-200" stroke="currentColor" stroke-width="4" fill="none"
+                                    cx="20" cy="20" r="16" />
+                                <circle stroke="#a855f7" stroke-width="4" fill="none" cx="20" cy="20" r="16"
+                                    stroke-linecap="round" :stroke-dasharray="circumference"
+                                    :stroke-dashoffset="skill.dashoffset" />
+                            </svg>
+                            <span class="absolute inset-0 flex items-center justify-center">
+                                <i :class="skill.icon" class="text-purple-600 text-xl sm:text-2xl"></i>
+                            </span>
+                            <span
+                                class="absolute -top-2 -right-2 bg-white px-2 py-0.5 rounded-full text-xs font-bold shadow"
+                                style="color: #a855f7; border: 1px solid #a855f7;" x-text="skill.percent + '%'"></span>
                         </div>
-                        <div class="flex items-center justify-between text-xs mb-1 text-gray-400">
-                            <span>Progress</span>
-                            <span class="text-purple-400" x-text="skill.percent + '%'"></span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-1.5">
-                            <div class="bg-purple-500 h-1.5 rounded-full" :style="{width: skill.percent + '%'}">
-                            </div>
-                        </div>
+                        <span class="text-sm font-semibold text-slate-800" x-text="skill.name"></span>
                     </div>
                 </template>
             </div>
         </div>
+
+        <!-- Modal -->
+        <div x-show="modalOpen" x-cloak x-transition.opacity style="background: rgba(0,0,0,0.6);"
+            class="fixed inset-0 flex items-center justify-center z-50" @click.outside="modalOpen = false">
+            <div class="bg-white rounded-lg p-6 max-w-md w-full shadow-lg" @click.stop x-trap.noscroll="modalOpen">
+                <h2 class="text-2xl font-bold mb-4" x-text="selectedSkill.name"></h2>
+                <p class="mt-3 text-gray-700" x-text="selectedSkill.details || 'No additional details available.'"></p>
+                <button class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                    @click="modalOpen = false">
+                    Close
+                </button>
+            </div>
+        </div>
     </section>
+
+    <style>
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spin {
+            animation: spin 10s linear infinite;
+            transform-origin: center center;
+            transition: animation-duration 0.3s ease;
+        }
+
+        circle[stroke-dashoffset] {
+            transition: stroke-dashoffset 1s ease-out;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fix flash of modal */
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
 
     <script>
         document.addEventListener('alpine:init', () => {
             Alpine.data('skillsData', () => ({
                 skills: [
-                    { name: 'HTML5', icon: 'fab fa-html5', color: '#F1662A', percent: 90, bgColor: 'bg-[#F1662A]/10' },
-                    { name: 'CSS3', icon: 'fab fa-css3-alt', color: '#226DE4', percent: 90, bgColor: 'bg-[#226DE4]/10' },
-                    { name: 'Tailwind CSS', icon: 'fas fa-wind', color: '#44a8b3', percent: 90, bgColor: 'bg-[#44a8b3]/10' },
-                    { name: 'WordPress Design', icon: 'fab fa-wordpress', color: '#21759B', percent: 70, bgColor: 'bg-[#21759B]/10' },
-                    { name: 'WooCommerce', icon: 'fas fa-cart-plus', color: '#96588A', percent: 60, bgColor: 'bg-[#96588A]/10' },
-                    { name: 'jQuery Plugins', icon: 'fas fa-code', color: '#88D686', percent: 60, bgColor: 'bg-[#88D686]/10' },
-                    { name: 'SEO', icon: 'fas fa-search', color: '#4285F4', percent: 70, bgColor: 'bg-[#4285F4]/10' },
-                    { name: 'Performance Optimization', icon: 'fas fa-tachometer-alt', color: '#4285F4', percent: 80, bgColor: 'bg-[#4285F4]/10' },
-                    { name: 'Website Security', icon: 'fas fa-shield-alt', color: '#4285F4', percent: 80, bgColor: 'bg-[#4285F4]/10' },
-                    { name: 'SASS', icon: 'fab fa-sass', color: '#CC6699', percent: 60, bgColor: 'bg-[#CC6699]/10' },
-                    { name: 'Figma Conversion', icon: 'fas fa-vector-square', color: '#4285F4', percent: 70, bgColor: 'bg-[#4285F4]/10' },
-
+                    { name: 'HTML5', icon: 'fab fa-html5', color: '#F1662A', percent: 90, dashoffset: 100, details: 'Expert in crafting clean and semantic markup using HTML5. I ensure accessibility, SEO-readiness, and responsive design, applying best practices to structure websites for optimal performance and usability.' },
+                    { name: 'CSS3', icon: 'fab fa-css3-alt', color: '#226DE4', percent: 80, dashoffset: 100, details: 'Proficient in writing scalable and responsive layouts using CSS3. I work with Flexbox, Grid, animations, and media queries to create fluid interfaces that enhance user experience across devices.' },
+                    { name: 'Tailwind CSS', icon: 'fas fa-wind', color: '#44a8b3', percent: 70, dashoffset: 100, details: 'Specialized in Tailwind CSS for utility-first design. I rapidly prototype and build clean, maintainable interfaces with consistency and a design system mindset.' },
+                    { name: 'WordPress', icon: 'fab fa-wordpress', color: '#21759B', percent: 80, dashoffset: 100, details: 'Skilled in advanced WordPress customization using customizer, hooks, filters, ACF, CPT, and various plugins. I work with modern builders like Elementor, Gutenberg, Bricks and customize popular themes like Astra, Kadence, GeneratePress. I provide tailored solutions focusing on speed, UX, and SEO without building core themes or plugins.' },
+                    { name: 'WooCommerce', icon: 'fas fa-cart-plus', color: '#96588A', percent: 70, dashoffset: 100, details: 'Experienced in WooCommerce store customization, product setup, payment integration, and theme tweaks to improve UX and conversion rates without modifying core plugin code.' },
+                    { name: 'jQuery Plugins', icon: 'fas fa-code', color: '#88D686', percent: 60, dashoffset: 100, details: 'Skilled in using and modifying jQuery plugins for enhanced UI interactivity — including sliders, accordions, popups, and AJAX forms. I integrate them seamlessly into WordPress themes.' },
+                    { name: 'SEO', icon: 'fas fa-search', color: '#4285F4', percent: 80, dashoffset: 100, details: 'Apply SEO best practices including keyword mapping, metadata optimization, schema markup, and performance enhancements to improve organic visibility. Comfortable with Yoast, Rank Math, and Search Console.' },
+                    { name: 'Performance Optimization', icon: 'fas fa-tachometer-alt', color: '#4285F4', percent: 80, dashoffset: 100, details: 'Improve speed scores and Core Web Vitals using image compression, code minification, cache setup (WP Rocket, LiteSpeed), and removal of bloat. I also use dev tools and online analyzers for auditing.' },
+                    { name: 'Website Security', icon: 'fas fa-shield-alt', color: '#4285F4', percent: 70, dashoffset: 100, details: 'Ensure WordPress security via plugins (like Wordfence, iThemes), login lockdown, CAPTCHA, spam filtering, and regular backups. I avoid risky plugins and apply secure configurations.' },
+                    { name: 'SASS', icon: 'fab fa-sass', color: '#CC6699', percent: 65, dashoffset: 100, details: 'Use SASS to organize large-scale stylesheets with variables, nesting, mixins, and imports — which improves maintainability and reusability of design systems.' },
+                    { name: 'Figma Conversion', icon: 'fas fa-vector-square', color: '#4285F4', percent: 60, dashoffset: 100, details: 'Convert Figma designs into pixel-perfect, responsive websites using HTML, CSS (or Tailwind), and JavaScript. I focus on accessibility, layout fidelity, and mobile-first principles.' }
                 ],
                 learning: [
-                    { name: 'JavaScript', icon: 'fab fa-js', percent: 25 },
-                    { name: 'PHP', icon: 'fab fa-php', percent: 25 },
-                    { name: 'MySQL', icon: 'fas fa-database', percent: 20 },
-                    { name: 'WP Theme Dev', icon: 'fab fa-wordpress', percent: 20 },
-                    { name: 'Shopify', icon: 'fab fa-shopify', percent: 10 }
-                ]
+                    { name: 'JavaScript', icon: 'fab fa-js', percent: 20, dashoffset: 100, details: 'Programming language for interactive web pages.' },
+                    { name: 'PHP', icon: 'fab fa-php', percent: 15, dashoffset: 100, details: 'Server-side scripting language for web development.' },
+                    { name: 'WP Theme Dev', icon: 'fab fa-wordpress', percent: 20, dashoffset: 100, details: 'Developing custom WordPress themes.' },
+                    { name: 'MySQL', icon: 'fas fa-database', percent: 20, dashoffset: 100, details: 'Relational database management system.' },
+                    { name: 'Shopify', icon: 'fab fa-shopify', percent: 10, dashoffset: 100, details: 'E-commerce platform for online stores.' },
+                    { name: 'Github', icon: 'fab fa-github', percent: 35, dashoffset: 100, details: 'Version control platform for tracking changes in code repositories.' },
+                ],
+
+                circumference: 2 * Math.PI * 16,
+                modalOpen: false,
+                selectedSkill: {},
+
+                openModal(skill) {
+                    this.selectedSkill = skill;
+                    this.modalOpen = true;
+                },
+
+                animateProgress() {
+                    [...this.skills, ...this.learning].forEach((skill) => this.animateSkill(skill));
+                },
+
+                animateSkill(skill) {
+                    const duration = 1000;
+                    const start = performance.now();
+                    const circumference = this.circumference;
+                    const targetOffset = circumference - (circumference * skill.percent) / 100;
+
+                    const animate = (time) => {
+                        let elapsed = time - start;
+                        if (elapsed > duration) elapsed = duration;
+
+                        skill.dashoffset = circumference - (circumference - targetOffset) * (elapsed / duration);
+
+                        if (elapsed < duration) {
+                            requestAnimationFrame(animate);
+                        } else {
+                            skill.dashoffset = targetOffset;
+                        }
+                    };
+
+                    requestAnimationFrame(animate);
+                },
+
+                init() {
+                    this.animateProgress();
+                },
             }));
         });
     </script>
 
-    <style>
-        .skill-card {
-            @apply transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10 hover:bg-gray-800;
-        }
-    </style>
+
+
+
+
 
 
     <!-- Projects Section -->
@@ -1303,8 +1349,7 @@
     </style>
 
     <!-- Social Media Container -->
-    <div
-        class="fixed bottom-1 left-1 rounded-2xl p-2 shadow-xl border border-white/10 z-50">
+    <div class="fixed bottom-1 left-1 rounded-2xl p-2 shadow-xl border border-white/10 z-50">
         <div class="flex flex-col gap-1">
             <!-- WhatsApp -->
             <a href="https://wa.me/8801788167580"

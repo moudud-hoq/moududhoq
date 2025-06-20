@@ -1,78 +1,103 @@
-/* Project Cards */
+/* ===================== Project Section Styles ===================== */
+
+/* Project Card Container: Styles the main card for each project. */
 .project-card {
     @apply bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] relative;
 }
 
+/* Ensures the card content is vertically stacked and fills height. */
 .project-card-container {
-    @apply flex flex-col h-full;
+    @apply flex flex-col h-full min-h-full;
 }
 
+/* Project Image: Sets up the background image for each card. */
 .project-background-image {
-    @apply relative h-64 bg-cover bg-center bg-no-repeat overflow-hidden transition-transform duration-1000 ease-in-out;
+    @apply relative h-96 bg-no-repeat overflow-hidden;
     background-size: cover;
     background-position: center top;
+    transition: background-position 5s ease-in-out;
 }
 
+/* On hover, scrolls the background image for a dynamic effect. */
+.project-card:hover .project-background-image {
+    background-position: center bottom;
+}
+
+/* Technology Badges: Shows tech stack for each project. */
 .tech-badges {
-    @apply absolute inset-0 flex flex-wrap items-start justify-start p-4 gap-2 transition-all duration-300 ease-in-out;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, transparent 100%);
+    @apply absolute flex flex-wrap items-end bottom-0 p-1 gap-1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 100%);
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
+/* Hide tech badges on hover for a cleaner look. */
+.project-card:hover .tech-badges {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Individual tech badge styling. */
 .tech-badge {
-    @apply px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-800 rounded-full text-xs font-medium 
-    hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:text-white 
-    transition-all duration-300 transform hover:scale-105 shadow-sm;
+    @apply px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-800 rounded-full text-xs font-medium hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-sm;
 }
 
+/* Project Info: Contains title and buttons. */
 .project-info {
     @apply p-6 flex-1 flex flex-col justify-between;
 }
 
+/* Project Title: Styles the project name. */
 .project-title {
     @apply text-xl font-bold mb-4 text-gray-800;
 }
 
+/* Project Buttons: Container for action buttons. */
 .project-buttons {
-    @apply flex flex-col gap-3;
+    @apply flex flex-col gap-2;
 }
 
+/* Project Button: Styles for action buttons (visit, design, etc.). */
 .project-button {
-    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-full
-    transition-all duration-300 transform hover:scale-105 text-center;
+    @apply inline-flex items-center justify-center p-2 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105 text-center;
 }
 
+/* Primary Button: For main actions (e.g., visit site). */
 .primary-button {
-    @apply text-white bg-gradient-to-r from-green-500 to-blue-500
-    hover:from-green-600 hover:to-blue-600 hover:shadow-lg;
+    @apply text-white bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 hover:shadow-lg;
 }
 
+/* Secondary Button: For secondary actions (e.g., design link). */
 .secondary-button {
-    @apply text-gray-700 bg-gray-100 border border-gray-300
-    hover:bg-gray-200 hover:border-gray-400;
+    @apply text-gray-700 bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400;
 }
 
+/* ===================== Project Filter Styles ===================== */
+
+/* Project Filter: Category filter buttons. */
 .project-filter {
-    @apply px-6 py-2 text-base font-medium rounded-full text-white
-    border-2 border-transparent border-gray-500 hover:border-green-500
-    transition-all duration-300 transform hover:scale-105;
+    @apply p-2 text-base font-medium rounded-full text-white border-2 border-transparent border-gray-500 hover:border-green-500 transition-all duration-300 transform hover:scale-105;
 }
 
+/* Active filter state. */
 .project-filter.active {
-    @apply bg-gradient-to-r from-green-500 to-blue-500 text-white 
-    shadow-lg shadow-green-500/20;
+    @apply bg-gradient-to-r from-green-500 to-blue-500 text-white shadow-lg shadow-green-500/20;
 }
 
-/* Project Grid Animation */
+/* ===================== Project Grid Layout & Animation ===================== */
+
+/* Projects Grid: Layout for project cards. */
 .projects-grid {
     @apply grid grid-cols-1 gap-8 transition-all duration-500;
 }
 
-/* Small screens (mobile) - 1 column, 4 cards visible */
+/* Show only 4 cards on mobile. */
 .projects-grid .project-card:nth-child(n+5) {
     @apply hidden;
 }
 
-/* Medium screens (tablet) - 2 columns, 6 cards visible */
+/* Tablet: 2 columns, 6 cards. */
 @media (min-width: 768px) {
     .projects-grid {
         @apply grid-cols-2;
@@ -82,51 +107,66 @@
     }
 }
 
-/* Large screens (desktop) - 3 columns, 9 cards visible */
+/* Desktop: 3 columns, 9 cards. */
 @media (min-width: 1024px) {
     .projects-grid {
         @apply grid-cols-3;
     }
 }
 
-/* Extra large screens - 4 columns, 8 cards visible */
+/* XL: 3 columns, 9 cards. */
 @media (min-width: 1280px) {
     .projects-grid {
-        @apply grid-cols-4;
+        @apply grid-cols-3;
     }
     .projects-grid .project-card:nth-child(n+9) {
         @apply hidden;
     }
 }
 
-/* Show all cards when show-all class is present */
+/* Show all cards when .show-all is present. */
 .projects-grid.show-all .project-card {
     @apply block !important;
 }
 
-/* Hover effects for background image scrolling */
-.project-card:hover .project-background-image {
-    transform: translateY(-30%);
-}
-
-/* Ensure smooth transitions */
-.tech-badges,
-.project-background-image {
-    transition: all 0.6s ease-in-out;
-}
-
-/* Additional styling for better visual hierarchy */
-.project-card-container {
-    @apply min-h-full;
-}
-
-/* Responsive adjustments for project info */
+/* Responsive: Buttons in a row on mobile. */
 @media (max-width: 640px) {
     .project-buttons {
         @apply flex-row gap-2;
     }
-    
     .project-button {
-        @apply flex-1 text-xs px-3 py-2;
+        @apply flex-1 text-xs p-2;
     }
+}
+
+/* ===================== Project Carousel Styles ===================== */
+
+/* Project carousel navigation arrows. */
+.projects-carousel .slick-prev:before,
+.projects-carousel .slick-next:before {
+    color: #10B981;
+    font-size: 24px;
+}
+
+/* Project carousel dots. */
+.projects-carousel .slick-dots li button:before {
+    color: #10B981;
+    opacity: 0.5;
+    font-size: 10px;
+}
+
+.projects-carousel .slick-dots li.slick-active button:before {
+    color: #10B981;
+    opacity: 1;
+}
+
+/* ===================== Project Link Styles ===================== */
+
+/* Project link styling for external links. */
+.project-link {
+    @apply text-green-600 font-semibold hover:text-green-700 transition-colors duration-300 flex items-center;
+}
+
+.project-link:hover i {
+    @apply transform translate-x-1;
 }
