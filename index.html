@@ -248,6 +248,7 @@
         });
     </script>
 
+    <!-- Hero -->
     <section id="about" class="pt-32 pb-20 bg-white text-slate-800">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-12">
@@ -262,80 +263,51 @@
                     </p>
                     <div class="text-justify">
                         <p class="text-slate-700 mb-4">
-                            I'm a passionate web developer crafting user-focused digital experiences through modern
-                            design and development practices. With a strong learning mindset, I constantly build,
-                            refine, and deploy real-world projects that speak for my growth.
+                            I am a professional web developer focused on creating user-friendly and modern websites. I
+                            use the latest design and development techniques to deliver clean, responsive, and reliable
+                            solutions.
+
+                            My main skills are in Frontend development, WordPress, and WooCommerce. I build websites and
+                            online stores that look good and work well on all devices. I am always learning new things
+                            to improve my work and help clients succeed.
                         </p>
                     </div>
 
                     <!-- Stats + Social combined container -->
                     <div class="stats-social flex flex-col md:flex-row items-center gap-6 md:gap-12 mt-6">
 
+
                         <!-- Stats Section -->
-                        <div class="grid grid-cols-4 gap-4">
-                            <!-- Stats Card 1 -->
-                            <div class="relative flex flex-col items-center">
-                                <div class="relative flex items-center justify-center mb-2">
-                                    <svg class="w-16 h-16" viewBox="0 0 40 40">
-                                        <circle class="text-slate-200" stroke="currentColor" stroke-width="2"
-                                            fill="none" cx="20" cy="20" r="16" />
-                                        <circle stroke="#3b82f6" stroke-width="2" fill="none" cx="20" cy="20" r="16"
-                                            stroke-linecap="round" stroke-dasharray="100.53"
-                                            stroke-dashoffset="10.53" />
-                                    </svg>
-                                    <span
-                                        class="absolute inset-0 flex items-center justify-center text-blue-600 font-bold text-xl">10+</span>
-                                </div>
-                                <span class="text-sm font-semibold text-slate-800">Projects</span>
-                            </div>
-
-                            <!-- Stats Card 2 -->
-                            <div class="relative flex flex-col items-center">
-                                <div class="relative flex items-center justify-center mb-2">
-                                    <svg class="w-16 h-16" viewBox="0 0 40 40">
-                                        <circle class="text-slate-200" stroke="currentColor" stroke-width="2"
-                                            fill="none" cx="20" cy="20" r="16" />
-                                        <circle stroke="#9333ea" stroke-width="2" fill="none" cx="20" cy="20" r="16"
-                                            stroke-linecap="round" stroke-dasharray="100.53"
-                                            stroke-dashoffset="10.53" />
-                                    </svg>
-                                    <span
-                                        class="absolute inset-0 flex items-center justify-center text-purple-600 font-bold text-xl">10+</span>
-                                </div>
-                                <span class="text-sm font-semibold text-slate-800">Skills</span>
-                            </div>
-
-                            <!-- Stats Card 3 -->
-                            <div class="relative flex flex-col items-center">
-                                <div class="relative flex items-center justify-center mb-2">
-                                    <svg class="w-16 h-16" viewBox="0 0 40 40">
-                                        <circle class="text-slate-200" stroke="currentColor" stroke-width="2"
-                                            fill="none" cx="20" cy="20" r="16" />
-                                        <circle stroke="#10b981" stroke-width="2" fill="none" cx="20" cy="20" r="16"
-                                            stroke-linecap="round" stroke-dasharray="100.53"
-                                            stroke-dashoffset="80.53" />
-                                    </svg>
-                                    <span
-                                        class="absolute inset-0 flex items-center justify-center text-green-600 font-bold text-xl">1+</span>
-                                </div>
-                                <span class="text-sm font-semibold text-slate-800">Years</span>
-                            </div>
-
-                            <!-- Stats Card 4 -->
-                            <div class="relative flex flex-col items-center">
-                                <div class="relative flex items-center justify-center mb-2">
-                                    <svg class="w-16 h-16" viewBox="0 0 40 40">
-                                        <circle class="text-slate-200" stroke="currentColor" stroke-width="2"
-                                            fill="none" cx="20" cy="20" r="16" />
-                                        <circle stroke="#eab308" stroke-width="2" fill="none" cx="20" cy="20" r="16"
-                                            stroke-linecap="round" stroke-dasharray="100.53" stroke-dashoffset="0" />
-                                    </svg>
-                                    <span
-                                        class="absolute inset-0 flex items-center justify-center text-yellow-600 font-bold text-xl">100%</span>
-                                </div>
-                                <span class="text-sm font-semibold text-slate-800">Dedication</span>
+                        <div x-data="{
+                      stats: [
+                         { label: 'Projects', value: '10+', color: '#3b82f6', dashoffset: 10.53 },
+                        { label: 'Skills', value: '10+', color: '#9333ea', dashoffset: 10.53 },
+                         { label: 'Years', value: '1+', color: '#10b981', dashoffset: 80.53 },
+                          { label: 'Dedication', value: '99%', color: '#eab308', dashoffset: 0 },
+                             ],
+                            dasharray: 100.53
+                            }">
+                            <div class="grid grid-cols-4 gap-4">
+                                <template x-for="stat in stats" :key="stat.label">
+                                    <div class="relative flex flex-col items-center">
+                                        <div class="relative flex items-center justify-center mb-2">
+                                            <svg class="w-16 h-16" viewBox="0 0 40 40">
+                                                <circle class="text-slate-200" stroke="currentColor" stroke-width="2"
+                                                    fill="none" cx="20" cy="20" r="16" />
+                                                <circle :stroke="stat.color" stroke-width="2" fill="none" cx="20"
+                                                    cy="20" r="16" stroke-linecap="round" :stroke-dasharray="dasharray"
+                                                    :stroke-dashoffset="stat.dashoffset" />
+                                            </svg>
+                                            <span
+                                                class="absolute inset-0 flex items-center justify-center font-bold text-xl"
+                                                :style="{ color: stat.color }" x-text="stat.value"></span>
+                                        </div>
+                                        <span class="text-sm font-semibold text-slate-800" x-text="stat.label"></span>
+                                    </div>
+                                </template>
                             </div>
                         </div>
+
 
                         <!-- Social Icons -->
                         <div class="flex items-center gap-3 justify-center">
@@ -936,218 +908,200 @@
     </script>
 
 
-    <!-- Testimonials Section (Additional Section) -->
-    <section class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
-                Client <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Testimonials</span>
-            </h2>
 
-            <!-- Testimonial Carousel -->
-            <div class="testimonial-carousel">
 
-                <!-- Testimonial 1 -->
-                <div class="px-4">
-                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-                        <div class="flex items-center mb-4">
-                            <div class="text-amber-400 text-2xl mr-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-6 italic">"Working with this developer was an absolute pleasure. They
-                            delivered our project ahead of schedule and the quality exceeded our expectations."</p>
-                        <div class="flex items-center">
-                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200"
-                                alt="Sarah Johnson"
-                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200">
-                            <div>
-                                <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
-                                <p class="text-gray-500 text-sm">CEO, TechStart</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Testimonial 2 -->
-                <div class="px-4">
-                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-                        <div class="flex items-center mb-4">
-                            <div class="text-amber-400 text-2xl mr-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-6 italic">"The attention to detail and communication throughout the
-                            project was exceptional. I would highly recommend their services."</p>
-                        <div class="flex items-center">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200"
-                                alt="Michael Chen"
-                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200">
-                            <div>
-                                <h4 class="font-bold text-gray-800">Michael Chen</h4>
-                                <p class="text-gray-500 text-sm">Marketing Director, BrightCo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Testimonial 3 -->
-                <div class="px-4">
-                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-                        <div class="flex items-center mb-4">
-                            <div class="text-amber-400 text-2xl mr-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-6 italic">"Our website redesign was a huge success thanks to their
-                            expertise. The new site has significantly improved our conversion rates."</p>
-                        <div class="flex items-center">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200"
-                                alt="Emily Rodriguez"
-                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200">
-                            <div>
-                                <h4 class="font-bold text-gray-800">Emily Rodriguez</h4>
-                                <p class="text-gray-500 text-sm">Founder, DesignHub</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Testimonials Section -->
+<section 
+  x-data 
+  x-init="$('.testimonial-carousel').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true,
+    arrows: true,
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },  /* md screens */
+      { breakpoint: 640, settings: { slidesToShow: 1 } }    /* sm screens */
+    ]
+  })"
+  class="py-20 bg-gradient-to-br from-blue-50 to-purple-50"
+>
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+      Client <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Testimonials</span>
+    </h2>
 
-                <!-- Testimonial 4-->
-                <div class="px-4">
-                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-                        <div class="flex items-center mb-4">
-                            <div class="text-amber-400 text-2xl mr-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great
-                            attention to detail and creative solutions to complex problems."</p>
-                        <div class="flex items-center">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200"
-                                alt="David Wilson"
-                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200">
-                            <div>
-                                <h4 class="font-bold text-gray-800">David Wilson</h4>
-                                <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 5 -->
-                <div class="px-4">
-                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-                        <div class="flex items-center mb-4">
-                            <div class="text-amber-400 text-2xl mr-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great
-                            attention to detail and creative solutions to complex problems."</p>
-                        <div class="flex items-center">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200"
-                                alt="David Wilson"
-                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200">
-                            <div>
-                                <h4 class="font-bold text-gray-800">David Wilson</h4>
-                                <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 6 -->
-                <div class="px-4">
-                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-                        <div class="flex items-center mb-4">
-                            <div class="text-amber-400 text-2xl mr-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great
-                            attention to detail and creative solutions to complex problems."</p>
-                        <div class="flex items-center">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200"
-                                alt="David Wilson"
-                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200">
-                            <div>
-                                <h4 class="font-bold text-gray-800">David Wilson</h4>
-                                <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+    <div class="testimonial-carousel">
+      <!-- Repeat testimonial cards here -->
+      <!-- Testimonial 1 -->
+      <div class="px-4">
+        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 mb-6 italic">"Working with this developer was an absolute pleasure. They delivered our project ahead of schedule and the quality exceeded our expectations."</p>
+          <div class="flex items-center">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+            <div>
+              <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
+              <p class="text-gray-500 text-sm">CEO, TechStart</p>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Add Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+      <!-- Testimonial 2 -->
+      <div class="px-4">
+        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 mb-6 italic">"The attention to detail and communication throughout the project was exceptional. I would highly recommend their services."</p>
+          <div class="flex items-center">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200" alt="Michael Chen" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+            <div>
+              <h4 class="font-bold text-gray-800">Michael Chen</h4>
+              <p class="text-gray-500 text-sm">Marketing Director, BrightCo</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <style>
-        /* Custom Slick Carousel Styles */
-        .testimonial-carousel .slick-slide {
-            padding: 10px;
-        }
+      <!-- Testimonial 3 -->
+      <div class="px-4">
+        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="text-gray-600 mb-6 italic">"Our website redesign was a huge success thanks to their expertise. The new site has significantly improved our conversion rates."</p>
+          <div class="flex items-center">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200" alt="Emily Rodriguez" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+            <div>
+              <h4 class="font-bold text-gray-800">Emily Rodriguez</h4>
+              <p class="text-gray-500 text-sm">Founder, DesignHub</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        .testimonial-carousel .slick-prev:before,
-        .testimonial-carousel .slick-next:before {
-            color: #f97316;
-            font-size: 24px;
-        }
+      <!-- Testimonial 4 -->
+      <div class="px-4">
+        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great attention to detail and creative solutions to complex problems."</p>
+          <div class="flex items-center">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="David Wilson" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+            <div>
+              <h4 class="font-bold text-gray-800">David Wilson</h4>
+              <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        .testimonial-carousel .slick-dots li button:before {
-            color: #f97316;
-            opacity: 0.5;
-            font-size: 10px;
-        }
+      <!-- Testimonial 5 -->
+      <div class="px-4">
+        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great attention to detail and creative solutions to complex problems."</p>
+          <div class="flex items-center">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="David Wilson" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+            <div>
+              <h4 class="font-bold text-gray-800">David Wilson</h4>
+              <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        .testimonial-carousel .slick-dots li.slick-active button:before {
-            color: #f97316;
-            opacity: 1;
-        }
+      <!-- Testimonial 6 -->
+      <div class="px-4">
+        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great attention to detail and creative solutions to complex problems."</p>
+          <div class="flex items-center">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="David Wilson" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+            <div>
+              <h4 class="font-bold text-gray-800">David Wilson</h4>
+              <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        .testimonial-carousel .slick-track {
-            display: flex;
-            align-items: stretch;
-        }
+    </div>
+  </div>
+</section>
 
-        .testimonial-carousel .slick-slide {
-            height: auto;
-        }
+<!-- Slick Carousel CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-        .testimonial-carousel .slick-slide>div {
-            height: 100%;
-        }
-    </style>
+<style>
+  /* Custom Slick Carousel Styles */
+  .testimonial-carousel .slick-slide {
+    padding: 10px;
+  }
+
+  .testimonial-carousel .slick-prev:before,
+  .testimonial-carousel .slick-next:before {
+    color: #f97316;
+    font-size: 20px;
+    opacity: 0.75;  
+    overflow: hidden;
+  }
+
+  .testimonial-carousel .slick-dots li button:before {
+    color: #f97316;
+    opacity: 0.5;
+    font-size: 10px;
+  }
+
+  .testimonial-carousel .slick-dots li.slick-active button:before {
+    color: #f97316;
+    opacity: 1;
+  }
+
+  .testimonial-carousel .slick-track {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .testimonial-carousel .slick-slide {
+    height: auto;
+  }
+
+  .testimonial-carousel .slick-slide > div {
+    height: 100%;
+  }
+
+  /* Fix slick default hr line below carousel */
+  .slick-slider {
+    border-bottom: none !important;
+  }
+  
+</style>
+
+<!-- jQuery and Slick JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- Alpine.js -->
+<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+
+
+
+
 
     <!-- Footer -->
     <footer class="bg-custom-dark text-white py-12">
