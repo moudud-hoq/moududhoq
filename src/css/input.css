@@ -6,26 +6,26 @@
   /* Buttons */
 
   .project-button {
-    @apply inline-flex items-center justify-center p-2 text-sm font-semibold rounded-full transition-all duration-300 transform hover: scale-105 text-center;
+    @apply inline-flex items-center justify-center p-2 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105 text-center;
   }
 
   .secondary-button {
-    @apply w-full text-white bg-gradient-to-r from-green-500 to-blue-500 hover: from-green-600 hover:to-blue-600 hover:shadow-lg;
+    @apply w-full my-2 bg-slate-700 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded;
   }
 
   .primary-button {
-    @apply w-full text-gray-700 bg-gray-100 border border-gray-300 hover: bg-gray-200 hover:border-gray-400;
+    @apply w-full my-2 bg-slate-700 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded;
   }
 
 
   /*Footer Social Icons */
   .social-icon {
-    @apply w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover: scale-110;
+    @apply w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110;
   }
 
   /* Footer Links */
   .footer-link {
-    @apply text-gray-400 hover: text-blue-400 transition duration-300 flex items-center;
+    @apply text-gray-400 hover:text-blue-400 transition duration-300 flex items-center;
   }
 
   .footer-link::before {
@@ -56,16 +56,14 @@
 
   /* Shadows */
   .custom-shadow {
-    @apply shadow-lg hover: shadow-xl;
+    @apply shadow-lg hover:shadow-xl;
   }
 
   /* Card Styles */
   .card-gradient {
     @apply bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 backdrop-blur-md;
   }
-
-
-
+  
   .project-card {
     @apply bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] relative;
   }
@@ -76,9 +74,9 @@
 
   .project-background-image {
     @apply relative h-96 bg-no-repeat overflow-hidden;
-    background-size: cover;
-    background-position: center top;
-    transition: background-position 5s ease-in-out;
+    background-size:cover;
+    background-position:center top;
+    transition:background-position 5s ease-in-out;
   }
 
   .project-card:hover .project-background-image {
@@ -87,7 +85,7 @@
 
   .project-card:hover .tech-badges {
     opacity: 0;
-    transform: translateY(-20px);
+    transform:translateY(-20px);
   }
 
   .project-info {
@@ -188,28 +186,28 @@
 
   /* Back to Top */
   .back-to-top {
-    @apply fixed bottom-[100px] right-[40px] bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-full shadow-xl transition-all duration-300 cursor-pointer z-[9999] hover: from-blue-600 hover:to-purple-600 transform hover:scale-110;
-    opacity: 0;
-    visibility: hidden;
-    animation: float 3s ease-in-out infinite;
+    @apply fixed bottom-[100px] right-[40px] bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-full shadow-xl transition-all duration-300 cursor-pointer z-[9999] hover:from-blue-600 hover:to-purple-600 transform hover:scale-110;
+    opacity:0;
+    visibility:hidden;
+    animation:float 3s ease-in-out infinite;
   }
 
   .back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
+    opacity:1;
+    visibility:visible;
   }
 
   @keyframes float {
     0% {
-      transform: translateY(0px);
+      transform:translateY(0px);
     }
 
     50% {
-      transform: translateY(-10px);
+      transform:translateY(-10px);
     }
 
     100% {
-      transform: translateY(0px);
+      transform:translateY(0px);
     }
   }
 
