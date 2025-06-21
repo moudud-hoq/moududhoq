@@ -13,11 +13,11 @@ function showProjectDetailsModal(project) {
         <div class="bg-white px-8 pt-4 rounded-lg w-full max-w-3xl shadow-lg transform transition-all duration-300 scale-95 max-h-[100vh] flex flex-col" @click.stop>
             <div class="flex justify-between items-center mb-2">
                 <h2 class="text-3xl font-bold text-gray-800">${project.title}</h2>
-                <button class="close-modal-button text-gray-500 hover:text-gray-800 text-4xl transition-transform hover:rotate-90">&times;</button>
+                <button class="close-modal-button text-gray-500 hover:text-gray-800 text-6xl transition-transform hover:rotate-90">&times;</button>
             </div>
             
-            <div class="mb-6"><p class="text-gray-600 text-lg">${project.description || 'No detailed description available.'}</p></div>
-            <hr class="my-4 border-gray-200">
+            <div class=""><p class="text-gray-600 text-lg">${project.description || 'No detailed description available.'}</p></div>
+            <hr class="my-2 border-gray-200">
 
             <div class="flex-1 overflow-y-auto">
                 <div class="project-modal-image-container mb-4 rounded-xl overflow-y-auto" style="max-height: 80vh">
@@ -126,8 +126,6 @@ function createProjectCard(project, index) {
     `;
     return card;
 }
-
-// ... (rest of the JavaScript code remains the same) ...
 
 function loadMoreProjects(filter = 'all') {
     const projectsGrid = document.querySelector('.projects-grid');
