@@ -8,74 +8,26 @@ const projectsPerLoad = {
 
 function showProjectDetailsModal(project) {
     const modal = document.createElement('div');
-    modal.className = 'fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 p-4 transition-opacity duration-300 opacity-0';
+    modal.className = 'fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 transition-opacity duration-300 opacity-0';
     modal.innerHTML = `
-        <div class="bg-white p-6 rounded-lg max-w-2xl w-full shadow-lg transform transition-all duration-300 scale-95 max-h-[90vh]" @click.stop>
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-2xl font-bold text-gray-800">${project.title}</h2>
+        <div class="bg-white px-8 pt-4 rounded-lg w-full max-w-3xl shadow-lg transform transition-all duration-300 scale-95 max-h-[100vh] flex flex-col" @click.stop>
+            <div class="flex justify-between items-center mb-2">
+                <h2 class="text-3xl font-bold text-gray-800">${project.title}</h2>
                 <button class="close-modal-button text-gray-500 hover:text-gray-800 text-4xl transition-transform hover:rotate-90">&times;</button>
             </div>
             
-            <div class="mb-4"><p class="text-gray-600">${project.description || 'No detailed description available.'}</p></div>
+            <div class="mb-6"><p class="text-gray-600 text-lg">${project.description || 'No detailed description available.'}</p></div>
             <hr class="my-4 border-gray-200">
 
-            <div class="max-h-[70vh] overflow-y-auto">
-                <div class="project-modal-image-container h-96 overflow-hidden rounded-md mb-6">
-                    <img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover project-modal-image transition-transform duration-10000 ease-linear">
+            <div class="flex-1 overflow-y-auto">
+                <div class="project-modal-image-container mb-4 rounded-xl overflow-y-auto" style="max-height: 80vh">
+                    <img src="${project.image}" alt="${project.title}" class="w-full h-auto">
                 </div>
                 
-                <div class="mb-6">
-                    <h3 class="font-semibold text-lg mb-2">Technologies Used:</h3>
-                    <div class="flex flex-wrap gap-2">
-                        ${project.technologies.map(tech => `<span class="bg-gray-100 px-3 py-1 rounded-full text-sm">${tech}</span>`).join('')}
-                    </div>
-                </div>
-                
-                <div class="flex flex-wrap gap-3">
-                    <a href="${project.link}" target="_blank" class="flex-1 min-w-[120px] bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded text-center transition-colors">
-                        Visit Website
-                    </a>
-                    ${project.figmaLink && project.figmaLink !== '#' ? `
-                    <a href="${project.figmaLink}" target="_blank" class="flex-1 min-w-[120px] bg-gray-700 hover:bg-gray-800 text-white font-medium py-2 px-4 rounded text-center transition-colors">
-                        Design Link
-                    </a>
-                    ` : ''}
-                </div>
             </div>
         </div>
     `;
     document.body.appendChild(modal);
-    
-    // Initialize image scroll on hover
-    const modalImageContainer = modal.querySelector('.project-modal-image-container');
-    const modalImage = modal.querySelector('.project-modal-image');
-    
-    let scrollInterval;
-    
-    modalImageContainer.addEventListener('mouseenter', () => {
-        if (modalImage.offsetHeight > modalImageContainer.offsetHeight) {
-            const scrollDistance = modalImage.offsetHeight - modalImageContainer.offsetHeight;
-            let currentScroll = 0;
-            
-            scrollInterval = setInterval(() => {
-                currentScroll = Math.min(currentScroll + 1, scrollDistance);
-                modalImage.style.transform = `translateY(-${currentScroll}px)`;
-                
-                if (currentScroll >= scrollDistance) {
-                    clearInterval(scrollInterval);
-                    setTimeout(() => {
-                        modalImage.style.transform = 'translateY(0)';
-                        currentScroll = 0;
-                    }, 1000);
-                }
-            }, 30);
-        }
-    });
-    
-    modalImageContainer.addEventListener('mouseleave', () => {
-        clearInterval(scrollInterval);
-        modalImage.style.transform = 'translateY(0)';
-    });
     
     // Trigger animations
     setTimeout(() => {
@@ -84,7 +36,6 @@ function showProjectDetailsModal(project) {
     }, 10);
 
     const closeModal = () => {
-        clearInterval(scrollInterval);
         modal.classList.remove('opacity-100');
         modal.querySelector('div').classList.add('scale-95');
         setTimeout(() => {
@@ -99,6 +50,11 @@ function showProjectDetailsModal(project) {
         }
     });
 }
+
+// Modal Section End
+
+
+
 
 function getProjectsPerLoad() {
     if (window.innerWidth >= 1024) return projectsPerLoad.desktop;

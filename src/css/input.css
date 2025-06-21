@@ -41,16 +41,13 @@
 }
 
 /* Modal Styles */
-.modal-content {
-    max-height: 90vh;
-}
-
 .project-modal-image-container {
-    @apply h-96 overflow-hidden relative;
+    @apply rounded-xl overflow-y-auto;
+    max-height: 60vh;
 }
 
-.project-modal-image {
-    @apply w-full h-auto object-cover;
+.project-modal-image-container img {
+    @apply w-full h-auto;
     min-height: 100%;
 }
 

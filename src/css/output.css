@@ -677,21 +677,15 @@ video {
 
 /* Modal Styles */
 
-.modal-content {
-  max-height: 90vh;
-}
-
 .project-modal-image-container {
-  position: relative;
-  height: 24rem;
-  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 0.75rem;
+  max-height: 60vh;
 }
 
-.project-modal-image {
+.project-modal-image-container img {
   height: auto;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   min-height: 100%;
 }
 
@@ -1583,12 +1577,12 @@ video {
   max-height: 1000px;
 }
 
-.max-h-\[70vh\] {
-  max-height: 70vh;
-}
-
 .max-h-\[90vh\] {
   max-height: 90vh;
+}
+
+.max-h-\[100vh\] {
+  max-height: 100vh;
 }
 
 .min-h-screen {
@@ -1671,8 +1665,8 @@ video {
   width: 100%;
 }
 
-.min-w-\[120px\] {
-  min-width: 120px;
+.min-w-\[160px\] {
+  min-width: 160px;
 }
 
 .max-w-2xl {
