@@ -11,7 +11,7 @@ function showProjectDetailsModal(project) {
     modal.className = 'fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 transition-opacity duration-300 opacity-0';
     modal.innerHTML = `
         <div class="bg-white px-8 pt-4 rounded-lg w-full max-w-3xl shadow-lg transform transition-all duration-300 scale-95 max-h-[100vh] flex flex-col" @click.stop>
-            <div class="flex justify-between items-center mb-2">
+            <div class="flex justify-between items-center">
                 <h2 class="text-3xl font-bold text-gray-800">${project.title}</h2>
                 <button class="close-modal-button text-gray-500 hover:text-gray-800 text-6xl transition-transform hover:rotate-90">&times;</button>
             </div>
