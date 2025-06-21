@@ -1,9 +1,49 @@
+let allProjects = [];
+
+function showProjectDetailsModal(project) {
+    const modal = document.createElement('div');
+    modal.className = 'fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 p-4';
+    modal.innerHTML = `
+        <div class="bg-white p-6 rounded-lg max-w-xl w-full shadow-lg" @click.stop>
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">${project.title}</h2>
+                <button class="close-modal-button text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            </div>
+            <div class="max-h-[70vh] overflow-y-auto">
+                <img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover rounded-md mb-4">
+                <p class="text-gray-600">${project.description || 'No detailed description available.'}</p>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    const closeModal = () => document.body.removeChild(modal);
+
+    modal.querySelector('.close-modal-button').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.project-filter');
     const projectCards = document.querySelectorAll('.project-card');
     const projectsGrid = document.querySelector('.projects-grid');
     const viewAllButton = document.querySelector('#view-all-projects');
     let isShowingAll = false;
+
+    projectsGrid.addEventListener('click', function(e) {
+        const detailsButton = e.target.closest('.project-details-button');
+        if (detailsButton) {
+            const projectId = detailsButton.dataset.projectId;
+            const project = allProjects.find(p => p.id.toString() === projectId);
+            if (project) {
+                showProjectDetailsModal(project);
+            }
+        }
+    });
 
     // Function to handle responsive visibility
     function handleResponsiveVisibility() {
@@ -103,13 +143,11 @@ function createProjectCard(project) {
         <div class="project-card" data-category="${project.category}">
             <div class="project-card-container">
                 <div class="project-background-image" style="background-image: url('${project.image}')">
-                    <div class="tech-badges">
-                        ${project.technologies.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
-                    </div>
                 </div>
 
 <div class="project-info">
     <h3 class="project-title mb-2">${project.title}</h3>
+    <button class="project-details-button my-2 bg-slate-700 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded" data-project-id="${project.id}">Project Details</button>
     <div class="project-buttons flex flex-row">
 
         <a href="${project.link}" class="project-button primary-button" target="_blank" rel="noopener noreferrer">
@@ -134,6 +172,7 @@ async function loadProjects() {
     try {
         const response = await fetch('./src/data/projects.json');
         const data = await response.json();
+        allProjects = data.projects;
         const projectsGrid = document.querySelector('.projects-grid');
 
         // Clear existing projects
@@ -156,16 +195,9 @@ async function loadProjects() {
 
 // Function to initialize hover effects for a single card
 function initializeCardHover(card) {
-    const techBadges = card.querySelector('.tech-badges');
     const backgroundImage = card.querySelector('.project-background-image');
 
     card.addEventListener('mouseenter', () => {
-        // Hide tech badges
-        if (techBadges) {
-            techBadges.style.opacity = '0';
-            techBadges.style.transform = 'translateY(-20px)';
-        }
-
         // Start image scroll animation
         if (backgroundImage) {
             backgroundImage.style.backgroundPosition = 'center bottom';
@@ -173,12 +205,6 @@ function initializeCardHover(card) {
     });
 
     card.addEventListener('mouseleave', () => {
-        // Show tech badges
-        if (techBadges) {
-            techBadges.style.opacity = '1';
-            techBadges.style.transform = 'translateY(0)';
-        }
-
         // Reset image position
         if (backgroundImage) {
             backgroundImage.style.backgroundPosition = 'center top';

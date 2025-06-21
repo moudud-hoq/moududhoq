@@ -66,8 +66,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link href="./src/css/output.css" rel="stylesheet">
 
+    <link href="./src/css/output.css" rel="stylesheet">
+    <!-- Project.css -->
+    <link rel="stylesheet" href="./src/css/project.css">
     <!-- Slick Slider style -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
@@ -91,8 +93,8 @@
 
     <!-- Waypoints (Dependency for Counter-Up) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <!-- Project.css -->
-    <link rel="stylesheet" href="./src/css/project.css">
+
+
     <!-- Favicon -->
     <link rel="icon" type="image/png"
         href="https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/487868560_2859497670886650_1078534593812205352_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHAiW_G0MPT26CRNJ76QaJNPdBEy2vhmEU90ETLa-GYRXB_syuMGApQhLAfZ2EGWz8MulTd9qy9AqW2edYiIhsu&_nc_ohc=cmlxj_9HEMkQ7kNvwFuHFQz&_nc_oc=AdnFkRbr_Kwa3Dusox9qpe1sHXmhCB0vC4HC9SnA6oq5-fyIQgrNEsiohixYdVItqIk&_nc_zt=23&_nc_ht=scontent.fdac5-1.fna&_nc_gid=tdT1UBM7_yVSEFpxTsM_mw&oh=00_AfJH_u8dDgJuBzL2db3rWRQZSmJMH-QG_hMf_jwDj0WmMw&oe=6844D61F">
@@ -599,7 +601,7 @@
             </div>
 
             <!-- Projects Grid -->
-            <div class="projects-grid">
+            <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Projects will be dynamically loaded here -->
             </div>
 
@@ -912,10 +914,8 @@
 
 
 
-<!-- Testimonials Section -->
-<section 
-  x-data 
-  x-init="$('.testimonial-carousel').slick({
+    <!-- Testimonials Section -->
+    <section x-data x-init="$('.testimonial-carousel').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
@@ -926,177 +926,200 @@
       { breakpoint: 1024, settings: { slidesToShow: 2 } },  /* md screens */
       { breakpoint: 640, settings: { slidesToShow: 1 } }    /* sm screens */
     ]
-  })"
-  class="py-20 bg-gradient-to-br from-blue-50 to-purple-50"
->
-  <div class="container mx-auto px-6">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
-      Client <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Testimonials</span>
-    </h2>
+  })" class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+                Client <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Testimonials</span>
+            </h2>
 
-    <div class="testimonial-carousel">
-      <!-- Repeat testimonial cards here -->
-      <!-- Testimonial 1 -->
-      <div class="px-4">
-        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="text-gray-600 mb-6 italic">"Working with this developer was an absolute pleasure. They delivered our project ahead of schedule and the quality exceeded our expectations."</p>
-          <div class="flex items-center">
-            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
-            <div>
-              <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
-              <p class="text-gray-500 text-sm">CEO, TechStart</p>
+            <div class="testimonial-carousel">
+                <!-- Repeat testimonial cards here -->
+                <!-- Testimonial 1 -->
+                <div class="px-4">
+                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+                        <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"Working with this developer was an absolute pleasure. They
+                            delivered our project ahead of schedule and the quality exceeded our expectations."</p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200"
+                                alt="Sarah Johnson"
+                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+                            <div>
+                                <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
+                                <p class="text-gray-500 text-sm">CEO, TechStart</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="px-4">
+                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+                        <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"The attention to detail and communication throughout the
+                            project was exceptional. I would highly recommend their services."</p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200"
+                                alt="Michael Chen"
+                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+                            <div>
+                                <h4 class="font-bold text-gray-800">Michael Chen</h4>
+                                <p class="text-gray-500 text-sm">Marketing Director, BrightCo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="px-4">
+                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+                        <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"Our website redesign was a huge success thanks to their
+                            expertise. The new site has significantly improved our conversion rates."</p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200"
+                                alt="Emily Rodriguez"
+                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+                            <div>
+                                <h4 class="font-bold text-gray-800">Emily Rodriguez</h4>
+                                <p class="text-gray-500 text-sm">Founder, DesignHub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="px-4">
+                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+                        <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great
+                            attention to detail and creative solutions to complex problems."</p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200"
+                                alt="David Wilson"
+                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+                            <div>
+                                <h4 class="font-bold text-gray-800">David Wilson</h4>
+                                <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="px-4">
+                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+                        <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great
+                            attention to detail and creative solutions to complex problems."</p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200"
+                                alt="David Wilson"
+                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+                            <div>
+                                <h4 class="font-bold text-gray-800">David Wilson</h4>
+                                <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="px-4">
+                    <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
+                        <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great
+                            attention to detail and creative solutions to complex problems."</p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200"
+                                alt="David Wilson"
+                                class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
+                            <div>
+                                <h4 class="font-bold text-gray-800">David Wilson</h4>
+                                <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Testimonial 2 -->
-      <div class="px-4">
-        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="text-gray-600 mb-6 italic">"The attention to detail and communication throughout the project was exceptional. I would highly recommend their services."</p>
-          <div class="flex items-center">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200" alt="Michael Chen" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
-            <div>
-              <h4 class="font-bold text-gray-800">Michael Chen</h4>
-              <p class="text-gray-500 text-sm">Marketing Director, BrightCo</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-      <!-- Testimonial 3 -->
-      <div class="px-4">
-        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-          </div>
-          <p class="text-gray-600 mb-6 italic">"Our website redesign was a huge success thanks to their expertise. The new site has significantly improved our conversion rates."</p>
-          <div class="flex items-center">
-            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200" alt="Emily Rodriguez" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
-            <div>
-              <h4 class="font-bold text-gray-800">Emily Rodriguez</h4>
-              <p class="text-gray-500 text-sm">Founder, DesignHub</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <style>
+        /* Custom Slick Carousel Styles */
+        .testimonial-carousel .slick-slide {
+            padding: 10px;
+        }
 
-      <!-- Testimonial 4 -->
-      <div class="px-4">
-        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great attention to detail and creative solutions to complex problems."</p>
-          <div class="flex items-center">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="David Wilson" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
-            <div>
-              <h4 class="font-bold text-gray-800">David Wilson</h4>
-              <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        .testimonial-carousel .slick-prev:before,
+        .testimonial-carousel .slick-next:before {
+            color: #f97316;
+            font-size: 20px;
+            opacity: 0.75;
+            overflow: hidden;
+        }
 
-      <!-- Testimonial 5 -->
-      <div class="px-4">
-        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great attention to detail and creative solutions to complex problems."</p>
-          <div class="flex items-center">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="David Wilson" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
-            <div>
-              <h4 class="font-bold text-gray-800">David Wilson</h4>
-              <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        .testimonial-carousel .slick-dots li button:before {
+            color: #f97316;
+            opacity: 0.5;
+            font-size: 10px;
+        }
 
-      <!-- Testimonial 6 -->
-      <div class="px-4">
-        <div class="bg-white p-8 rounded-xl shadow-lg mx-2">
-          <div class="flex items-center mb-4 text-amber-400 text-2xl mr-2">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="text-gray-600 mb-6 italic">"The team delivered exceptional results with great attention to detail and creative solutions to complex problems."</p>
-          <div class="flex items-center">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="David Wilson" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-orange-200" />
-            <div>
-              <h4 class="font-bold text-gray-800">David Wilson</h4>
-              <p class="text-gray-500 text-sm">CTO, InnovateTech</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        .testimonial-carousel .slick-dots li.slick-active button:before {
+            color: #f97316;
+            opacity: 1;
+        }
 
-    </div>
-  </div>
-</section>
+        .testimonial-carousel .slick-track {
+            display: flex;
+            align-items: stretch;
+        }
 
-<!-- Slick Carousel CSS -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+        .testimonial-carousel .slick-slide {
+            height: auto;
+        }
 
-<style>
-  /* Custom Slick Carousel Styles */
-  .testimonial-carousel .slick-slide {
-    padding: 10px;
-  }
+        .testimonial-carousel .slick-slide>div {
+            height: 100%;
+        }
 
-  .testimonial-carousel .slick-prev:before,
-  .testimonial-carousel .slick-next:before {
-    color: #f97316;
-    font-size: 20px;
-    opacity: 0.75;  
-    overflow: hidden;
-  }
+        /* Fix slick default hr line below carousel */
+        .slick-slider {
+            border-bottom: none !important;
+        }
+    </style>
 
-  .testimonial-carousel .slick-dots li button:before {
-    color: #f97316;
-    opacity: 0.5;
-    font-size: 10px;
-  }
+    <!-- jQuery and Slick JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  .testimonial-carousel .slick-dots li.slick-active button:before {
-    color: #f97316;
-    opacity: 1;
-  }
-
-  .testimonial-carousel .slick-track {
-    display: flex;
-    align-items: stretch;
-  }
-
-  .testimonial-carousel .slick-slide {
-    height: auto;
-  }
-
-  .testimonial-carousel .slick-slide > div {
-    height: 100%;
-  }
-
-  /* Fix slick default hr line below carousel */
-  .slick-slider {
-    border-bottom: none !important;
-  }
-  
-</style>
-
-<!-- jQuery and Slick JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-<!-- Alpine.js -->
-<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- Alpine.js -->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
 
 
@@ -1381,6 +1404,7 @@
     <script src="./src/js/toptobottom.js"></script>
     <script src="./src/js/projects.js"></script>
     <script src="./src/js/faq.js"></script>
+    <script src="./src/js/contact-form.js"></script>
 
     <!-- Add jQuery and Slick JS-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -1462,7 +1486,6 @@
     </script>
 
     <!-- Add contact form script -->
-    <script src="./src/js/contact-form.js"></script>
 
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -1495,7 +1518,6 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
-    <script src="./src/js/projects.js"></script>
 
     <style>
         #goToFooter {
@@ -1638,7 +1660,7 @@
                 } else if (lowerMessage.includes('contact') || lowerMessage.includes('reach')) {
                     response = "You can reach me via WhatsApp (+88 017 8816 7580), Email (moududulhaque@gmail.com), or follow me on GitHub, LinkedIn, Facebook, and YouTube.";
                 } else if (lowerMessage.includes('project') || lowerMessage.includes('work')) {
-                    response = "I’ve worked on WordPress websites, plugin development, WooCommerce stores, Elementor designs, and website speed optimization.";
+                    response = "I've worked on WordPress websites, plugin development, WooCommerce stores, Elementor designs, and website speed optimization.";
                 } else if (lowerMessage.includes('experience') || lowerMessage.includes('year')) {
                     response = "I have over 1 year of hands-on experience in professional web development.";
                 } else if (lowerMessage.includes('service') || lowerMessage.includes('offer')) {
@@ -1646,7 +1668,7 @@
                 } else if (lowerMessage.includes('learning') || lowerMessage.includes('studying')) {
                     response = "I'm currently learning advanced CSS, WordPress plugin/theme development, server deployment, and improving English for global clients.";
                 } else if (lowerMessage.includes('resume') || lowerMessage.includes('cv')) {
-                    response = "I’m a WordPress Developer skilled in Elementor, Gutenberg, SEO, plugin/theme development, and performance troubleshooting. Want a copy? Just ask!";
+                    response = "I'm a WordPress Developer skilled in Elementor, Gutenberg, SEO, plugin/theme development, and performance troubleshooting. Want a copy? Just ask!";
                 } else if (lowerMessage.includes('number') || lowerMessage.includes('phone')) {
                     response = "You can WhatsApp me at +88 017 8816 7580.";
                 } else if (lowerMessage.includes('whatsapp')) {
@@ -1658,7 +1680,7 @@
                 } else if (lowerMessage.includes('elementor') || lowerMessage.includes('builder')) {
                     response = "I frequently use Elementor and Gutenberg to create stunning page designs.";
                 } else {
-                    response = "Sorry, I didn’t quite catch that. You can ask me about my skills, services, learning goals, resume, or how to reach me!";
+                    response = "Sorry, I didn't quite catch that. You can ask me about my skills, services, learning goals, resume, or how to reach me!";
                 }
 
                 setTimeout(() => {
