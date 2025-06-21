@@ -7,11 +7,11 @@ function showProjectDetailsModal(project) {
         <div class="bg-white p-6 rounded-lg max-w-xl w-full shadow-lg" @click.stop>
             <div class="flex justify-between items-center border-b pb-3 mb-4">
                 <h2 class="text-2xl font-bold text-gray-800">${project.title}</h2>
-                <button class="close-modal-button text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+                <p class="text-gray-600">${project.description || 'No detailed description available.'}</p>
+                <button class="close-modal-button text-gray-500 hover:text-gray-800 text-4xl border border-gray-300 p-2 rounded-full">&times;</button>
             </div>
             <div class="max-h-[70vh] overflow-y-auto">
                 <img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover rounded-md mb-4">
-                <p class="text-gray-600">${project.description || 'No detailed description available.'}</p>
             </div>
         </div>
     `;
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const viewAllButton = document.querySelector('#view-all-projects');
     let isShowingAll = false;
 
-    projectsGrid.addEventListener('click', function(e) {
+    projectsGrid.addEventListener('click', function (e) {
         const detailsButton = e.target.closest('.project-details-button');
         if (detailsButton) {
             const projectId = detailsButton.dataset.projectId;
