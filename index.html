@@ -577,89 +577,53 @@
         });
     </script>
 
-    <!-- Projects Section -->
-    <section id="work" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="text-center mb-16">
-                <span class="text-sm font-semibold tracking-wider text-green-500 uppercase">My Portfolio</span>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mt-2">Featured <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">Projects</span>
-                </h2>
-                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Explore my recent work and discover how I bring creative
-                    solutions to life.</p>
-            </div>
 
-            <!-- Project Categories -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button class="project-filter active" data-filter="all">All Projects</button>
-                <button class="project-filter" data-filter="wordpress">WordPress</button>
-                <button class="project-filter" data-filter="woocommerce">WooCommerce</button>
-                <button class="project-filter" data-filter="css3">CSS3</button>
-                <button class="project-filter" data-filter="tailwind">Tailwind CSS</button>
-                <button class="project-filter" data-filter="javascript">JavaScript</button>
-                <button class="project-filter" data-filter="others">Others</button>
-            </div>
 
-            <!-- Projects Grid -->
-            <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Projects will be dynamically loaded here -->
-            </div>
 
-            <!-- View All Projects CTA -->
-            <div class="text-center mt-16">
-                <a href="#" id="view-all-projects"
-                    class="inline-flex items-center px-8 py-4 text-lg font-semibold rounded-full text-white bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    View All Projects
-                    <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
+
+<!-- Projects Section -->
+<section id="work" class="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+            <span class="text-sm font-semibold tracking-wider text-green-500 uppercase">My Portfolio</span>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mt-2">Featured <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">Projects</span>
+            </h2>
+            <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Explore my recent work and discover how I bring creative
+                solutions to life.</p>
         </div>
-    </section>
 
-    <!-- Add Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+        <!-- Project Categories -->
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+            <button class="project-filter active" data-filter="all">All Projects</button>
+            <button class="project-filter" data-filter="wordpress">WordPress</button>
+            <button class="project-filter" data-filter="woocommerce">WooCommerce</button>
+            <button class="project-filter" data-filter="css3">CSS3</button>
+            <button class="project-filter" data-filter="tailwind">Tailwind</button>
+            <button class="project-filter" data-filter="others">Others</button>
+        </div>
 
-    <style>
-        .tech-badge {
-            @apply px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-green-100 hover:text-green-700 transition;
-        }
+        <!-- Projects Grid -->
+        <div class="projects-grid"></div>
 
-        .project-link {
-            @apply text-green-600 font-semibold hover:text-green-700 transition-colors duration-300 flex items-center;
-        }
+        <!-- Load More Button -->
+        <div class="text-center mt-8">
+            <a href="#" id="load-more-projects"
+                class="inline-flex items-center px-6 py-3 text-base font-medium rounded-full text-white">
+                Load More Projects
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
 
-        .project-link:hover i {
-            @apply transform translate-x-1;
-        }
 
-        .project-filter {
-            @apply px-4 py-2 text-sm font-medium rounded-full bg-white text-gray-700 hover:bg-gray-100 transition-colors duration-300;
-        }
 
-        .project-filter.active {
-            @apply bg-gradient-to-r from-green-500 to-blue-500 text-white;
-        }
 
-        .projects-carousel .slick-prev:before,
-        .projects-carousel .slick-next:before {
-            color: #10B981;
-            font-size: 24px;
-        }
 
-        .projects-carousel .slick-dots li button:before {
-            color: #10B981;
-            opacity: 0.5;
-            font-size: 10px;
-        }
 
-        .projects-carousel .slick-dots li.slick-active button:before {
-            color: #10B981;
-            opacity: 1;
-        }
-    </style>
-    <!-- End Project Section -->
 
 
     <!-- FAQ and Contact Section -->

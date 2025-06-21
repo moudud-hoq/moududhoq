@@ -3,19 +3,100 @@
 @tailwind utilities;
 
 @layer components {
-  /* Buttons */
 
-  .project-button {
-    @apply inline-flex items-center justify-center p-2 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105 text-center;
-  }
+ /* Project Section Styles */
+/* Project Section Styles */
+/* Project Section Styles */
+.projects-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
 
-  .secondary-button {
-    @apply w-full my-2 bg-slate-700 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded;
-  }
+.project-card {
+    @apply transition-all duration-500 ease-out;
+}
 
-  .primary-button {
-    @apply w-full my-2 bg-slate-700 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded;
-  }
+.project-card.visible {
+    @apply opacity-100 translate-y-0;
+}
+
+.project-card-container {
+    @apply h-full flex flex-col bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300;
+}
+
+.project-background-image {
+    @apply h-64 overflow-hidden relative;
+}
+
+.project-image {
+    @apply w-full h-auto object-cover;
+    min-height: 100%;
+}
+
+.project-info {
+    @apply p-5 flex flex-col;
+}
+
+.project-title {
+    @apply text-xl font-bold text-gray-800;
+}
+
+/* Modal Styles */
+.modal-content {
+    max-height: 90vh;
+}
+
+.project-modal-image-container {
+    @apply h-96 overflow-hidden relative;
+}
+
+.project-modal-image {
+    @apply w-full h-auto object-cover;
+    min-height: 100%;
+}
+
+/* Filter Buttons */
+.project-filter {
+    @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300;
+    @apply bg-gray-800 text-gray-200 hover:bg-gray-700;
+}
+
+.project-filter.active {
+    @apply bg-gradient-to-r from-green-500 to-blue-500 text-white shadow-md;
+}
+
+/* Load More Button */
+#load-more-projects {
+    @apply mt-8 px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white font-medium rounded-full;
+    @apply hover:from-green-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
   /*Footer Social Icons */
@@ -59,104 +140,7 @@
     @apply shadow-lg hover:shadow-xl;
   }
 
-  /* Card Styles */
-  .card-gradient {
-    @apply bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 backdrop-blur-md;
-  }
-  
-  .project-card {
-    @apply bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] relative;
-  }
-
-  .project-card-container {
-    @apply flex flex-col h-full min-h-full;
-  }
-
-  .project-background-image {
-    @apply relative h-96 bg-no-repeat overflow-hidden;
-    background-size:cover;
-    background-position:center top;
-    transition:background-position 5s ease-in-out;
-  }
-
-  .project-card:hover .project-background-image {
-    background-position: center bottom;
-  }
-
-  .project-card:hover .tech-badges {
-    opacity: 0;
-    transform:translateY(-20px);
-  }
-
-  .project-info {
-    @apply p-6 flex-1 flex flex-col justify-between;
-  }
-
-  .project-title {
-    @apply text-lg font-bold mb-4 text-gray-800;
-  }
-
-  .project-buttons {
-    @apply flex flex-col gap-2;
-  }
-
-  /* Project Filter */
-  .project-filter {
-    @apply p-2 text-base font-medium rounded-full text-white border-2 border-transparent border-gray-500 hover:border-green-500 transition-all duration-300 transform hover:scale-105;
-  }
-
-  .project-filter.active {
-    @apply bg-gradient-to-r from-green-500 to-blue-500 text-white shadow-lg shadow-green-500/20;
-  }
-
-  /* Project Grid Layout */
-  .projects-grid {
-    @apply grid grid-cols-1 gap-8 transition-all duration-500;
-  }
-
-  .projects-grid .project-card:nth-child(n+5) {
-    @apply hidden;
-  }
-
-  @media (min-width: 768px) {
-    .projects-grid {
-      @apply grid-cols-2;
-    }
-
-    .projects-grid .project-card:nth-child(n+7) {
-      @apply hidden;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .projects-grid {
-      @apply grid-cols-3;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .projects-grid {
-      @apply grid-cols-3;
-    }
-
-    .projects-grid .project-card:nth-child(n+9) {
-      @apply hidden;
-    }
-  }
-
-  .projects-grid.show-all .project-card {
-    @apply block !important;
-  }
-
-  @media (max-width: 640px) {
-    .project-buttons {
-      @apply flex-row gap-2;
-    }
-
-    .project-button {
-      @apply flex-1 text-xs p-2;
-    }
-  }
+ 
 
   /* Footer Tags */
   .tag {
@@ -211,8 +195,4 @@
     }
   }
 
-  /* Navbar */
-  .navbar {
-    @apply bg-white/95 backdrop-blur-sm border-b border-gray-200;
-  }
 }

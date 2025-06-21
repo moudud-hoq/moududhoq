@@ -1,27 +1,96 @@
 let allProjects = [];
+let visibleProjects = 0;
+const projectsPerLoad = {
+  mobile: 1,
+  tablet: 2,
+  desktop: 3
+};
 
 function showProjectDetailsModal(project) {
     const modal = document.createElement('div');
-    modal.className = 'fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 p-4';
+    modal.className = 'fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 p-4 transition-opacity duration-300 opacity-0';
     modal.innerHTML = `
-        <div class="bg-white p-6 rounded-lg max-w-xl w-full shadow-lg" @click.stop>
-            
-            <div class="flex justify-between items-center">
+        <div class="bg-white p-6 rounded-lg max-w-2xl w-full shadow-lg transform transition-all duration-300 scale-95 max-h-[90vh]" @click.stop>
+            <div class="flex justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-gray-800">${project.title}</h2>
-                <button class="close-modal-button text-gray-500 hover:text-gray-800 text-4xl">&times;</button>
+                <button class="close-modal-button text-gray-500 hover:text-gray-800 text-4xl transition-transform hover:rotate-90">&times;</button>
             </div>
             
-            <div><p class=" text-gray-600">${project.description || 'No detailed description available.'}</p></div>
-            <hr class="my-4 border-gray-700">
+            <div class="mb-4"><p class="text-gray-600">${project.description || 'No detailed description available.'}</p></div>
+            <hr class="my-4 border-gray-200">
 
             <div class="max-h-[70vh] overflow-y-auto">
-                <img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover rounded-md mb-4">
+                <div class="project-modal-image-container h-96 overflow-hidden rounded-md mb-6">
+                    <img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover project-modal-image transition-transform duration-10000 ease-linear">
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="font-semibold text-lg mb-2">Technologies Used:</h3>
+                    <div class="flex flex-wrap gap-2">
+                        ${project.technologies.map(tech => `<span class="bg-gray-100 px-3 py-1 rounded-full text-sm">${tech}</span>`).join('')}
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-3">
+                    <a href="${project.link}" target="_blank" class="flex-1 min-w-[120px] bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded text-center transition-colors">
+                        Visit Website
+                    </a>
+                    ${project.figmaLink && project.figmaLink !== '#' ? `
+                    <a href="${project.figmaLink}" target="_blank" class="flex-1 min-w-[120px] bg-gray-700 hover:bg-gray-800 text-white font-medium py-2 px-4 rounded text-center transition-colors">
+                        Design Link
+                    </a>
+                    ` : ''}
+                </div>
             </div>
         </div>
     `;
     document.body.appendChild(modal);
+    
+    // Initialize image scroll on hover
+    const modalImageContainer = modal.querySelector('.project-modal-image-container');
+    const modalImage = modal.querySelector('.project-modal-image');
+    
+    let scrollInterval;
+    
+    modalImageContainer.addEventListener('mouseenter', () => {
+        if (modalImage.offsetHeight > modalImageContainer.offsetHeight) {
+            const scrollDistance = modalImage.offsetHeight - modalImageContainer.offsetHeight;
+            let currentScroll = 0;
+            
+            scrollInterval = setInterval(() => {
+                currentScroll = Math.min(currentScroll + 1, scrollDistance);
+                modalImage.style.transform = `translateY(-${currentScroll}px)`;
+                
+                if (currentScroll >= scrollDistance) {
+                    clearInterval(scrollInterval);
+                    setTimeout(() => {
+                        modalImage.style.transform = 'translateY(0)';
+                        currentScroll = 0;
+                    }, 1000);
+                }
+            }, 30);
+        }
+    });
+    
+    modalImageContainer.addEventListener('mouseleave', () => {
+        clearInterval(scrollInterval);
+        modalImage.style.transform = 'translateY(0)';
+    });
+    
+    // Trigger animations
+    setTimeout(() => {
+        modal.classList.add('opacity-100');
+        modal.querySelector('div').classList.remove('scale-95');
+    }, 10);
 
-    const closeModal = () => document.body.removeChild(modal);
+    const closeModal = () => {
+        clearInterval(scrollInterval);
+        modal.classList.remove('opacity-100');
+        modal.querySelector('div').classList.add('scale-95');
+        setTimeout(() => {
+            document.body.removeChild(modal);
+        }, 300);
+    };
 
     modal.querySelector('.close-modal-button').addEventListener('click', closeModal);
     modal.addEventListener('click', (e) => {
@@ -31,225 +100,186 @@ function showProjectDetailsModal(project) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const filterButtons = document.querySelectorAll('.project-filter');
-    const projectCards = document.querySelectorAll('.project-card');
-    const projectsGrid = document.querySelector('.projects-grid');
-    const viewAllButton = document.querySelector('#view-all-projects');
-    let isShowingAll = false;
+function getProjectsPerLoad() {
+    if (window.innerWidth >= 1024) return projectsPerLoad.desktop;
+    if (window.innerWidth >= 768) return projectsPerLoad.tablet;
+    return projectsPerLoad.mobile;
+}
 
-    projectsGrid.addEventListener('click', function (e) {
-        const detailsButton = e.target.closest('.project-details-button');
-        if (detailsButton) {
-            const projectId = detailsButton.dataset.projectId;
-            const project = allProjects.find(p => p.id.toString() === projectId);
-            if (project) {
-                showProjectDetailsModal(project);
-            }
+function initializeCardHover(card) {
+    const backgroundImage = card.querySelector('.project-background-image');
+    const image = card.querySelector('.project-image');
+    
+    let scrollInterval;
+    
+    card.addEventListener('mouseenter', () => {
+        if (backgroundImage && image.offsetHeight > backgroundImage.offsetHeight) {
+            const scrollDistance = image.offsetHeight - backgroundImage.offsetHeight;
+            let currentScroll = 0;
+            
+            scrollInterval = setInterval(() => {
+                currentScroll = Math.min(currentScroll + 1, scrollDistance);
+                image.style.transform = `translateY(-${currentScroll}px)`;
+                
+                if (currentScroll >= scrollDistance) {
+                    clearInterval(scrollInterval);
+                    setTimeout(() => {
+                        image.style.transform = 'translateY(0)';
+                        currentScroll = 0;
+                    }, 1000);
+                }
+            }, 30);
         }
     });
 
-    // Function to handle responsive visibility
-    function handleResponsiveVisibility() {
-        if (!isShowingAll) {
-            projectsGrid.classList.remove('show-all');
+    card.addEventListener('mouseleave', () => {
+        clearInterval(scrollInterval);
+        if (image) {
+            image.style.transform = 'translateY(0)';
+        }
+    });
+}
+
+function createProjectCard(project, index) {
+    const card = document.createElement('div');
+    card.className = `project-card hidden opacity-0 translate-y-6 transition-all duration-500 ease-out delay-[${index * 50}ms]`;
+    card.setAttribute('data-category', project.category);
+    card.innerHTML = `
+        <div class="project-card-container h-full flex flex-col">
+            <div class="project-background-image rounded-t-lg overflow-hidden h-64 relative">
+                <img src="${project.image}" alt="${project.title}" class="project-image w-full h-auto object-cover absolute top-0 left-0 transition-transform duration-10000 ease-linear">
+            </div>
+            <div class="project-info p-5 bg-white rounded-b-lg flex flex-col">
+                <h3 class="project-title text-xl font-bold mb-4 text-gray-800">${project.title}</h3>
+                <div class="flex gap-2 mt-auto">
+                    <button class="project-details-button flex-1 bg-slate-700 hover:bg-slate-800 text-white font-medium py-3 px-4 rounded transition-colors" 
+                            data-project-id="${project.id}">
+                        Project Details
+                    </button>
+                    <a href="${project.link}" target="_blank" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded text-center transition-colors">
+                        Visit Website
+                    </a>
+                </div>
+                ${project.figmaLink && project.figmaLink !== '#' ? `
+                <a href="${project.figmaLink}" target="_blank" class="w-full mt-2 bg-gray-700 hover:bg-gray-800 text-white font-medium py-3 px-4 rounded text-center transition-colors">
+                    Design Link
+                </a>
+                ` : ''}
+            </div>
+        </div>
+    `;
+    return card;
+}
+
+// ... (rest of the JavaScript code remains the same) ...
+
+function loadMoreProjects(filter = 'all') {
+    const projectsGrid = document.querySelector('.projects-grid');
+    const projectsToShow = getProjectsPerLoad();
+    let loadedCount = 0;
+    
+    // Filter projects based on category
+    const filteredProjects = filter === 'all' 
+        ? allProjects 
+        : allProjects.filter(project => project.category === filter);
+    
+    // Show projects with staggered animation
+    for (let i = visibleProjects; i < Math.min(visibleProjects + projectsToShow, filteredProjects.length); i++) {
+        const project = filteredProjects[i];
+        const card = createProjectCard(project, i);
+        projectsGrid.appendChild(card);
+        
+        // Trigger animation
+        setTimeout(() => {
+            card.classList.remove('hidden');
+            card.classList.remove('opacity-0');
+            card.classList.remove('translate-y-6');
+        }, 10);
+        
+        loadedCount++;
+        
+        // Initialize hover effects and click handler
+        setTimeout(() => {
+            initializeCardHover(card);
+            card.querySelector('.project-details-button').addEventListener('click', () => {
+                showProjectDetailsModal(project);
+            });
+        }, 50);
+    }
+    
+    visibleProjects += loadedCount;
+    
+    // Update load more button state
+    const loadMoreBtn = document.querySelector('#load-more-projects');
+    if (loadMoreBtn) {
+        if (visibleProjects >= filteredProjects.length) {
+            loadMoreBtn.classList.add('hidden');
+        } else {
+            loadMoreBtn.classList.remove('hidden');
         }
     }
+    
+    return loadedCount;
+}
 
-    // Initialize visibility
-    handleResponsiveVisibility();
+function resetProjects(filter = 'all') {
+    const projectsGrid = document.querySelector('.projects-grid');
+    projectsGrid.innerHTML = '';
+    visibleProjects = 0;
+    loadMoreProjects(filter);
+}
 
-    // Filter functionality
+function initializeProjectFilters() {
+    const filterButtons = document.querySelectorAll('.project-filter');
+    
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-
+            
             // Add active class to clicked button
             button.classList.add('active');
-
+            
+            // Reset and load projects with new filter
             const filter = button.getAttribute('data-filter');
-
-            // Reset show-all state
-            isShowingAll = false;
-            projectsGrid.classList.remove('show-all');
-
-            projectCards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-            // After filtering, apply responsive visibility
-            handleResponsiveVisibility();
+            resetProjects(filter);
         });
     });
-
-    // Handle "View All Project's" button
-    if (viewAllButton) {
-        viewAllButton.addEventListener('click', (e) => {
-            e.preventDefault();
-
-            // Toggle show-all state
-            isShowingAll = !isShowingAll;
-
-            if (isShowingAll) {
-                // Show all projects
-                projectsGrid.classList.add('show-all');
-                viewAllButton.innerHTML = 'Show Less <i class="fas fa-arrow-up ml-2"></i>';
-            } else {
-                // Hide extra projects
-                projectsGrid.classList.remove('show-all');
-                viewAllButton.innerHTML = 'View All Projects <i class="fas fa-arrow-right ml-2"></i>';
-                // Scroll back to projects section
-                document.querySelector('#work').scrollIntoView({ behavior: 'smooth' });
-            }
-
-            // Reset filter buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            const allButton = document.querySelector('[data-filter="all"]');
-            if (allButton) allButton.classList.add('active');
-        });
-    }
-
-    // Handle window resize
-    window.addEventListener('resize', handleResponsiveVisibility);
-
-    // Initialize Intersection Observer for fade-in animation
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                entry.target.classList.remove('hidden');
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '50px'
-    });
-
-    // Observe all project cards
-    projectCards.forEach(card => {
-        observer.observe(card);
-    });
-
-    // Enhanced hover effects for project cards
-    projectCards.forEach(card => {
-        initializeCardHover(card);
-    });
-});
-
-// Function to create project card HTML
-function createProjectCard(project) {
-    return `
-        <div class="project-card" data-category="${project.category}">
-            <div class="project-card-container">
-                <div class="project-background-image" style="background-image: url('${project.image}')">
-                </div>
-
-<div class="project-info">
-    <h3 class="project-title mb-2">${project.title}</h3>
-    <button class="project-details-button my-2 bg-slate-700 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded" data-project-id="${project.id}">Project Details</button>
-    <div class="project-buttons flex flex-row">
-
-        <a href="${project.link}" class="project-button primary-button" target="_blank" rel="noopener noreferrer">
-            Visit Website
-        </a>
-
-        ${project.figmaLink ? `
-            <a href="${project.figmaLink}" class="project-button secondary-button" target="_blank" rel="noopener noreferrer">
-                Design Link
-            </a>
-        ` : ''}
-    </div>
-</div>
-
-            </div>
-        </div>
-    `;
 }
 
-// Function to load and display projects
+function initializeLoadMoreButton() {
+    const loadMoreBtn = document.querySelector('#load-more-projects');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const activeFilter = document.querySelector('.project-filter.active').getAttribute('data-filter');
+            loadMoreProjects(activeFilter);
+        });
+    }
+}
+
 async function loadProjects() {
     try {
         const response = await fetch('./src/data/projects.json');
         const data = await response.json();
         allProjects = data.projects;
-        const projectsGrid = document.querySelector('.projects-grid');
-
-        // Clear existing projects
-        projectsGrid.innerHTML = '';
-
-        // Add all projects
-        data.projects.forEach(project => {
-            projectsGrid.innerHTML += createProjectCard(project);
-        });
-
-        // Re-initialize event listeners for dynamically created cards
-        initializeCardHoverEffects();
-
-        // Initialize project filters
+        
+        // Initialize with all projects
+        resetProjects();
+        
+        // Initialize filters and load more button
         initializeProjectFilters();
+        initializeLoadMoreButton();
+        
+        // Reinitialize on window resize
+        window.addEventListener('resize', () => {
+            const activeFilter = document.querySelector('.project-filter.active').getAttribute('data-filter');
+            resetProjects(activeFilter);
+        });
+        
     } catch (error) {
         console.error('Error loading projects:', error);
     }
 }
 
-// Function to initialize hover effects for a single card
-function initializeCardHover(card) {
-    const backgroundImage = card.querySelector('.project-background-image');
-
-    card.addEventListener('mouseenter', () => {
-        // Start image scroll animation
-        if (backgroundImage) {
-            backgroundImage.style.backgroundPosition = 'center bottom';
-        }
-    });
-
-    card.addEventListener('mouseleave', () => {
-        // Reset image position
-        if (backgroundImage) {
-            backgroundImage.style.backgroundPosition = 'center top';
-        }
-    });
-}
-
-// Function to initialize hover effects for dynamically created cards
-function initializeCardHoverEffects() {
-    const projectCards = document.querySelectorAll('.project-card');
-
-    projectCards.forEach(card => {
-        initializeCardHover(card);
-    });
-}
-
-// Function to initialize project filters
-function initializeProjectFilters() {
-    const filterButtons = document.querySelectorAll('.project-filter');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-
-            // Add active class to clicked button
-            button.classList.add('active');
-
-            const filter = button.getAttribute('data-filter');
-
-            projectCards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
-}
-
-// Load projects when the document is ready
 document.addEventListener('DOMContentLoaded', loadProjects);
