@@ -67,7 +67,7 @@
 
 
   .project-card {
-    @apply bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] relative;
+    @apply bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] relative;
   }
 
   .project-card-container {
@@ -85,21 +85,9 @@
     background-position: center bottom;
   }
 
-  .tech-badges {
-    @apply absolute flex flex-wrap items-end bottom-0 p-1 gap-1;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 100%);
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-  }
-
   .project-card:hover .tech-badges {
     opacity: 0;
     transform: translateY(-20px);
-  }
-
-  .tech-badge {
-    @apply px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-800 rounded-full text-xs font-medium hover: bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-sm;
   }
 
   .project-info {
@@ -116,7 +104,7 @@
 
   /* Project Filter */
   .project-filter {
-    @apply p-2 text-base font-medium rounded-full text-white border-2 border-transparent border-gray-500 hover: border-green-500 transition-all duration-300 transform hover:scale-105;
+    @apply p-2 text-base font-medium rounded-full text-white border-2 border-transparent border-gray-500 hover:border-green-500 transition-all duration-300 transform hover:scale-105;
   }
 
   .project-filter.active {
@@ -174,7 +162,7 @@
 
   /* Footer Tags */
   .tag {
-    @apply bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm hover: bg-blue-600 hover:text-white transition-all duration-300;
+    @apply bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-blue-600 hover:text-white transition-all duration-300;
   }
 
   /* FAQ */

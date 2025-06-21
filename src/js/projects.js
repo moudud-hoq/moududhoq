@@ -5,11 +5,15 @@ function showProjectDetailsModal(project) {
     modal.className = 'fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 p-4';
     modal.innerHTML = `
         <div class="bg-white p-6 rounded-lg max-w-xl w-full shadow-lg" @click.stop>
-            <div class="flex justify-between items-center border-b pb-3 mb-4">
+            
+            <div class="flex justify-between items-center">
                 <h2 class="text-2xl font-bold text-gray-800">${project.title}</h2>
-                <p class="text-gray-600">${project.description || 'No detailed description available.'}</p>
-                <button class="close-modal-button text-gray-500 hover:text-gray-800 text-4xl border border-gray-300 p-2 rounded-full">&times;</button>
+                <button class="close-modal-button text-gray-500 hover:text-gray-800 text-4xl">&times;</button>
             </div>
+            
+            <div><p class=" text-gray-600">${project.description || 'No detailed description available.'}</p></div>
+            <hr class="my-4 border-gray-700">
+
             <div class="max-h-[70vh] overflow-y-auto">
                 <img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover rounded-md mb-4">
             </div>

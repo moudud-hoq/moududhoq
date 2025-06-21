@@ -23,25 +23,7 @@
     background-position: center bottom;
 }
 
-/* Technology Badges: Shows tech stack for each project. */
-.tech-badges {
-    @apply absolute flex flex-wrap items-end bottom-0 p-1 gap-1;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 100%);
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
 
-/* Hide tech badges on hover for a cleaner look. */
-.project-card:hover .tech-badges {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-
-/* Individual tech badge styling. */
-.tech-badge {
-    @apply px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-800 rounded-full text-xs font-medium hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-sm;
-}
 
 /* Project Info: Contains title and buttons. */
 .project-info {
@@ -110,14 +92,14 @@
 /* Desktop: 3 columns, 9 cards. */
 @media (min-width: 1024px) {
     .projects-grid {
-        @apply grid-cols-3;
+        @apply grid-cols-4;
     }
 }
 
 /* XL: 3 columns, 9 cards. */
 @media (min-width: 1280px) {
     .projects-grid {
-        @apply grid-cols-3;
+        @apply grid-cols-4;
     }
     .projects-grid .project-card:nth-child(n+9) {
         @apply hidden;
