@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moudud Hoq - Front End Developer | WordPress & WooCommerce Expert</title>
+    <title>Moudud Hoq - WordPress & WooCommerce Developer | Front End Developer </title>
     <meta name="theme-color" content="#ffffff" />
     <meta name="description"
         content="Professional Front End Developer specializing in WordPress, WooCommerce, HTML5, CSS3, and JavaScript. Expert in website development, speed optimization, and SEO.">
@@ -46,22 +46,6 @@
 
     <!-- Font Awesome (Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Open Graph Meta Tags for Link Preview -->
-    <meta property="og:title" content="Moudud Hoq - Front End Developer">
-    <meta property="og:description"
-        content="Front End Developer specializing in web development. Explore my portfolio and get in touch for your next project.">
-    <meta property="og:image" content="https://tinyurl.com/jeyrfdsh">
-    <meta property="og:url" content="https://moududhoq.com">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Moudud Hoq - Front End Developer">
-    <meta name="twitter:description"
-        content="Front End Developer specializing in web development. Explore my portfolio and get in touch for your next project.">
-    <meta name="twitter:image" content="https://tinyurl.com/jeyrfdsh">
-
     <!-- Google Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link
@@ -142,7 +126,7 @@
                         <span
                             class="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-700 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#blog"
+                    <a href="blog.html"
                         class="text-slate-700 hover:text-slate-900 transition-colors duration-300 relative group">
                         Blog
                         <span
@@ -181,7 +165,7 @@
                     class="w-full text-center px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-lg transition-colors duration-300">Skills</a>
                 <a href="#work"
                     class="w-full text-center px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-lg transition-colors duration-300">Projects</a>
-                <a href="#blog"
+                <a href="blog.html"
                     class="w-full text-center px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-lg transition-colors duration-300">Blog</a>
                 <a href="#contact"
                     class="w-48 text-center px-6 py-2.5 bg-slate-700 text-white font-semibold rounded-full hover:bg-slate-800 transition-all duration-300">
@@ -576,44 +560,44 @@
         });
     </script>
 
-<!-- Projects Section -->
-<section id="work" class="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
-    <div class="container mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-            <span class="text-sm font-semibold tracking-wider text-green-500 uppercase">My Portfolio</span>
-            <h2 class="text-4xl md:text-5xl font-bold text-white mt-2">Featured <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">Projects</span>
-            </h2>
-            <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Explore my recent work and discover how I bring creative
-                solutions to life.</p>
+    <!-- Projects Section -->
+    <section id="work" class="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <span class="text-sm font-semibold tracking-wider text-green-500 uppercase">My Portfolio</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mt-2">Featured <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">Projects</span>
+                </h2>
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Explore my recent work and discover how I bring creative
+                    solutions to life.</p>
+            </div>
+
+            <!-- Project Categories -->
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <button class="project-filter active" data-filter="all">All Projects</button>
+                <button class="project-filter" data-filter="wordpress">WordPress</button>
+                <button class="project-filter" data-filter="woocommerce">WooCommerce</button>
+                <button class="project-filter" data-filter="css3">CSS3</button>
+                <button class="project-filter" data-filter="tailwind">Tailwind</button>
+                <button class="project-filter" data-filter="others">Others</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid"></div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-8">
+                <a href="#" id="load-more-projects"
+                    class="inline-flex items-center px-6 py-3 text-base font-medium rounded-full text-white">
+                    Load More Projects
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+            </div>
         </div>
-
-        <!-- Project Categories -->
-        <div class="flex flex-wrap justify-center gap-3 mb-8">
-            <button class="project-filter active" data-filter="all">All Projects</button>
-            <button class="project-filter" data-filter="wordpress">WordPress</button>
-            <button class="project-filter" data-filter="woocommerce">WooCommerce</button>
-            <button class="project-filter" data-filter="css3">CSS3</button>
-            <button class="project-filter" data-filter="tailwind">Tailwind</button>
-            <button class="project-filter" data-filter="others">Others</button>
-        </div>
-
-        <!-- Projects Grid -->
-        <div class="projects-grid"></div>
-
-        <!-- Load More Button -->
-        <div class="text-center mt-8">
-            <a href="#" id="load-more-projects"
-                class="inline-flex items-center px-6 py-3 text-base font-medium rounded-full text-white">
-                Load More Projects
-                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </a>
-        </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- FAQ and Contact Section -->
     <section id="contact" class="py-20">
@@ -797,71 +781,6 @@
         </div>
     </section>
     <!--End Video/Image Section Test -->
-
-    <!-- Blog Section -->
-    <section id="blog" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-sm font-semibold tracking-wider text-blue-600 uppercase">Latest Articles</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">From My <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Blog</span>
-                </h2>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Explore my latest thoughts and insights on web
-                    development, design, and technology.</p>
-            </div>
-
-            <div id="featured-blogs" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Blog's posts will be dynamically inserted here -->
-            </div>
-
-            <div class="text-center mt-12">
-                <a href="src/pages/blog.html" target="_blank"
-                    class="inline-flex items-center px-8 py-4 text-lg font-semibold rounded-full text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    View All Posts
-                    <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Fetch and display featured blog posts
-        async function loadFeaturedBlogs() {
-            try {
-                const response = await fetch('src/data/blog.json');
-                const data = await response.json();
-                const blogGrid = document.getElementById('featured-blogs');
-
-                // Display only the first 4 blog posts
-                data.blogs.slice(0, 4).forEach(blog => {
-                    const blogCard = `
-                        <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                            <img src="${blog.image}" alt="${blog.title}" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <div class="flex items-center justify-between mb-4">
-                                    <span class="text-sm text-blue-600 font-semibold">${blog.category}</span>
-                                    <span class="text-sm text-gray-500">${blog.date}</span>
-                                </div>
-                                <h2 class="text-xl font-bold mb-2 text-gray-800">${blog.title}</h2>
-                                <p class="text-gray-600 mb-4">${blog.description}</p>
-                                <div class="flex items-center justify-between text-sm text-gray-500">
-                                    <span><i class="far fa-clock mr-1"></i>${blog.readTime}</span>
-                                    <span><i class="far fa-eye mr-1"></i>${blog.views} views</span>
-                                </div>
-                            </div>
-                        </article>
-                    `;
-                    blogGrid.innerHTML += blogCard;
-                });
-            } catch (error) {
-                console.error('Error loading featured blogs:', error);
-            }
-        }
-
-        // Load featured blogs when the page loads
-        document.addEventListener('DOMContentLoaded', loadFeaturedBlogs);
-    </script>
-
 
     <!-- Testimonials Section -->
     <section x-data x-init="$('.testimonial-carousel').slick({
@@ -1070,7 +989,6 @@
     <!-- Alpine.js -->
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
-
     <!-- Footer -->
     <footer class="bg-custom-dark text-white py-12">
         <div class="container mx-auto px-6">
@@ -1114,7 +1032,7 @@
                         <li><a href="#skills" class="footer-link">My Skills</a></li>
                         <li><a href="#work" class="footer-link">Portfolio</a></li>
                         <li><a href="#contact" class="footer-link">Contact</a></li>
-                        <li><a href="src/pages/blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
                     </ul>
                 </div>
 
@@ -1329,7 +1247,6 @@
         }
     </style>
 
-
     <!-- Go to Footer Button -->
     <button id="goToFooter"
         class="fixed right-2 bottom-[90px] w-8 h-8 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-all duration-300 z-50 flex items-center justify-center group opacity-100"
@@ -1429,8 +1346,6 @@
             menu.classList.toggle('flex');
         });
     </script>
-
-    <!-- Add contact form script -->
 
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">

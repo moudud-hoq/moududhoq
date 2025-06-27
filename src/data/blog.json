@@ -2,8 +2,8 @@
   "blogs": [
     {
       "id": 1,
-      "title": "The Future of Web Development: Trends to Watch in 2024",
-      "description": "Explore the latest trends in web development, from AI integration to advanced CSS techniques that are shaping the future of the web.",
+      "title": "WordPress Theme Development শেখার আগে যা যা জানা উচিত",
+      "description": "Include here as it is\n1️⃣ HTML5\nওয়েবপেজের গঠন (structure) তৈরি করতে শেখা জরুরি\n\nযেমন: div, header, footer, section, article ইত্যাদি\n\n✅ কেন দরকার: থিম টেমপ্লেট গুলোতে তুমি বারবার HTML tag ব্যবহার করবে\n\n2️⃣ CSS3\nডিজাইন (style) করার জন্য দরকার\n\nযেমন: color, spacing, responsive layout, flexbox, grid\n\n✅ থিমকে আকর্ষণীয় ও responsive করার জন্য CSS বাধ্যতামূলক\n\n3️⃣ Basic PHP\nWordPress নিজেই PHP তে লেখা, তাই কমপক্ষে basic PHP জানতে হবে:\n\nvariables ($title)\n\nfunctions (function theme_setup())\n\nloops (foreach, while)\n\nconditional (if, else)\n\n✅ থিম ফাইলগুলোর ভিতরে অনেক PHP tag থাকবে — যেমন:\n\nphp\nCopy\nEdit\n<?php the_title(); ?>\n<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>\n4️⃣ WordPress Structure বুঝা\nWordPress কিভাবে কাজ করে সেই ধারণা\n\nThemes vs Plugins\n\nwp-content, wp-admin, wp-includes\n\nDashboard-এ Themes কিভাবে দেখায়\n\n✅ অনেক Theme ফাইল WordPress এর Template Hierarchy অনুসরণ করে (এটা একটু পরের বিষয়, কিন্তু জানা দরকার)\n\n5️⃣ WordPress Template Tags\nWordPress এর নিজস্ব functions যেগুলো থিমে ব্যবহৃত হয়\n\nget_header(), get_footer()\n\nthe_content(), the_title()\n\nbloginfo(), wp_head(), wp_footer()\n\n✅ এগুলোর কাজ বুঝে ব্যবহার করতে হবে\n\n6️⃣ Localhost / Development Environment Setup\nতুমি XAMPP, LocalWP, অথবা Laragon-এ WordPress Install করে থিম develop করতে পারো\n\n✅ তুমিই নিজের সার্ভার, নিজেই developer!\n",
       "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
       "date": "2024-03-15",
       "readTime": "5 min read",
@@ -49,6 +49,96 @@
       "readTime": "9 min read",
       "views": 1789,
       "category": "WordPress"
-    }
+    },
+    {
+      "id": 6,
+      "title": "WordPress Development: Tips and Tricks",
+      "description": "Learn advanced WordPress development techniques to create custom themes and plugins that stand out.",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800",
+      "date": "2024-02-20",
+      "readTime": "9 min read",
+      "views": 1789,
+      "category": "WordPress"
+    },
+    {
+      "id": 7,
+      "title": "WordPress Development: Tips and Tricks",
+      "description": "Learn advanced WordPress development techniques to create custom themes and plugins that stand out.",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800",
+      "date": "2024-02-20",
+      "readTime": "9 min read",
+      "views": 1789,
+      "category": "WordPress"
+    },
+    {
+      "id": 8,
+      "title": "WordPress Development: Tips and Tricks",
+      "description": "Learn advanced WordPress development techniques to create custom themes and plugins that stand out.",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800",
+      "date": "2024-02-20",
+      "readTime": "9 min read",
+      "views": 1789,
+      "category": "WordPress"
+    },
+    {
+      "id": 9,
+      "title": "WordPress Development: Tips and Tricks",
+      "description": "Learn advanced WordPress development techniques to create custom themes and plugins that stand out.",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800",
+      "date": "2024-02-20",
+      "readTime": "9 min read",
+      "views": 1789,
+      "category": "WordPress"
+    },
+    {
+      "id": 10,
+      "title": "WordPress Development: Tips and Tricks",
+      "description": "Learn advanced WordPress development techniques to create custom themes and plugins that stand out.",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800",
+      "date": "2024-02-20",
+      "readTime": "9 min read",
+      "views": 1789,
+      "category": "WordPress"
+    },
+    {
+      "id": 11,
+      "title": "WordPress Development: Tips and Tricks",
+      "description": "Learn advanced WordPress development techniques to create custom themes and plugins that stand out.",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800",
+      "date": "2024-02-20",
+      "readTime": "9 min read",
+      "views": 1789,
+      "category": "WordPress"
+    },
+    {
+      "id": 12,
+      "title": "WordPress Development: Tips and Tricks",
+      "description": "Learn advanced WordPress development techniques to create custom themes and plugins that stand out.",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800",
+      "date": "2024-02-20",
+      "readTime": "9 min read",
+      "views": 1789,
+      "category": "WordPress"
+    },
+    {
+      "id": 13,
+      "title": "WordPress Development: Tips and Tricks",
+      "description": "Learn advanced WordPress development techniques to create custom themes and plugins that stand out.",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800",
+      "date": "2024-02-20",
+      "readTime": "9 min read",
+      "views": 1789,
+      "category": "WordPress"
+    },
+    {
+      "id": 14,
+      "title": "WordPress Development: Tips and Tricks",
+      "description": "Learn advanced WordPress development techniques to create custom themes and plugins that stand out.",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800",
+      "date": "2024-02-20",
+      "readTime": "9 min read",
+      "views": 1789,
+      "category": "WordPress"
+    },
   ]
 }
