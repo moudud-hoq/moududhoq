@@ -1,148 +1,38 @@
-// Sample blog data as fallback
-const sampleBlogData = {
-    blogs: [
-        {
-            id: 1,
-            title: "WordPress Theme Development শেখার আগে যা যা জানা উচিত",
-            description: "\n1️⃣ HTML5\nওয়েবপেজের গঠন (structure) তৈরি করতে শেখা জরুরি\n\nযেমন: div, header, footer, section, article ইত্যাদি\n\n✅ কেন দরকার: থিম টেমপ্লেট গুলোতে তুমি বারবার HTML tag ব্যবহার করবে\n\n2️⃣ CSS3\nডিজাইন (style) করার জন্য দরকার\n\nযেমন: color, spacing, responsive layout, flexbox, grid\n\n✅ থিমকে আকর্ষণীয় ও responsive করার জন্য CSS বাধ্যতামূলক\n\n3️⃣ Basic PHP\nWordPress নিজেই PHP তে লেখা, তাই কমপক্ষে basic PHP জানতে হবে:\n\nvariables ($title)\n\nfunctions (function theme_setup())\n\nloops (foreach, while)\n\nconditional (if, else)\n\n✅ থিম ফাইলগুলোর ভিতরে অনেক PHP tag থাকবে — যেমন:\n\nphp\nCopy\nEdit\n<?php the_title(); ?>\n<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>\n4️⃣ WordPress Structure বুঝা\nWordPress কিভাবে কাজ করে সেই ধারণা\n\nThemes vs Plugins\n\nwp-content, wp-admin, wp-includes\n\nDashboard-এ Themes কিভাবে দেখায়\n\n✅ অনেক Theme ফাইল WordPress এর Template Hierarchy অনুসরণ করে (এটা একটু পরের বিষয়, কিন্তু জানা দরকার)\n\n5️⃣ WordPress Template Tags\nWordPress এর নিজস্ব functions যেগুলো থিমে ব্যবহৃত হয়\n\nget_header(), get_footer()\n\nthe_content(), the_title()\n\nbloginfo(), wp_head(), wp_footer()\n\n✅ এগুলোর কাজ বুঝে ব্যবহার করতে হবে\n\n6️⃣ Localhost / Development Environment Setup\nতুমি XAMPP, LocalWP, অথবা Laragon-এ WordPress Install করে থিম develop করতে পারো\n\n✅ তুমিই নিজের সার্ভার, নিজেই developer!\n",
-            category: "Web Development",
-            date: "Dec 15, 2024",
-            readTime: "5 min read",
-            views: "1.2k",
-            image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-            id: 2,
-            title: "Advanced CSS Techniques and Best Practices",
-            description: "Discover advanced CSS techniques including Grid, Flexbox, custom properties, and modern layout methods. Learn how to create responsive designs that work across all devices and browsers.",
-            category: "CSS",
-            date: "Dec 10, 2024",
-            readTime: "7 min read",
-            views: "856",
-            image: "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-            id: 3,
-            title: "JavaScript ES6+ Features You Should Know",
-            description: "Explore the latest JavaScript features including arrow functions, destructuring, async/await, modules, and more. Stay up-to-date with modern JavaScript development practices.",
-            category: "JavaScript",
-            date: "Dec 5, 2024",
-            readTime: "8 min read",
-            views: "2.1k",
-            image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-            id: 4,
-            title: "Building Custom WordPress Themes from Scratch",
-            description: "Learn how to create custom WordPress themes from the ground up. This tutorial covers PHP basics, template hierarchy, custom post types, and theme development best practices.",
-            category: "WordPress",
-            date: "Nov 28, 2024",
-            readTime: "12 min read",
-            views: "934",
-            image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-            id: 5,
-            title: "Responsive Design Principles and Techniques",
-            description: "Master the art of responsive web design with mobile-first approach, flexible grids, and adaptive images. Learn how to create websites that look great on any device.",
-            category: "Web Development",
-            date: "Nov 20, 2024",
-            readTime: "6 min read",
-            views: "1.5k",
-            image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-            id: 6,
-            title: "CSS Animation and Transition Masterclass",
-            description: "Create stunning animations and smooth transitions with CSS. Learn keyframes, transforms, and performance optimization techniques for better user experience.",
-            category: "CSS",
-            date: "Nov 15, 2024",
-            readTime: "9 min read",
-            views: "678",
-            image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        }
-    ]
-};
-
 document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById('blog-details-container');
-    const loadingIndicator = document.getElementById('loading-indicator');
-    const errorContainer = document.getElementById('error-container');
-    const errorMessage = document.getElementById('error-message');
-
-    // Show loading, hide others
-    loadingIndicator.style.display = 'block';
-    container.style.display = 'none';
-    errorContainer.classList.add('hidden');
+    container.innerHTML = '<div class="text-center text-gray-500">Loading...</div>';
 
     // Get blog id from URL
     const urlParams = new URLSearchParams(window.location.search);
     const blogId = urlParams.get('id');
     if (!blogId) {
-        loadingIndicator.style.display = 'none';
-        errorContainer.classList.remove('hidden');
-        errorMessage.textContent = 'No blog post specified.';
+        container.innerHTML = '<div class="text-center text-red-500">No blog post specified.</div>';
         return;
     }
 
     try {
-        // Try multiple possible paths for the JSON file
-        const possiblePaths = [
-            './src/data/blog.json',
-            './blog.json',
-            '../src/data/blog.json',
-            './data/blog.json'
-        ];
-        let response;
-        let data = null;
-        let foundValidPath = false;
-        for (const path of possiblePaths) {
-            try {
-                response = await fetch(path);
-                if (response.ok) {
-                    const contentType = response.headers.get('content-type');
-                    if (contentType && contentType.includes('application/json')) {
-                        data = await response.json();
-                        foundValidPath = true;
-                        break;
-                    }
-                }
-            } catch (err) {
-                // continue
-            }
-        }
-        if (!foundValidPath) {
-            data = sampleBlogData;
-        }
-        if (!data || !data.blogs || !Array.isArray(data.blogs)) {
-            throw new Error('Invalid blog data structure - expected { blogs: [...] }');
-        }
+        const response = await fetch('./src/data/blog.json');
+        const data = await response.json();
         const blog = data.blogs.find(b => String(b.id) === String(blogId));
         if (!blog) {
-            loadingIndicator.style.display = 'none';
-            errorContainer.classList.remove('hidden');
-            errorMessage.textContent = 'Blog post not found.';
+            container.innerHTML = '<div class="text-center text-red-500">Blog post not found.</div>';
             return;
         }
-        // Render blog details
+
         container.innerHTML = `
             <article>
-                <img src="${blog.image || 'https://via.placeholder.com/800x400?text=No+Image'}" alt="${blog.title}" class="w-full h-64 object-cover rounded mb-6 shadow-md" onerror="this.src='https://via.placeholder.com/800x400?text=No+Image'">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">${blog.title}</h1>
-                <div class="flex flex-wrap items-center text-gray-500 text-sm mb-4 gap-4">
-                    <span class="flex items-center"><i class="far fa-calendar-alt mr-1"></i>${blog.date || ''}</span>
-                    <span class="flex items-center"><i class="far fa-clock mr-1"></i>${blog.readTime || ''}</span>
-                    <span class="flex items-center"><i class="far fa-eye mr-1"></i>${blog.views || '0'}</span>
-                    <span class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold ml-auto">${blog.category || 'General'}</span>
+                <img src="${blog.image || 'https://via.placeholder.com/800x400?text=No+Image'}" alt="${blog.title}" class="w-full h-64 object-cover rounded mb-6">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">${blog.title}</h1>
+                <div class="flex items-center text-gray-500 text-sm mb-4">
+                    <span class="mr-4"><i class="far fa-calendar-alt mr-1"></i>${blog.date || ''}</span>
+                    <span class="mr-4"><i class="far fa-clock mr-1"></i>${blog.readTime || ''}</span>
+                    <span><i class="far fa-eye mr-1"></i>${blog.views || '0'}</span>
                 </div>
-                <div class="prose max-w-none text-gray-700 whitespace-pre-line leading-relaxed text-lg">${blog.description}</div>
+                <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">${blog.category || 'General'}</span>
+                <div class="prose max-w-none text-gray-700 whitespace-pre-line">${blog.description}</div>
             </article>
         `;
-        loadingIndicator.style.display = 'none';
-        container.style.display = 'block';
     } catch (error) {
-        loadingIndicator.style.display = 'none';
-        errorContainer.classList.remove('hidden');
-        errorMessage.textContent = 'Error loading blog post. ' + error.message;
+        container.innerHTML = `<div class="text-center text-red-500">Error loading blog post.<br>${error.message}</div>`;
     }
 }); 

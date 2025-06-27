@@ -6,25 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Moudud Hoq</title>
 
-    <!-- Open Graph Meta Tags for Link Preview -->
-    <meta property="og:title" content="Blog - Moudud Hoq">
-    <meta property="og:description"
-        content="Read my latest articles about software development, web technologies, and tech insights.">
-    <meta property="og:image" content="https://tinyurl.com/jeyrfdsh">
-    <meta property="og:url" content="https://moududhoq.com/blog">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blog - Moudud Hoq">
-    <meta name="twitter:description"
-        content="Read my latest articles about software development, web technologies, and tech insights.">
-    <meta name="twitter:image" content="https://tinyurl.com/jeyrfdsh">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png"
-        href="https://api.dicebear.com/7.x/initials/png?seed=MH&backgroundColor=4f46e5,9333ea&fontSize=40" />
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Fonts -->
@@ -82,6 +63,29 @@
                 background-position: -200% 0;
             }
         }
+
+        /* Modal styles */
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        
+        .modal.active .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -130,22 +134,9 @@
         </div>
     </nav>
 
-    <!-- Blog Header -->
-    <header class="pt-32 pb-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center">
-                <span class="text-sm font-semibold tracking-wider text-blue-400 uppercase">Latest Articles</span>
-                <h1 class="text-4xl md:text-5xl font-bold mt-2">My <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Blog</span>
-                </h1>
-                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Explore my latest thoughts and insights on web
-                    development, design, and technology.</p>
-            </div>
-        </div>
-    </header>
 
     <!-- Blog Posts -->
-    <main class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <main class="mt-8 py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div class="container mx-auto px-6">
             <!-- Category Filter -->
             <div class="flex flex-wrap justify-center gap-4 mb-12">
@@ -231,161 +222,36 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <!-- Main Footer Content -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                <!-- About Section -->
-                <div>
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <span
-                            class="bg-purple-500 w-6 h-6 rounded-full mr-2 flex items-center justify-center text-white text-sm">M</span>
-                        Moudud Hoq
-                    </h3>
-                    <p class="text-sm mb-4">A passionate developer creating awesome web experiences with over 1+ years
-                        of industry experience.</p>
-                    <div class="flex items-center space-x-3">
-                        <a href="#" class="social-icon bg-blue-600 hover:bg-white">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon bg-blue-400 hover:bg-white">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon bg-gray-800 hover:bg-white">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-icon bg-red-600 hover:bg-white">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html#about" class="footer-link">About Me</a></li>
-                        <li><a href="index.html#skills" class="footer-link">My Skills</a></li>
-                        <li><a href="index.html#work" class="footer-link">Portfolio</a></li>
-                        <li><a href="index.html#contact" class="footer-link">Contact</a></li>
-                        <li><a href="#" class="footer-link">Blog</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services -->
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="footer-link">Web Development</a></li>
-                        <li><a href="#" class="footer-link">UI/UX Design</a></li>
-                        <li><a href="#" class="footer-link">Mobile Apps</a></li>
-                        <li><a href="#" class="footer-link">SEO Optimization</a></li>
-                        <li><a href="#" class="footer-link">Consulting</a></li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter -->
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Stay Updated</h3>
-                    <p class="text-sm mb-4">Subscribe to get notified about new blog posts and updates.</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Your email"
-                            class="px-4 py-3 w-full rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 text-gray-700">
-                        <button type="submit"
-                            class="bg-purple-500 px-4 py-3 rounded-r-lg text-white hover:bg-purple-600 transition-all duration-300">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
+    <!-- Blog Modal - Initially hidden -->
+    <div id="blog-modal" class="modal fixed inset-0 z-50 overflow-y-auto" aria-hidden="true">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!-- Background overlay -->
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
             </div>
 
-            <!-- Copyright -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; 2024 Moudud Hoq. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-purple-500 transition">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-purple-500 transition">Terms of Service</a>
-                    <a href="#" class="text-gray-400 hover:text-purple-500 transition">Sitemap</a>
+            <!-- Modal content -->
+            <div class="modal-content inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                            <!-- Close button -->
+                            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 focus:outline-none z-10">
+                                <i class="fas fa-times text-2xl"></i>
+                            </button>
+                            
+                            <!-- Blog content will be inserted here -->
+                            <div id="modal-blog-content" class="prose max-w-none">
+                                <!-- Content will be loaded dynamically -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top group" aria-label="Back to top">
-        <span class="flex items-center justify-center">
-            <i class="fas fa-arrow-up text-xl group-hover:animate-bounce"></i>
-        </span>
-    </button>
+    </div>
 
     <script>
-        // Sample blog data as fallback
-        const sampleBlogData = {
-            blogs: [
-                {
-                    id: 1,
-                    title: "WordPress Theme Development শেখার আগে যা যা জানা উচিত",
-                    description: "\n1️⃣ HTML5\nওয়েবপেজের গঠন (structure) তৈরি করতে শেখা জরুরি\n\nযেমন: div, header, footer, section, article ইত্যাদি\n\n✅ কেন দরকার: থিম টেমপ্লেট গুলোতে তুমি বারবার HTML tag ব্যবহার করবে\n\n2️⃣ CSS3\nডিজাইন (style) করার জন্য দরকার\n\nযেমন: color, spacing, responsive layout, flexbox, grid\n\n✅ থিমকে আকর্ষণীয় ও responsive করার জন্য CSS বাধ্যতামূলক\n\n3️⃣ Basic PHP\nWordPress নিজেই PHP তে লেখা, তাই কমপক্ষে basic PHP জানতে হবে:\n\nvariables ($title)\n\nfunctions (function theme_setup())\n\nloops (foreach, while)\n\nconditional (if, else)\n\n✅ থিম ফাইলগুলোর ভিতরে অনেক PHP tag থাকবে — যেমন:\n\nphp\nCopy\nEdit\n<?php the_title(); ?>\n<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>\n4️⃣ WordPress Structure বুঝা\nWordPress কিভাবে কাজ করে সেই ধারণা\n\nThemes vs Plugins\n\nwp-content, wp-admin, wp-includes\n\nDashboard-এ Themes কিভাবে দেখায়\n\n✅ অনেক Theme ফাইল WordPress এর Template Hierarchy অনুসরণ করে (এটা একটু পরের বিষয়, কিন্তু জানা দরকার)\n\n5️⃣ WordPress Template Tags\nWordPress এর নিজস্ব functions যেগুলো থিমে ব্যবহৃত হয়\n\nget_header(), get_footer()\n\nthe_content(), the_title()\n\nbloginfo(), wp_head(), wp_footer()\n\n✅ এগুলোর কাজ বুঝে ব্যবহার করতে হবে\n\n6️⃣ Localhost / Development Environment Setup\nতুমি XAMPP, LocalWP, অথবা Laragon-এ WordPress Install করে থিম develop করতে পারো\n\n✅ তুমিই নিজের সার্ভার, নিজেই developer!\n",
-                    category: "Web Development",
-                    date: "Dec 15, 2024",
-                    readTime: "5 min read",
-                    views: "1.2k",
-                    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                },
-                {
-                    id: 2,
-                    title: "Advanced CSS Techniques and Best Practices",
-                    description: "Discover advanced CSS techniques including Grid, Flexbox, custom properties, and modern layout methods. Learn how to create responsive designs that work across all devices and browsers.",
-                    category: "CSS",
-                    date: "Dec 10, 2024",
-                    readTime: "7 min read",
-                    views: "856",
-                    image: "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                },
-                {
-                    id: 3,
-                    title: "JavaScript ES6+ Features You Should Know",
-                    description: "Explore the latest JavaScript features including arrow functions, destructuring, async/await, modules, and more. Stay up-to-date with modern JavaScript development practices.",
-                    category: "JavaScript",
-                    date: "Dec 5, 2024",
-                    readTime: "8 min read",
-                    views: "2.1k",
-                    image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                },
-                {
-                    id: 4,
-                    title: "Building Custom WordPress Themes from Scratch",
-                    description: "Learn how to create custom WordPress themes from the ground up. This tutorial covers PHP basics, template hierarchy, custom post types, and theme development best practices.",
-                    category: "WordPress",
-                    date: "Nov 28, 2024",
-                    readTime: "12 min read",
-                    views: "934",
-                    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                },
-                {
-                    id: 5,
-                    title: "Responsive Design Principles and Techniques",
-                    description: "Master the art of responsive web design with mobile-first approach, flexible grids, and adaptive images. Learn how to create websites that look great on any device.",
-                    category: "Web Development",
-                    date: "Nov 20, 2024",
-                    readTime: "6 min read",
-                    views: "1.5k",
-                    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                },
-                {
-                    id: 6,
-                    title: "CSS Animation and Transition Masterclass",
-                    description: "Create stunning animations and smooth transitions with CSS. Learn keyframes, transforms, and performance optimization techniques for better user experience.",
-                    category: "CSS",
-                    date: "Nov 15, 2024",
-                    readTime: "9 min read",
-                    views: "678",
-                    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                }
-            ]
-        };
-
         // Fetch and display blog posts
         async function loadBlogPosts() {
             const loadingIndicator = document.getElementById('loading-indicator');
@@ -398,42 +264,14 @@
             errorContainer.classList.add('hidden');
 
             try {
-                // Try multiple possible paths for the JSON file
-                const possiblePaths = [
-                    './src/data/blog.json',
-                    './blog.json',
-                    '../src/data/blog.json',
-                    './data/blog.json'
-                ];
-
-                let response;
-                let data = null;
-                let foundValidPath = false;
-
-                // Try each path until we find a valid one
-                for (const path of possiblePaths) {
-                    try {
-                        console.log(`Attempting to load from: ${path}`);
-                        response = await fetch(path);
-                        if (response.ok) {
-                            const contentType = response.headers.get('content-type');
-                            if (contentType && contentType.includes('application/json')) {
-                                data = await response.json();
-                                console.log(`Successfully loaded data from: ${path}`);
-                                foundValidPath = true;
-                                break;
-                            }
-                        }
-                    } catch (err) {
-                        console.log(`Failed to load from path: ${path}`, err.message);
-                    }
+                // Load from ./src/data/blog.json
+                const response = await fetch('./src/data/blog.json');
+                
+                if (!response.ok) {
+                    throw new Error('Failed to load blog data');
                 }
 
-                // If no valid path found, use sample data
-                if (!foundValidPath) {
-                    console.log('No JSON file found, using sample data');
-                    data = sampleBlogData;
-                }
+                const data = await response.json();
 
                 // Clear any existing content
                 blogGrid.innerHTML = '';
@@ -512,11 +350,11 @@
                                         </div>
                                         <span class="text-sm text-gray-600 font-medium">Moudud Hoq</span>
                                     </div>
-                                    <a href="blog-details.html?id=${blog.id}" 
+                                    <button onclick="openBlogModal(${blog.id})" 
                                        class="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                                         Read More
                                         <i class="fas fa-arrow-right ml-2"></i>
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </article>
@@ -542,32 +380,99 @@
             }
         }
 
+        // Open blog in modal
+        async function openBlogModal(blogId) {
+            const modal = document.getElementById('blog-modal');
+            const modalContent = document.getElementById('modal-blog-content');
+            
+            // Show loading state in modal
+            modalContent.innerHTML = `
+                <div class="flex justify-center items-center h-64">
+                    <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
+                </div>
+            `;
+            
+            // Show the modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            try {
+                // Load from ./src/data/blog.json
+                const response = await fetch('./src/data/blog.json');
+                
+                if (!response.ok) {
+                    throw new Error('Failed to load blog data');
+                }
+
+                const data = await response.json();
+
+                // Find the blog post
+                const blog = data.blogs.find(b => b.id == blogId);
+                if (!blog) {
+                    throw new Error('Blog post not found');
+                }
+
+                // Format the content for the modal
+                modalContent.innerHTML = `
+                    <div class="mb-6">
+                        <img src="${blog.image || 'https://via.placeholder.com/800x400?text=No+Image'}" 
+                             alt="${blog.title}" 
+                             class="w-full h-64 object-cover rounded-lg mb-4"
+                             onerror="this.src='https://via.placeholder.com/800x400?text=No+Image'">
+                        <h2 class="text-3xl font-bold mb-2 text-gray-800">${blog.title}</h2>
+                        <div class="flex flex-wrap items-center text-gray-500 text-sm mb-4 gap-4">
+                            <span class="flex items-center"><i class="far fa-calendar-alt mr-1"></i>${blog.date || ''}</span>
+                            <span class="flex items-center"><i class="far fa-clock mr-1"></i>${blog.readTime || ''}</span>
+                            <span class="flex items-center"><i class="far fa-eye mr-1"></i>${blog.views || '0'}</span>
+                            <span class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold ml-auto">${blog.category || 'General'}</span>
+                        </div>
+                        <div class="prose max-w-none text-gray-700 whitespace-pre-line">
+                            ${blog.description}
+                        </div>
+                    </div>
+                `;
+
+            } catch (error) {
+                console.error('Error loading blog post:', error);
+                modalContent.innerHTML = `
+                    <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-exclamation-triangle text-red-500 mt-1"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-red-700">Error loading blog post. Please try again later.</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Close modal function
+        function closeModal() {
+            const modal = document.getElementById('blog-modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
         // Blog filter functionality
         function initBlogFilter() {
             const filterButtons = document.querySelectorAll('.blog-filter');
             const articles = document.querySelectorAll('article');
-
+            
             filterButtons.forEach(button => {
-                button.addEventListener('click', function () {
+                button.addEventListener('click', function() {
                     // Remove active class from all buttons
                     filterButtons.forEach(btn => btn.classList.remove('active'));
                     // Add active class to clicked button
                     this.classList.add('active');
 
                     const category = this.getAttribute('data-filter');
-
+                    
                     articles.forEach(article => {
-                        const articleCategory = article.getAttribute('data-category');
-                        if (category === 'all' || articleCategory === category) {
+                        if (category === 'all' || article.getAttribute('data-category') === category) {
                             article.style.display = 'block';
-                            // Add animation
-                            article.style.opacity = '0';
-                            article.style.transform = 'translateY(20px)';
-                            setTimeout(() => {
-                                article.style.transition = 'all 0.3s ease';
-                                article.style.opacity = '1';
-                                article.style.transform = 'translateY(0)';
-                            }, 100);
                         } else {
                             article.style.display = 'none';
                         }
@@ -576,45 +481,21 @@
             });
         }
 
-        // Back to top button functionality
-        const backToTopButton = document.getElementById('backToTop');
-
-        // Show/hide back to top button
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.style.display = 'flex';
-                backToTopButton.style.opacity = '1';
-            } else {
-                backToTopButton.style.opacity = '0';
-                setTimeout(() => {
-                    if (window.pageYOffset <= 300) {
-                        backToTopButton.style.display = 'none';
-                    }
-                }, 300);
-            }
-        });
-
-        // Smooth scroll to top
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            // Set initial state
-            const backToTopButton = document.getElementById('backToTop');
-            backToTopButton.style.display = 'none';
-            backToTopButton.style.opacity = '0';
-            backToTopButton.style.transition = 'opacity 0.3s ease';
+            // Set up modal close button
+            document.getElementById('close-modal').addEventListener('click', closeModal);
+            
+            // Close modal when clicking outside content
+            document.getElementById('blog-modal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
 
             // Load blog posts
             loadBlogPosts();
         });
-
-        // Add some utility functions for better UX
 
         // Handle image loading errors
         document.addEventListener('error', function (e) {
@@ -622,53 +503,6 @@
                 e.target.src = 'https://via.placeholder.com/400x225/6366f1/white?text=Blog+Post';
             }
         }, true);
-
-        // Add smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add keyboard navigation support
-        document.addEventListener('keydown', function (e) {
-            // Press 'Home' key to scroll to top
-            if (e.key === 'Home' && e.ctrlKey) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-
-            // Press 'End' key to scroll to bottom
-            if (e.key === 'End' && e.ctrlKey) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: document.body.scrollHeight,
-                    behavior: 'smooth'
-                });
-            }
-        });
-
-        // Add loading animation to buttons
-        document.addEventListener('click', function (e) {
-            if (e.target.matches('button, .btn, a[href]')) {
-                const element = e.target;
-                element.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    element.style.transform = '';
-                }, 150);
-            }
-        });
     </script>
 </body>
-
 </html>
