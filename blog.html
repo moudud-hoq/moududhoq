@@ -23,26 +23,6 @@
             @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white;
         }
 
-        .social-icon {
-            @apply w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110;
-        }
-
-        .footer-link {
-            @apply text-gray-400 hover:text-purple-500 transition duration-300 flex items-center;
-        }
-
-        .footer-link::before {
-            content: "→";
-            @apply text-purple-500 mr-2 opacity-0 transition-all duration-300;
-        }
-
-        .footer-link:hover::before {
-            @apply opacity-100 mr-3;
-        }
-
-        .back-to-top {
-            @apply fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
-        }
 
         body {
             font-family: 'Josefin Sans', sans-serif;
@@ -126,7 +106,7 @@
                 <!-- Back to Home Button -->
                 <div>
                     <a href="index.html"
-                        class="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/25 focus:ring-2 focus:ring-blue-500/50 focus:outline-none">
+                        class="px-6 py-2.5 bg-gray-600 text-white font-semibold rounded-full hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/25 focus:ring-2 focus:ring-blue-500/50 focus:outline-none">
                         <i class="fas fa-arrow-left mr-2"></i>Back to Home
                     </a>
                 </div>
@@ -318,7 +298,7 @@
                                      class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
                                      onerror="this.src='https://via.placeholder.com/400x225/6366f1/white?text=Blog+Post'">
                                 <div class="absolute top-4 left-4">
-                                    <span class="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
+                                    <span class="bg-gray-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
                                         ${blog.category || 'General'}
                                     </span>
                                 </div>
@@ -351,7 +331,7 @@
                                         <span class="text-sm text-gray-600 font-medium">Moudud Hoq</span>
                                     </div>
                                     <button onclick="openBlogModal(${blog.id})" 
-                                       class="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+                                       class="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full text-white bg-gray-600 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                                         Read More
                                         <i class="fas fa-arrow-right ml-2"></i>
                                     </button>

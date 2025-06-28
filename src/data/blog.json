@@ -3,13 +3,14 @@
     {
       "id": 1,
       "title": "WordPress Theme Development শেখার আগে যা যা জানা উচিত",
-      "description": "\n1️⃣ HTML5\nওয়েবপেজের গঠন (structure) তৈরি করতে শেখা জরুরি\n\nযেমন: div, header, footer, section, article ইত্যাদি\n\n✅ কেন দরকার: থিম টেমপ্লেট গুলোতে তুমি বারবার HTML tag ব্যবহার করবে\n\n2️⃣ CSS3\nডিজাইন (style) করার জন্য দরকার\n\nযেমন: color, spacing, responsive layout, flexbox, grid\n\n✅ থিমকে আকর্ষণীয় ও responsive করার জন্য CSS বাধ্যতামূলক\n\n3️⃣ Basic PHP\nWordPress নিজেই PHP তে লেখা, তাই কমপক্ষে basic PHP জানতে হবে:\n\nvariables ($title)\n\nfunctions (function theme_setup())\n\nloops (foreach, while)\n\nconditional (if, else)\n\n✅ থিম ফাইলগুলোর ভিতরে অনেক PHP tag থাকবে — যেমন:\n\nphp\nCopy\nEdit\n<?php the_title(); ?>\n<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>\n4️⃣ WordPress Structure বুঝা\nWordPress কিভাবে কাজ করে সেই ধারণা\n\nThemes vs Plugins\n\nwp-content, wp-admin, wp-includes\n\nDashboard-এ Themes কিভাবে দেখায়\n\n✅ অনেক Theme ফাইল WordPress এর Template Hierarchy অনুসরণ করে (এটা একটু পরের বিষয়, কিন্তু জানা দরকার)\n\n5️⃣ WordPress Template Tags\nWordPress এর নিজস্ব functions যেগুলো থিমে ব্যবহৃত হয়\n\nget_header(), get_footer()\n\nthe_content(), the_title()\n\nbloginfo(), wp_head(), wp_footer()\n\n✅ এগুলোর কাজ বুঝে ব্যবহার করতে হবে\n\n6️⃣ Localhost / Development Environment Setup\nতুমি XAMPP, LocalWP, অথবা Laragon-এ WordPress Install করে থিম develop করতে পারো\n\n✅ তুমিই নিজের সার্ভার, নিজেই developer!\n",
+      "description": "🎯 WordPress Theme Development শেখা শুরু করার আগে নিচের টপিকগুলো জানা একদম অপরিহার্য:\n\n1️⃣ **HTML5**\nওয়েবপেজের গঠন (structure) তৈরি করতে শেখো।\n📌 Tag গুলো: `<div>`, `<header>`, `<footer>`, `<section>`, `<article>`\n✅ দরকারি কারণ: থিম টেমপ্লেটে বারবার এসব ব্যবহার হবে।\n\n2️⃣ **CSS3**\nডিজাইন করার জন্য CSS মাস্ট! \n📌 বিষয়গুলো শেখো: colors, spacing, responsive layout, Flexbox, Grid\n✅ থিমকে আকর্ষণীয় ও মোবাইল-ফ্রেন্ডলি করতে CSS লাগবেই।\n\n3️⃣ **Basic PHP**\nWordPress নিজেই PHP দিয়ে বানানো, তাই basic PHP জানতেই হবে।\n📌 Focus করো: variables (`$title`), functions, loops (`foreach`, `while`), conditionals (`if`, `else`)\n✅ কারণ থিমে এইরকম কোড থাকবে:\n```php\n<?php the_title(); ?>\n<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>\n```\n\n4️⃣ **WordPress Structure**\nWordPress কীভাবে কাজ করে সেটা বুঝতে হবে।\n📌 Concepts: Themes vs Plugins, wp-content, wp-admin, wp-includes\n✅ Dashboard-এ থিম কিভাবে লোড হয় এবং Template Hierarchy বুঝতে হবে।\n\n5️⃣ **WordPress Template Tags**\nWordPress এর Built-in Functions যেগুলো থিমে সবসময় দরকার হয়।\n📌 Examples: `get_header()`, `get_footer()`, `the_title()`, `the_content()`, `bloginfo()`, `wp_head()`, `wp_footer()`\n✅ এগুলোর কাজ ও প্রয়োগ জানা বাধ্যতামূলক।\n\n6️⃣ **Localhost/Development Environment**\nWordPress থিম ডেভেলপমেন্ট প্র্যাকটিস করতে লোকাল সার্ভারে সেটআপ দাও।\n📌 Tools: XAMPP, LocalWP, Laragon\n✅ নিজের সার্ভার মানে নিজের রাজত্ব! কোডিং শেখা সহজ হবে।\n\n🚀 সব কিছুর শুরু এখান থেকেই — আগে বেসিক জানো, তারপর থিম ডেভেলপমেন্ট হবে মসৃণ ও মজার!",
       "category": "Web Development",
       "date": "Dec 15, 2024",
       "readTime": "5 min read",
       "views": "1.2k",
       "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
+
     {
       "id": 2,
       "title": "Advanced CSS Techniques and Best Practices",
@@ -52,6 +53,36 @@
     },
     {
       "id": 6,
+      "title": "CSS Animation and Transition Masterclass",
+      "description": "Create stunning animations and smooth transitions with CSS. Learn keyframes, transforms, and performance optimization techniques for better user experience.",
+      "category": "CSS",
+      "date": "Nov 15, 2024",
+      "readTime": "9 min read",
+      "views": "678",
+      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": 7,
+      "title": "CSS Animation and Transition Masterclass",
+      "description": "Create stunning animations and smooth transitions with CSS. Learn keyframes, transforms, and performance optimization techniques for better user experience.",
+      "category": "CSS",
+      "date": "Nov 15, 2024",
+      "readTime": "9 min read",
+      "views": "678",
+      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": 8,
+      "title": "CSS Animation and Transition Masterclass",
+      "description": "Create stunning animations and smooth transitions with CSS. Learn keyframes, transforms, and performance optimization techniques for better user experience.",
+      "category": "CSS",
+      "date": "Nov 15, 2024",
+      "readTime": "9 min read",
+      "views": "678",
+      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": 9,
       "title": "CSS Animation and Transition Masterclass",
       "description": "Create stunning animations and smooth transitions with CSS. Learn keyframes, transforms, and performance optimization techniques for better user experience.",
       "category": "CSS",
