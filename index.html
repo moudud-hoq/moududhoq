@@ -390,7 +390,7 @@
                 Click Any Skill to See Details
             </p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
                 <template x-for="skill in skills" :key="skill.name">
                     <div class="skill-card gradient-border bg-white p-0 border border-gray-200 shadow-sm relative cursor-pointer transition-all duration-300 hover:shadow-md"
                         @click="openModal(skill)">
@@ -425,7 +425,7 @@
                 Currently <span class="text-purple-600">Learning</span>
             </h3>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
                 <template x-for="skill in learning" :key="skill.name">
                     <div class="skill-card gradient-border bg-white p-0 border border-gray-200 shadow-sm relative cursor-pointer transition-all duration-300 hover:shadow-md"
                         @click="openModal(skill)">
