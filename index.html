@@ -380,39 +380,42 @@
     </section>
 
     <!-- Enhanced Skills Section -->
-    <section id="skills" class="pb-16 bg-white text-slate-800" x-data="skillsData" x-init="init()">
+    <section id="skills" class="py-16 bg-white text-slate-800" x-data="skillsData">
         <div class="container mx-auto px-4">
             <!-- Main Skills -->
             <h2 class="text-4xl font-bold text-center mb-1">
                 My <span class="text-blue-600">Skills</span>
             </h2>
-            <h2 class="text-xs font-semibold text-center mb-12">
+            <p class="text-xs font-semibold text-center mb-12">
                 Click Any Skill to See Details
-            </h2>
+            </p>
 
-            <div
-                class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-11 gap-4 justify-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                 <template x-for="skill in skills" :key="skill.name">
-                    <div class="relative flex flex-col justify-center items-center pb-6 cursor-pointer"
+                    <div class="skill-card gradient-border bg-white p-0 border border-gray-200 shadow-sm relative cursor-pointer transition-all duration-300 hover:shadow-md"
                         @click="openModal(skill)">
-                        <div class="relative flex items-center justify-center mb-2 scale-90 sm:scale-100">
-                            <svg class="w-16 h-16 sm:w-20 sm:h-20 spin" viewBox="0 0 40 40"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle class="text-slate-200" stroke="currentColor" stroke-width="3" fill="none"
-                                    cx="20" cy="20" r="16" />
-                                <circle :stroke="skill.color" stroke-width="2" fill="none" cx="20" cy="20" r="16"
-                                    stroke-linecap="round" :stroke-dasharray="circumference"
-                                    :stroke-dashoffset="skill.dashoffset" />
-                            </svg>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <i :class="skill.icon" :style="{ color: skill.color }" class="text-xl sm:text-2xl"></i>
-                            </span>
-                            <span
-                                class="absolute -top-2 -right-2 bg-white px-2 py-0.5 rounded-full text-xs font-bold shadow"
-                                :style="{ color: skill.color, border: '1px solid ' + skill.color }"
-                                x-text="skill.percent + '%'"></span>
+                        <div class="skill-header flex justify-between items-center p-4 border-b border-gray-100">
+                            <h3 x-text="skill.name" class="skill-name font-bold text-lg text-gray-800"></h3>
+                            <span class="skill-percent font-bold text-blue-600" x-text="skill.percent + '%'"></span>
                         </div>
-                        <span class="text-sm font-semibold text-slate-800 text-center" x-text="skill.name"></span>
+
+                        <!-- Border progress animation -->
+                        <div class="skill-progress-border w-full h-1.5 bg-gray-200 overflow-hidden">
+                            <div class="progress-fill h-full bg-gradient-to-r from-blue-500 to-purple-500"
+                                :style="{ width: skill.percent + '%' }"></div>
+                        </div>
+
+                        <div class="skill-content p-4 text-center">
+                            <i :class="skill.icon" class="skill-icon mx-auto text-4xl mb-4"
+                                :style="{ color: skill.color }"></i>
+                            <p class="skill-description text-gray-600 text-sm truncate-3-lines mb-4"
+                                x-text="getShortDescription(skill.details)"></p>
+                            <button
+                                class="read-more text-blue-600 text-xs font-semibold hover:underline focus:outline-none"
+                                @click.stop="openModal(skill)">
+                                Read More
+                            </button>
+                        </div>
                     </div>
                 </template>
             </div>
@@ -422,27 +425,31 @@
                 Currently <span class="text-purple-600">Learning</span>
             </h3>
 
-            <div
-                class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-11 gap-4 justify-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                 <template x-for="skill in learning" :key="skill.name">
-                    <div class="relative flex flex-col items-center pb-6 cursor-pointer" @click="openModal(skill)">
-                        <div class="relative flex items-center justify-center mb-2 scale-90 sm:scale-100 mx-auto">
-                            <svg class="w-16 h-16 sm:w-20 sm:h-20 spin" viewBox="0 0 40 40"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle class="text-slate-200" stroke="currentColor" stroke-width="3" fill="none"
-                                    cx="20" cy="20" r="16" />
-                                <circle stroke="#a855f7" stroke-width="2" fill="none" cx="20" cy="20" r="16"
-                                    stroke-linecap="round" :stroke-dasharray="circumference"
-                                    :stroke-dashoffset="skill.dashoffset" />
-                            </svg>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <i :class="skill.icon" class="text-purple-600 text-xl sm:text-2xl"></i>
-                            </span>
-                            <span
-                                class="absolute -top-2 -right-2 bg-white px-2 py-0.5 rounded-full text-xs font-bold shadow"
-                                style="color: #a855f7; border: 1px solid #a855f7;" x-text="skill.percent + '%'"></span>
+                    <div class="skill-card gradient-border bg-white p-0 border border-gray-200 shadow-sm relative cursor-pointer transition-all duration-300 hover:shadow-md"
+                        @click="openModal(skill)">
+                        <div class="skill-header flex justify-between items-center p-4 border-b border-gray-100">
+                            <h3 x-text="skill.name" class="skill-name font-bold text-lg text-gray-800"></h3>
+                            <span class="skill-percent font-bold text-purple-600" x-text="skill.percent + '%'"></span>
                         </div>
-                        <span class="text-sm font-semibold text-slate-800" x-text="skill.name"></span>
+
+                        <!-- Border progress animation -->
+                        <div class="skill-progress-border w-full h-1.5 bg-gray-200 overflow-hidden">
+                            <div class="progress-fill h-full bg-gradient-to-r from-purple-500 to-pink-500"
+                                :style="{ width: skill.percent + '%' }"></div>
+                        </div>
+
+                        <div class="skill-content p-4 text-center">
+                            <i :class="skill.icon" class="skill-icon mx-auto text-4xl mb-4 text-purple-600"></i>
+                            <p class="skill-description text-gray-600 text-sm truncate-3-lines mb-4"
+                                x-text="getShortDescription(skill.details)"></p>
+                            <button
+                                class="read-more text-purple-600 text-xs font-semibold hover:underline focus:outline-none"
+                                @click.stop="openModal(skill)">
+                                Read More
+                            </button>
+                        </div>
                     </div>
                 </template>
             </div>
@@ -451,111 +458,226 @@
         <!-- Modal -->
         <div x-show="modalOpen" x-cloak x-transition.opacity style="background: rgba(0,0,0,0.6);"
             class="fixed inset-0 flex items-center justify-center z-50" @click.outside="modalOpen = false">
-            <div class="bg-white rounded-lg p-6 max-w-md w-full shadow-lg" @click.stop x-trap.noscroll="modalOpen">
-                <h2 class="text-2xl font-bold mb-4" x-text="selectedSkill.name"></h2>
-                <p class="mt-3 text-gray-700" x-text="selectedSkill.details || 'No additional details available.'"></p>
-                <button class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4 shadow-xl" @click.stop x-trap.noscroll="modalOpen">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold" x-text="selectedSkill.name"></h2>
+                        <div class="flex items-center mt-1">
+                            <div class="w-24 h-1.5 bg-gray-200 rounded-full overflow-hidden mr-2">
+                                <div class="h-full"
+                                    :class="selectedSkill.learning ? 'bg-gradient-to-r from-purple-500 to-pink-500' : 'bg-gradient-to-r from-blue-500 to-purple-500'"
+                                    :style="{ width: selectedSkill.percent + '%' }"></div>
+                            </div>
+                            <span class="text-sm font-bold"
+                                :class="selectedSkill.learning ? 'text-purple-600' : 'text-blue-600'"
+                                x-text="selectedSkill.percent + '%'"></span>
+                        </div>
+                    </div>
+                    <i :class="selectedSkill.icon" class="text-3xl"
+                        :style="{ color: selectedSkill.learning ? '#a855f7' : selectedSkill.color }"></i>
+                </div>
+                <p class="text-gray-700 mt-4" x-text="selectedSkill.details || 'No additional details available.'"></p>
+                <button class="mt-6 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
                     @click="modalOpen = false">
                     Close
                 </button>
             </div>
         </div>
     </section>
-
     <style>
-        @keyframes spin {
+        @keyframes border-glow {
             0% {
-                transform: rotate(0deg);
+                box-shadow: 0 0 5px 0px rgba(59, 130, 246, 0.7);
+            }
+
+            50% {
+                box-shadow: 0 0 20px 5px rgba(59, 130, 246, 0.4);
             }
 
             100% {
-                transform: rotate(360deg);
+                box-shadow: 0 0 5px 0px rgba(59, 130, 246, 0.7);
             }
         }
 
-        .spin {
-            animation: spin 10s linear infinite;
-            transform-origin: center center;
-            transition: animation-duration 0.3s ease;
+        .skill-card:hover {
+            animation: border-glow 2s infinite;
         }
 
-        circle[stroke-dashoffset] {
-            transition: stroke-dashoffset 1s ease-out;
+        .progress-fill {
+            transition: width 1s ease-out;
         }
 
-        html {
-            scroll-behavior: smooth;
+        .gradient-border {
+            position: relative;
+            border-radius: 0 !important;
         }
 
-        /* Fix flash of modal */
+        .gradient-border::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+            z-index: -1;
+            border-radius: 0 !important;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gradient-border:hover::after {
+            opacity: 1;
+        }
+
         [x-cloak] {
             display: none !important;
         }
-    </style>
 
+        .truncate-3-lines {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
     <script>
         document.addEventListener('alpine:init', () => {
             Alpine.data('skillsData', () => ({
                 skills: [
-                    { name: 'HTML5', icon: 'fab fa-html5', color: '#F1662A', percent: 90, dashoffset: 100, details: 'Expert in crafting clean and semantic markup using HTML5. I ensure accessibility, SEO-readiness, and responsive design, applying best practices to structure websites for optimal performance and usability.' },
-                    { name: 'CSS3', icon: 'fab fa-css3-alt', color: '#226DE4', percent: 80, dashoffset: 100, details: 'Proficient in writing scalable and responsive layouts using CSS3. I work with Flexbox, Grid, animations, and media queries to create fluid interfaces that enhance user experience across devices.' },
-                    { name: 'Tailwind CSS', icon: 'fas fa-wind', color: '#44a8b3', percent: 70, dashoffset: 100, details: 'Specialized in Tailwind CSS for utility-first design. I rapidly prototype and build clean, maintainable interfaces with consistency and a design system mindset.' },
-                    { name: 'WordPress', icon: 'fab fa-wordpress', color: '#21759B', percent: 80, dashoffset: 100, details: 'Skilled in advanced WordPress customization using customizer, hooks, filters, ACF, CPT, and various plugins. I work with modern builders like Elementor, Gutenberg, Bricks and customize popular themes like Astra, Kadence, GeneratePress. I provide tailored solutions focusing on speed, UX, and SEO without building core themes or plugins.' },
-                    { name: 'WooCommerce', icon: 'fas fa-cart-plus', color: '#96588A', percent: 70, dashoffset: 100, details: 'Experienced in WooCommerce store customization, product setup, payment integration, and theme tweaks to improve UX and conversion rates without modifying core plugin code.' },
-                    { name: 'jQuery Plugins', icon: 'fas fa-code', color: '#88D686', percent: 60, dashoffset: 100, details: 'Skilled in using and modifying jQuery plugins for enhanced UI interactivity — including sliders, accordions, popups, and AJAX forms. I integrate them seamlessly into WordPress themes.' },
-                    { name: 'SEO', icon: 'fas fa-search', color: '#4285F4', percent: 80, dashoffset: 100, details: 'Apply SEO best practices including keyword mapping, metadata optimization, schema markup, and performance enhancements to improve organic visibility. Comfortable with Yoast, Rank Math, and Search Console.' },
-                    { name: 'Performance Optimization', icon: 'fas fa-tachometer-alt', color: '#4285F4', percent: 80, dashoffset: 100, details: 'Improve speed scores and Core Web Vitals using image compression, code minification, cache setup (WP Rocket, LiteSpeed), and removal of bloat. I also use dev tools and online analyzers for auditing.' },
-                    { name: 'Website Security', icon: 'fas fa-shield-alt', color: '#4285F4', percent: 70, dashoffset: 100, details: 'Ensure WordPress security via plugins (like Wordfence, iThemes), login lockdown, CAPTCHA, spam filtering, and regular backups. I avoid risky plugins and apply secure configurations.' },
-                    { name: 'SASS', icon: 'fab fa-sass', color: '#CC6699', percent: 65, dashoffset: 100, details: 'Use SASS to organize large-scale stylesheets with variables, nesting, mixins, and imports — which improves maintainability and reusability of design systems.' },
-                    { name: 'Figma Conversion', icon: 'fas fa-vector-square', color: '#4285F4', percent: 60, dashoffset: 100, details: 'Convert Figma designs into pixel-perfect, responsive websites using HTML, CSS (or Tailwind), and JavaScript. I focus on accessibility, layout fidelity, and mobile-first principles.' }
+                    {
+                        name: 'HTML5',
+                        icon: 'fab fa-html5',
+                        color: '#F1662A',
+                        percent: 90,
+                        details: 'Expert in crafting clean and semantic markup using HTML5. I ensure accessibility, SEO-readiness, and responsive design, applying best practices to structure websites for optimal performance and usability.'
+                    },
+                    {
+                        name: 'CSS3',
+                        icon: 'fab fa-css3-alt',
+                        color: '#226DE4',
+                        percent: 80,
+                        details: 'Proficient in writing scalable and responsive layouts using CSS3. I work with Flexbox, Grid, animations, and media queries to create fluid interfaces that enhance user experience across devices.'
+                    },
+                    {
+                        name: 'Tailwind CSS',
+                        icon: 'fas fa-wind',
+                        color: '#44a8b3',
+                        percent: 70,
+                        details: 'Specialized in Tailwind CSS for utility-first design. I rapidly prototype and build clean, maintainable interfaces with consistency and a design system mindset.'
+                    },
+                    {
+                        name: 'WordPress',
+                        icon: 'fab fa-wordpress',
+                        color: '#21759B',
+                        percent: 80,
+                        details: 'Skilled in advanced WordPress customization using customizer, hooks, filters, ACF, CPT, and various plugins. I work with modern builders like Elementor, Gutenberg, Bricks and customize popular themes like Astra, Kadence, GeneratePress. I provide tailored solutions focusing on speed, UX, and SEO without building core themes or plugins.'
+                    },
+                    {
+                        name: 'WooCommerce',
+                        icon: 'fas fa-cart-plus',
+                        color: '#96588A',
+                        percent: 70,
+                        details: 'Experienced in WooCommerce store customization, product setup, payment integration, and theme tweaks to improve UX and conversion rates without modifying core plugin code.'
+                    },
+                    {
+                        name: 'jQuery Plugins',
+                        icon: 'fas fa-code',
+                        color: '#88D686',
+                        percent: 60,
+                        details: 'Skilled in using and modifying jQuery plugins for enhanced UI interactivity — including sliders, accordions, popups, and AJAX forms. I integrate them seamlessly into WordPress themes.'
+                    },
+                    {
+                        name: 'SEO',
+                        icon: 'fas fa-search',
+                        color: '#4285F4',
+                        percent: 80,
+                        details: 'Apply SEO best practices including keyword mapping, metadata optimization, schema markup, and performance enhancements to improve organic visibility. Comfortable with Yoast, Rank Math, and Search Console.'
+                    },
+                    {
+                        name: 'Performance Optimization',
+                        icon: 'fas fa-tachometer-alt',
+                        color: '#4285F4',
+                        percent: 80,
+                        details: 'Improve speed scores and Core Web Vitals using image compression, code minification, cache setup (WP Rocket, LiteSpeed), and removal of bloat. I also use dev tools and online analyzers for auditing.'
+                    },
+                    {
+                        name: 'Website Security',
+                        icon: 'fas fa-shield-alt',
+                        color: '#4285F4',
+                        percent: 70,
+                        details: 'Ensure WordPress security via plugins (like Wordfence, iThemes), login lockdown, CAPTCHA, spam filtering, and regular backups. I avoid risky plugins and apply secure configurations.'
+                    },
+                    {
+                        name: 'SASS',
+                        icon: 'fab fa-sass',
+                        color: '#CC6699',
+                        percent: 65,
+                        details: 'Use SASS to organize large-scale stylesheets with variables, nesting, mixins, and imports — which improves maintainability and reusability of design systems.'
+                    },
+                    {
+                        name: 'Figma Conversion',
+                        icon: 'fas fa-vector-square',
+                        color: '#4285F4',
+                        percent: 60,
+                        details: 'Convert Figma designs into pixel-perfect, responsive websites using HTML, CSS (or Tailwind), and JavaScript. I focus on accessibility, layout fidelity, and mobile-first principles.'
+                    }
                 ],
                 learning: [
-                    { name: 'JavaScript', icon: 'fab fa-js', percent: 20, dashoffset: 100, details: 'Programming language for interactive web pages.' },
-                    { name: 'PHP', icon: 'fab fa-php', percent: 15, dashoffset: 100, details: 'Server-side scripting language for web development.' },
-                    { name: 'WP Theme Dev', icon: 'fab fa-wordpress', percent: 20, dashoffset: 100, details: 'Developing custom WordPress themes.' },
-                    { name: 'MySQL', icon: 'fas fa-database', percent: 20, dashoffset: 100, details: 'Relational database management system.' },
-                    { name: 'Shopify', icon: 'fab fa-shopify', percent: 10, dashoffset: 100, details: 'E-commerce platform for online stores.' },
-                    { name: 'Github', icon: 'fab fa-github', percent: 35, dashoffset: 100, details: 'Version control platform for tracking changes in code repositories.' },
+                    {
+                        name: 'JavaScript',
+                        icon: 'fab fa-js',
+                        percent: 20,
+                        learning: true,
+                        details: 'Currently learning JavaScript fundamentals, DOM manipulation, and ES6+ features to build more interactive web applications and enhance my frontend development skills.'
+                    },
+                    {
+                        name: 'PHP',
+                        icon: 'fab fa-php',
+                        percent: 15,
+                        learning: true,
+                        details: 'Beginning my journey with PHP to understand server-side scripting and WordPress theme/plugin development at a deeper level.'
+                    },
+                    {
+                        name: 'WP Theme Dev',
+                        icon: 'fab fa-wordpress',
+                        percent: 20,
+                        learning: true,
+                        details: 'Learning WordPress theme development from scratch, including template hierarchy, theme structure, and custom functionality implementation.'
+                    },
+                    {
+                        name: 'MySQL',
+                        icon: 'fas fa-database',
+                        percent: 20,
+                        learning: true,
+                        details: 'Studying database design and SQL queries to better understand data management for web applications and WordPress sites.'
+                    },
+                    {
+                        name: 'Shopify',
+                        icon: 'fab fa-shopify',
+                        percent: 10,
+                        learning: true,
+                        details: 'Exploring Shopify platform as an alternative e-commerce solution, learning Liquid templating and store customization.'
+                    },
+                    {
+                        name: 'GitHub',
+                        icon: 'fab fa-github',
+                        percent: 35,
+                        learning: true,
+                        details: 'Improving my version control skills with Git and GitHub, including branching strategies, pull requests, and collaborative workflows.'
+                    },
                 ],
-
-                circumference: 2 * Math.PI * 16,
                 modalOpen: false,
                 selectedSkill: {},
+
+                getShortDescription(details) {
+                    return details.length > 120 ? details.substring(0, 120) + '...' : details;
+                },
 
                 openModal(skill) {
                     this.selectedSkill = skill;
                     this.modalOpen = true;
-                },
-
-                animateProgress() {
-                    [...this.skills, ...this.learning].forEach((skill) => this.animateSkill(skill));
-                },
-
-                animateSkill(skill) {
-                    const duration = 1000;
-                    const start = performance.now();
-                    const circumference = this.circumference;
-                    const targetOffset = circumference - (circumference * skill.percent) / 100;
-
-                    const animate = (time) => {
-                        let elapsed = time - start;
-                        if (elapsed > duration) elapsed = duration;
-
-                        skill.dashoffset = circumference - (circumference - targetOffset) * (elapsed / duration);
-
-                        if (elapsed < duration) {
-                            requestAnimationFrame(animate);
-                        } else {
-                            skill.dashoffset = targetOffset;
-                        }
-                    };
-
-                    requestAnimationFrame(animate);
-                },
-
-                init() {
-                    this.animateProgress();
-                },
+                }
             }));
         });
     </script>
@@ -787,11 +909,14 @@
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8 border border-blue-100">
                 <div class="flex items-center gap-4 mb-6">
-                    <img src="https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/475797839_9755602714457853_4483625152940490837_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeG323zjcZkgJ5dW04wQaasDFgJfIvIu2nUWAl8i8i7adZmrvOHn_ET2PyxFrb8Ik1qaZN9nvPI0yKei3hIr3ceA&_nc_ohc=zxVK8_ZvqMkQ7kNvwF1I0na&_nc_oc=AdnRMJtkcdKL0x3iE8i5hQ3Cs_-PnCjIuj8aStPriCjawOvBNRHLyGZA_Y0MRo8Z7pM&_nc_zt=23&_nc_ht=scontent.fdac5-1.fna&_nc_gid=4pRMDXke9FL4U35aOrm3rA&oh=00_AfMQZb-07YqIZNyrq8ka-vHfeG4_-bhW0mYz1zi6SXlPmg&oe=6866955F" alt="RRF Group" class="w-16 h-16 rounded-full border-2 border-blue-400 object-cover" onerror="this.src='https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/og8V99JVf2R.png';">
+                    <img src="https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/475797839_9755602714457853_4483625152940490837_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeG323zjcZkgJ5dW04wQaasDFgJfIvIu2nUWAl8i8i7adZmrvOHn_ET2PyxFrb8Ik1qaZN9nvPI0yKei3hIr3ceA&_nc_ohc=zxVK8_ZvqMkQ7kNvwF1I0na&_nc_oc=AdnRMJtkcdKL0x3iE8i5hQ3Cs_-PnCjIuj8aStPriCjawOvBNRHLyGZA_Y0MRo8Z7pM&_nc_zt=23&_nc_ht=scontent.fdac5-1.fna&_nc_gid=4pRMDXke9FL4U35aOrm3rA&oh=00_AfMQZb-07YqIZNyrq8ka-vHfeG4_-bhW0mYz1zi6SXlPmg&oe=6866955F"
+                        alt="RRF Group" class="w-16 h-16 rounded-full border-2 border-blue-400 object-cover"
+                        onerror="this.src='https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/og8V99JVf2R.png';">
                     <div>
                         <h3 class="text-2xl font-bold text-blue-700 flex items-center gap-2">
                             Moderator — RRF January 2025 Batch
-                            <a href="https://www.facebook.com/groups/1103590641314959" target="_blank" rel="noopener" class="ml-2 text-blue-500 hover:text-blue-700" title="View Facebook Group">
+                            <a href="https://www.facebook.com/groups/1103590641314959" target="_blank" rel="noopener"
+                                class="ml-2 text-blue-500 hover:text-blue-700" title="View Facebook Group">
                                 <i class="fab fa-facebook-square text-2xl"></i>
                             </a>
                         </h3>
@@ -806,11 +931,13 @@
                     <li>Helped manage sessions related to web basics and productivity skills.</li>
                 </ul>
                 <div class="flex items-center gap-3 mt-4">
-                    <a href="https://www.facebook.com/groups/1103590641314959/user/100004793356904" target="_blank" rel="noopener"
+                    <a href="https://www.facebook.com/groups/1103590641314959/user/100004793356904" target="_blank"
+                        rel="noopener"
                         class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
                         Visit Group <i class="fab fa-facebook-f ml-2"></i>
                     </a>
-                    <a href="https://www.facebook.com/groups/1103590641314959/user/100004793356904" target="_blank" rel="noopener"
+                    <a href="https://www.facebook.com/groups/1103590641314959/user/100004793356904" target="_blank"
+                        rel="noopener"
                         class="inline-flex items-center px-4 py-2 bg-slate-700 text-white rounded-lg font-semibold hover:bg-slate-800 transition">
                         My Moderator Profile <i class="fas fa-user-shield ml-2"></i>
                     </a>
@@ -839,12 +966,17 @@
                             <span>Helped resolve member queries and ensured group guidelines were followed.</span>
                         </li>
                     </ul>
-                    <p class="text-xs text-gray-400 mt-3">*Live Facebook group activity integration is not possible due to Facebook API restrictions. Above activities are recent highlights.</p>
+                    <p class="text-xs text-gray-400 mt-3">*Live Facebook group activity integration is not possible due
+                        to Facebook API restrictions. Above activities are recent highlights.</p>
                 </div>
             </div>
         </div>
     </section>
-<!-- End y-->
+    <!-- End y-->
+
+
+
+
 
     <!-- Testimonials Section -->
     <section x-data x-init="$('.testimonial-carousel').slick({
